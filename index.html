@@ -847,10 +847,12 @@ body.public [data-claim]{display:none!important}
 .bridge em{color:var(--wine)}
 
 /* cena */
-.cena2{position:relative;background:var(--night);color:#fff;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:clamp(28px,4vw,72px);padding:clamp(96px,11vw,160px) var(--pad)}
-.cena2-media{border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:#000}
-.cena2-media video{width:100%;height:100%;object-fit:cover;display:block}
-.cena2 .h2{font-size:clamp(38px,4.6vw,76px)}
+.cena2{position:relative;isolation:isolate;overflow:hidden;background:var(--night);color:#fff;display:flex;align-items:center;min-height:min(100svh,64vw);padding:clamp(96px,11vw,160px) var(--pad)}
+.cena2-media{position:absolute;inset:0;z-index:-1;background:#000}
+.cena2-media video{width:100%;height:100%;object-fit:cover;object-position:70% 35%;display:block}
+.cena2-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,14,.96) 0%,rgba(12,11,14,.88) 26%,rgba(12,11,14,.5) 44%,rgba(12,11,14,0) 62%),linear-gradient(0deg,rgba(12,11,14,.6) 0%,rgba(12,11,14,0) 30%),linear-gradient(180deg,rgba(12,11,14,.45) 0%,rgba(12,11,14,0) 22%)}
+.cena2-copy{position:relative;max-width:min(540px,42%)}
+.cena2 .h2{font-size:clamp(38px,4vw,64px)}
 .cena2 .h2 em,.revela .h2 em{color:var(--wine-glow)}
 .cena2 .sec-lede,.revela .sec-lede{color:rgba(255,255,255,.72);margin-top:28px}
 .cena2 .sec-lede em{color:#fff}
@@ -1131,6 +1133,14 @@ body.public [data-claim]{display:none!important}
   .sx *{transition-duration:0s!important;transition-delay:0s!important;animation:none!important}
 }
 
+
+@media (max-width:960px){
+  .cena2{flex-direction:column;justify-content:flex-end;align-items:stretch;min-height:100svh;padding-top:46svh}
+  .cena2-media{bottom:auto;height:60svh}
+  .cena2-media video{object-position:78% 30%}
+  .cena2-media::after{background:linear-gradient(180deg,rgba(12,11,14,.4) 0%,rgba(12,11,14,0) 20%,rgba(12,11,14,0) 50%,rgba(12,11,14,.8) 80%,var(--night) 100%)}
+  .cena2-copy{max-width:none}
+}
 /* ================= auditoria · ajustes ================= */
 .ledger{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
 .ledger a{color:inherit;text-decoration:none}
