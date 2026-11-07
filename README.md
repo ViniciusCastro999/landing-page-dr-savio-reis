@@ -9,6 +9,7 @@ Site institucional (landing page) do **Dr. Sávio Reis** — neurocirurgia e cir
 Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros — sem etapa de build e sem dependências externas além das fontes do Google Fonts (Instrument Serif, Geist e Geist Mono).
 
 - **Ícones:** [Tabler Icons](https://tabler.io/icons) (licença MIT), embutidos como SVG no `index.html`.
+- **Modelo 3D:** coluna lombar modelada por código em `js/coluna3d.js`, renderizada com [three.js](https://threejs.org) 0.160 (licença MIT, carregado do jsDelivr). Sem WebGL, a seção mostra a ilustração em SVG de `js/anatomia.js`.
 - **Ilustrações animadas:** desenhos próprios em SVG gerados por `js/anatomia.js` (sinais no corpo, caminho até a hérnia, comparação aberta × endoscópica e etapas do método). Rodam sozinhas quando aparecem na tela, sem depender do scroll, e respeitam a preferência de movimento reduzido.
 
 ## Estrutura

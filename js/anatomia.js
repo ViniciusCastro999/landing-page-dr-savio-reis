@@ -221,6 +221,7 @@ if (fMet) {
 /* --- Um caminho menor --- */
 const fCam = mount('sxCaminho', '240 40 720 690', buildSpine('c', false), 'A mesma hérnia de disco e dois caminhos até ela: a área grande aberta na cirurgia convencional e o trajeto fino da endoscopia, por um corte de cerca de 8 mm.');
 if (fCam) {
+  fCam.querySelector('svg').setAttribute('preserveAspectRatio', 'xMinYMid meet');
   const T = [
     ['Para chegar à hérnia, há dois caminhos', ''],
     ['Na cirurgia aberta, a área mexida é grande', 'Corte de vários centímetros e músculos afastados.'],
