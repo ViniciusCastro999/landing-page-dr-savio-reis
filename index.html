@@ -811,7 +811,7 @@ body.public [data-claim]{display:none!important}
 .vs-sticky{position:sticky;top:90px;height:calc(100vh - 130px);display:flex;flex-direction:column;justify-content:center}
 .vs-sticky svg{width:100%;height:auto;max-height:calc(100vh - 210px);overflow:visible}
 .vs-heads{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin-bottom:10px}
-.vs-heads span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.vs-heads span{font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
 .vs-heads span:last-child{color:var(--wine)}
 .vs-heads i{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--mute)}
 .vs-now{margin-top:10px;text-align:center;color:var(--mute)}
@@ -878,9 +878,323 @@ body.public [data-claim]{display:none!important}
   .hero h1 .ln > span{transform:none}
   .hero-lede,.hero-cta{opacity:1}
 }
+
+/* ================= v6 · seções estáticas (sem animação presa ao scroll) ================= */
+.grain{animation:none}
+.ilus{margin:0;display:flex;flex-direction:column;gap:14px}
+.ilus img{width:100%;height:auto;max-height:620px;object-fit:contain;background:var(--paper);border-radius:18px;padding:clamp(18px,3vw,40px)}
+.ilus figcaption{color:var(--mute);font-size:10px}
+.card-ic{font-size:34px;line-height:1;color:var(--wine);display:block;margin-bottom:22px}
+.card-tag{color:var(--mute);margin-bottom:10px;font-size:10.5px}
+.card,.step{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,2.4vw,32px);transition:border-color .3s,transform .3s var(--ease)}
+.card:hover,.step:hover{border-color:color-mix(in srgb,var(--wine) 40%,var(--line));transform:translateY(-2px)}
+.card h3,.step h3{font-family:var(--serif);font-weight:400;font-size:clamp(23px,1.9vw,28px);line-height:1.1;margin-bottom:10px}
+.card p:last-child,.step p:last-child{font-size:14.5px;line-height:1.65;color:var(--ink-2);font-weight:300}
+.bridge{margin-top:clamp(56px,7vw,96px);font-family:var(--serif);font-size:clamp(26px,2.8vw,40px);line-height:1.15;max-width:900px}
+.bridge em{color:var(--wine)}
+
+/* cena */
+.cena2{position:relative;background:var(--night);color:#fff;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:clamp(28px,4vw,72px);padding:clamp(96px,11vw,160px) var(--pad)}
+.cena2-media{border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:#000}
+.cena2-media video{width:100%;height:100%;object-fit:cover;display:block}
+.cena2 .h2{font-size:clamp(38px,4.6vw,76px)}
+.cena2 .h2 em,.revela .h2 em{color:var(--wine-glow)}
+.cena2 .sec-lede,.revela .sec-lede{color:rgba(255,255,255,.72);margin-top:28px}
+.cena2 .sec-lede em{color:#fff}
+.cena2 .sec-idx,.revela .sec-idx{color:rgba(255,255,255,.55)}
+.cena2 .sec-idx b,.revela .sec-idx b{color:var(--wine-glow)}
+.cena2-cap{margin-top:30px;color:rgba(255,255,255,.4);font-size:10px}
+
+/* sinais */
+.sinais-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4vw,64px);align-items:start}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* revelação */
+.revela{background:var(--night);color:#fff;padding:clamp(96px,12vw,170px) var(--pad)}
+.revela-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,90px);align-items:center}
+.revela .h2{font-size:clamp(42px,5.4vw,92px)}
+.facts{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:44px}
+.facts li{border-top:1px solid rgba(255,255,255,.14);padding-top:18px;display:flex;flex-direction:column;gap:4px}
+.facts i{font-size:28px;color:var(--wine-glow);margin-bottom:10px}
+.facts b{font-weight:500;font-size:15px}
+.facts span{font-size:13px;color:rgba(255,255,255,.55)}
+.ilus-card img{background:#fff}
+.revela .ilus figcaption{color:rgba(255,255,255,.45)}
+
+/* comparativo */
+.vs2-x{font-style:italic;color:var(--mute);padding:0 .1em}
+.vs2-legend{display:flex;align-items:center;gap:10px;color:var(--mute);margin-top:22px;font-size:10px}
+.vs2-legend i,.vs2-g::before{width:8px;height:8px;border-radius:50%;background:#2F7A57;display:inline-block}
+.vs2-table{border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.vs2-head,.vs2-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1fr)}
+.vs2-head span{padding:18px 24px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);background:var(--paper)}
+.vs2-head span:last-child{color:var(--wine)}
+.vs2-row{border-top:1px solid var(--line)}
+.vs2-row > *{padding:22px 24px}
+.vs2-k{display:flex;gap:14px;align-items:flex-start;font-family:var(--serif);font-size:22px;line-height:1.15}
+.vs2-k i{font-size:28px;color:var(--wine);flex:none}
+.vs2-k b{display:block;font-family:var(--mono);font-weight:400;font-size:10px;letter-spacing:.14em;color:var(--mute);margin-bottom:4px}
+.vs2-c{font-size:14.5px;line-height:1.65;color:var(--ink-2);font-weight:300}
+.vs2-c.e{background:color-mix(in srgb,var(--wine) 3%,#fff)}
+.vs2-c .mono{display:none;color:var(--mute);margin-bottom:6px;font-size:10px}
+.vs2-g{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#2F7A57}
+.vs2 .vs-foot{margin-top:28px;font-size:13.5px;line-height:1.7;color:var(--mute);max-width:900px}
+
+/* método */
+.metodo2-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,64px);align-items:start}
+.metodo2-figs{display:grid;gap:18px}
+.metodo2-figs .ilus:last-child img{max-height:300px}
+.steps{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ilus-credit{margin-top:40px;font-size:12px;color:var(--mute)}
+
+/* ícones Tabler (SVG embutido) */
+.ic{display:inline-block;line-height:0}
+.ic svg{width:1em;height:1em;stroke-width:1.5}
+/* placeholders com ícone padrão */
+.ph{display:grid;place-items:center;background:var(--paper)}
+.ph .ph-ic{display:grid;place-items:center;gap:10px;color:var(--mute);text-align:center}
+.ph .ph-ic i{font-size:44px;color:var(--wine);opacity:.7}
+.ph.on-wine{background:#741B35}
+.ph.on-wine .ph-ic i{color:#F4C9D3;opacity:.9}
+.j-icon{font-size:56px;line-height:1;width:auto;height:auto;display:block;color:var(--wine)}
+
+@media (max-width:960px){
+  .cena2,.sinais-grid,.revela-grid,.metodo2-grid{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .vs2-head{display:none}
+  .vs2-row{grid-template-columns:1fr}
+  .vs2-row > *{padding:16px 20px}
+  .vs2-row > .vs2-k{padding-bottom:4px}
+  .vs2-c .mono{display:block}
+}
+@media (max-width:600px){ .cards,.steps{grid-template-columns:1fr} }
+
+/* ================= v7 · ilustrações animadas (js/anatomia.js) ================= */
+.sx-card{position:relative;margin:0;border:1px solid var(--line);border-radius:24px;padding:clamp(14px,2vw,26px);background:radial-gradient(60% 55% at 50% 42%,rgba(224,122,147,.07),transparent 70%),var(--paper);overflow:hidden;color:var(--ink)}
+.sx-grain{position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;border-radius:inherit}
+.sx svg{display:block;width:100%;height:auto;overflow:visible}
+.sx.crop svg{overflow:hidden}
+.sx-capRow{position:relative;display:flex;gap:18px;align-items:flex-start;border-top:1px solid var(--line);padding-top:16px;margin-top:6px}
+.sx-num{flex:none;color:var(--wine);padding-top:9px;min-width:44px;font-size:10.5px}
+.sx-text{margin:0;max-width:720px;color:var(--ink-2);font-size:16px;line-height:1.6;font-weight:300;min-height:4.4em;transition:opacity .28s,transform .28s}
+.sx-text b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,30px);line-height:1.1;color:var(--ink);margin-bottom:6px}
+.sx-text.out,.sx-now.out{opacity:0;transform:translateY(6px)}
+.sx-segs{position:relative;display:flex;gap:6px;margin-top:14px}
+.sx-segs span{flex:1;height:3px;border-radius:3px;background:var(--line);overflow:hidden}
+.sx-segs i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--wine),var(--wine-glow))}
+.sx-note{position:relative;margin-top:10px;color:var(--mute);font-size:10px}
+.sinais .card.on,.metodo3 .step.on,.vs2-row.on{border-color:color-mix(in srgb,var(--wine) 55%,var(--line));box-shadow:0 18px 40px -28px rgba(138,34,64,.55)}
+.sinais .card,.metodo3 .step{transition:border-color .5s,box-shadow .5s,transform .3s var(--ease)}
+.vs2-row{transition:background .5s}
+.vs2-row.on{background:color-mix(in srgb,var(--wine) 4%,#fff);box-shadow:none}
+.vs2-row.on .vs2-k i{color:var(--wine)}
+.metodo3{display:grid;gap:14px}
+.metodo3 .steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metodo3 .sx{max-width:860px;margin:0 auto}
+.revela .sx-card{border-color:rgba(255,255,255,.12)}
+.vs-vis{margin-bottom:22px}
+.vs-vis .sx,.vs-vis .vs-heads{max-width:920px;margin-left:auto;margin-right:auto}
+.vs-heads{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:6px 0 0}
+.vs-heads i{font-style:normal;color:var(--mute);font-family:var(--serif);font-size:24px;letter-spacing:0}
+.vs-heads span:last-child{color:var(--wine)}
+.sx-now{position:relative;text-align:center;color:var(--mute);margin-top:4px;font-size:11px;letter-spacing:.2em;transition:opacity .28s,transform .28s}
+
+/* desenho */
+.sx .bone{fill:url(#sxBone);stroke:#A8937A;stroke-width:1.3;transition:fill-opacity .9s,stroke .9s}
+.sx .tex{fill:url(#sxTex);pointer-events:none;transition:opacity .9s}
+.sx .rim{fill:none;stroke:#fff;stroke-opacity:.55;stroke-width:2}
+.sx .disc{fill:url(#sxDisc);stroke:#A9624F;stroke-width:1.2}
+.sx .ring{fill:none;stroke:#FBE3D8;stroke-opacity:.35;stroke-width:1.4}
+.sx .nuc{fill:url(#sxNuc)}
+.sx .dura{fill:none;stroke:#E8B7C2;stroke-opacity:.8;stroke-width:34;stroke-linecap:round;stroke-linejoin:round}
+.sx .duraL{fill:none;stroke:#C9677F;stroke-opacity:.25;stroke-width:1.5}
+.sx .muscle{fill:url(#sxMus)}
+.sx .fib{fill:none;stroke:#8A2240;stroke-opacity:.12;stroke-width:1.3}
+.sx .skinB{fill:none;stroke:#E9B9A6;stroke-opacity:.35;stroke-width:16;stroke-linecap:round}
+.sx .skinL{fill:none;stroke:#C98B76;stroke-opacity:.7;stroke-width:1.5}
+.sx .root{fill:none;stroke:#E0A93B;stroke-width:9;stroke-linecap:round;transition:stroke 1.2s}
+.sx .core{fill:none;stroke:#FFF0C2;stroke-opacity:.75;stroke-width:2.6;stroke-linecap:round;transition:stroke 1.2s}
+.sx .root.hot{stroke:#D93A55;filter:url(#sxGlowR)}
+.sx .core.hot{stroke:#FFC2CD}
+.sx .pulse{fill:none;stroke:#FFE3E8;stroke-width:5;stroke-linecap:round;stroke-dasharray:30 460;animation:sxPulse 1.7s linear infinite;filter:url(#sxGlowR);transition:opacity .8s}
+@keyframes sxPulse{from{stroke-dashoffset:30}to{stroke-dashoffset:-460}}
+.sx .calm{fill:none;stroke:#FFE7A6;stroke-width:6;stroke-linecap:round;stroke-dasharray:70 520;stroke-dashoffset:70;opacity:0;filter:url(#sxGlowG)}
+.sx .her{fill:url(#sxHer);stroke:#8A2240;stroke-width:1.5;transform-box:fill-box;transform-origin:center;transition:transform 1.4s cubic-bezier(.6,0,.4,1),opacity 1.4s;animation:sxHerP 2.6s ease-in-out infinite}
+@keyframes sxHerP{50%{transform:scale(1.08)}}
+.sx .rip{transition:opacity .8s}
+.sx .rip circle{fill:none;stroke:#D93A55;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:sxRip 2.2s ease-out infinite}
+.sx .rip circle+circle{animation-delay:1.1s}
+@keyframes sxRip{from{transform:scale(.6);opacity:.9}to{transform:scale(2.2);opacity:0}}
+.sx .lbl{opacity:0;transition:opacity .6s}
+.sx .lbl text{font:400 22px var(--sans);fill:var(--ink)}
+.sx .lbl text.hot{fill:#D93A55}
+.sx .lbl line{stroke:var(--ink);stroke-opacity:.3}
+.sx .lbl circle{fill:var(--ink)}
+.sx.withlabels:not(.p1) .lbl{opacity:1}
+.sx .olab{font:500 19px var(--sans);paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round}
+.sx .olab.g{fill:#A87414}.sx .olab.r{fill:#D93A55}.sx .olab.w{fill:#fff;stroke:#2A0D16}
+.sx .fx{opacity:0;transition:opacity .8s}
+.sx .can{transform:translate(var(--sx-ox),var(--sx-oy));opacity:0;transition:transform 2s cubic-bezier(.55,0,.2,1),opacity .6s}
+.sx .light{opacity:0;transition:opacity 1s}
+.sx .light circle{transform-box:fill-box;transform-origin:center;animation:sxFlick 1.8s ease-in-out infinite}
+@keyframes sxFlick{50%{transform:scale(1.12)}}
+.sx .frag{fill:#D93A55;opacity:0}
+.sx .cut4{transition-delay:.4s}
+.sx .inc-o{stroke:#D93A55;stroke-width:6;stroke-linecap:round;fill:none;stroke-dasharray:var(--sx-il);stroke-dashoffset:var(--sx-il);transition:stroke-dashoffset 1.2s ease,opacity .6s}
+.sx .cav{transform-box:fill-box;transform-origin:right center;transform:scaleX(0);opacity:0;transition:transform 1.8s cubic-bezier(.55,0,.2,1),opacity .8s}
+.sx .dmg,.sx .scar{opacity:0;transition:opacity 1.2s}
+.sx .fpe{stroke:#E0A93B;stroke-width:12;stroke-linecap:round;stroke-dasharray:var(--sx-fpl);stroke-dashoffset:var(--sx-fpl);transition:stroke-dashoffset 1.6s ease;filter:url(#sxGlowG)}
+/* endoscopia */
+[data-kind=endo].p1 .inc-e{opacity:1}
+[data-kind=endo].p1 .can{transform:none;opacity:1;transition-delay:.7s}
+[data-kind=endo].p2 .light{opacity:1}
+[data-kind=endo].p2 .her{transform:translate(var(--sx-hx),var(--sx-hy)) scale(.05);opacity:0;transition-delay:1s}
+[data-kind=endo].p2 .frag{animation:sxFrag 1.5s 1.9s ease-in forwards}
+[data-kind=endo].p3 .light{opacity:0}
+[data-kind=endo].p3 .can{transform:translate(var(--sx-ox),var(--sx-oy));opacity:0;transition-delay:.5s,1.3s}
+[data-kind=endo].p3 .free,[data-kind=endo].p3 .keep{opacity:1;transition-delay:.6s}
+@keyframes sxFrag{0%{opacity:1;transform:none}100%{opacity:0;transform:translate(var(--sx-fx),var(--sx-fy))}}
+[data-kind=endo].p2 .root.hot,[data-kind=endo].p2 .core.hot{transition-delay:2.3s}
+[data-kind=endo].p2 .root.hot{stroke:#E0A93B;filter:none}
+[data-kind=endo].p2 .core.hot{stroke:#FFF0C2}
+[data-kind=endo].p2 .pulse{opacity:0;transition-delay:1.8s}
+[data-kind=endo].p2 .rip{opacity:0}
+[data-kind=endo].p2 .calm{animation:sxCalm 1.8s 2.5s ease-out forwards}
+@keyframes sxCalm{0%{opacity:1;stroke-dashoffset:70}100%{opacity:0;stroke-dashoffset:-520}}
+/* caminho menor */
+[data-kind=cmp].p1 .dmg{opacity:1}
+[data-kind=cmp].p1 .inc-o{stroke-dashoffset:0}
+[data-kind=cmp].p1 .l-o2{opacity:1;transition-delay:.6s}
+[data-kind=cmp].p2 .fpe{stroke-dashoffset:0}
+[data-kind=cmp].p2 .inc-e,[data-kind=cmp].p2 .l-e2{opacity:1;transition-delay:1s}
+[data-kind=cmp].p3 .dmg{opacity:.45}
+[data-kind=cmp].p3 .inc-o{opacity:.45}
+
+/* corpo · sinais */
+.sx .skin{fill:url(#sxSkin)}
+.sx .skinOut>*{fill:#D3A999;stroke:#D3A999;stroke-width:2.5}
+.sx .skinOut>*,.sx .shadeL,.sx .bspine *{vector-effect:non-scaling-stroke}
+.sx .bspine{opacity:.78}.sx .skinTex.soft{opacity:.16}
+[data-kind=body] .nb{stroke-width:2.8}[data-kind=body] .nr{stroke-width:3.6}[data-kind=body] .np{stroke-width:2.6}
+.sx .skinTex{fill:url(#sxTex);opacity:.45;pointer-events:none}
+.sx .shadeL{fill:none;stroke:#B98A7E;stroke-opacity:.3;stroke-width:1.6;stroke-linecap:round}
+.sx .zone{opacity:0;transition:opacity 1s}
+.sx .zone circle{transform-box:fill-box;transform-origin:center;animation:sxZone 2s ease-in-out infinite}
+@keyframes sxZone{50%{transform:scale(1.12)}}
+.sx .vl{transition:fill .8s,stroke .8s}
+.sx .nb{fill:none;stroke:#E0A93B;stroke-opacity:.55;stroke-width:4;stroke-linecap:round}
+.sx .nr{fill:none;stroke:#D93A55;stroke-width:5;stroke-linecap:round;stroke-dasharray:380;stroke-dashoffset:380;transition:stroke-dashoffset 1.8s ease;filter:url(#sxGlowR)}
+.sx .np{fill:none;stroke:#FFE3E8;stroke-width:4;stroke-linecap:round;stroke-dasharray:24 420;opacity:0;transition:opacity .6s;animation:sxPulse2 1.6s linear infinite}
+@keyframes sxPulse2{from{stroke-dashoffset:24}to{stroke-dashoffset:-420}}
+.sx .tg{opacity:0;transition:opacity .8s}
+.sx .tg path{fill:#D93A55;transform-box:fill-box;transform-origin:center;animation:sxTw 1.3s ease-in-out infinite}
+@keyframes sxTw{0%,100%{opacity:.15;transform:scale(.5) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(45deg)}}
+.sx .wk{opacity:0;transition:opacity 1s}
+.sx .wk path,.sx .wk ellipse{animation:sxWk 2.4s ease-in-out infinite}
+@keyframes sxWk{50%{opacity:.55}}
+.sx .bm{opacity:.28;transition:opacity .6s}
+.sx .bm polyline{fill:none;stroke:var(--ink);stroke-opacity:.35}
+.sx .bm circle{fill:#fff;stroke:var(--wine);stroke-width:1.5;transition:fill .5s}
+.sx .bm .bn{font:500 12px var(--mono);fill:var(--wine);text-anchor:middle;dominant-baseline:central;transition:fill .5s}
+.sx .bm .bt{font:400 20px var(--sans);fill:var(--ink)}
+[data-kind=body].p1 .z1,[data-kind=body].p2 .z2{opacity:1}
+[data-kind=body].p1 .vl{fill:#F7C3CC;stroke:#D93A55}
+[data-kind=body].p2 .nr{stroke-dashoffset:0}
+[data-kind=body].p2 .np{opacity:.9;transition-delay:1.6s}
+[data-kind=body].p3 .tg{opacity:1}
+[data-kind=body].p4 .wk{opacity:1}
+[data-kind=body].p1 .bm1,[data-kind=body].p2 .bm2,[data-kind=body].p3 .bm3,[data-kind=body].p4 .bm4{opacity:1}
+[data-kind=body].p1 .bm1 circle,[data-kind=body].p2 .bm2 circle,[data-kind=body].p3 .bm3 circle,[data-kind=body].p4 .bm4 circle{fill:var(--wine)}
+[data-kind=body].p1 .bm1 .bn,[data-kind=body].p2 .bm2 .bn,[data-kind=body].p3 .bm3 .bn,[data-kind=body].p4 .bm4 .bn{fill:#fff}
+
+/* aberta × endoscópica */
+#sxVs .vt{font:400 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;fill:var(--ink-2)}
+#sxVs .vt.w{fill:var(--wine)}#sxVs .vt.ok{fill:#2F7A57}#sxVs .vt.m{fill:var(--mute)}
+#sxVs .vt.serif{font-family:var(--serif);font-size:30px;letter-spacing:0;text-transform:none;fill:var(--ink)}
+#sxVs .vt.serif.w{fill:var(--wine)}
+#sxVs .vsc{opacity:0;transition:opacity .6s var(--ease)}
+#sxVs .vsc.on{opacity:1}
+#sxVs .draw{stroke-dashoffset:var(--l);transition:stroke-dashoffset 1.2s var(--ease) .3s}
+#sxVs .vsc.on .draw{stroke-dashoffset:0}
+#sxVs .fade{opacity:0;transition:opacity .6s var(--ease) .9s}
+#sxVs .vsc.on .fade{opacity:1}
+#sxVs .incA{stroke:#B4233F;stroke-width:4;stroke-linecap:round}
+#sxVs .retr{stroke:#5E5A66;stroke-width:11;stroke-linecap:round}
+#sxVs .canO{stroke:#6E6A76;stroke-width:15;stroke-linecap:round}
+#sxVs .canI{stroke:#F1EEF4;stroke-width:4;stroke-linecap:round}
+#sxVs .field{fill:url(#sxHatch);stroke:#D93A55;stroke-opacity:.45}
+#sxVs .psoas{fill:url(#sxMus);stroke:#C9677F;stroke-opacity:.35}
+#sxVs .mus{fill:url(#sxMus);stroke:#C9677F;stroke-opacity:.45;transition:fill .6s,stroke .6s,stroke-width .6s}
+#sxVs .fibE{fill:url(#sxFib);pointer-events:none}
+#sxVs .annA{fill:url(#sxDisc);opacity:.85}
+#sxVs .nucA{fill:url(#sxNuc)}
+#sxVs .canal{fill:#F6D9DF;stroke:#C9677F;stroke-opacity:.5}
+#sxVs .nrv{fill:#E0A93B;stroke:#B7821F;stroke-width:1.2;transition:fill 1s}
+#sxVs .nrv.hotA{fill:#D93A55;filter:url(#sxGlowR)}
+#sxVs .herA{fill:url(#sxHer);stroke:#8A2240;transform-box:fill-box;transform-origin:center;transition:transform 1.2s,opacity 1.2s;animation:sxHerP 2.6s ease-in-out infinite}
+#sxVs .musc{transition:transform 1s var(--ease);transform-box:fill-box;transform-origin:center}
+#sxVs #vB.on .mKL{transform:translateX(-26px) scaleX(.78)}
+#sxVs svg.tis .mKL .mus{fill:#F3C9D3;stroke:#D93A55;stroke-opacity:.8}
+#sxVs svg.tis .mER .mus{stroke:#2F7A57;stroke-width:3;stroke-opacity:1}
+#sxVs svg.tis .herA{transform:scale(.05);opacity:0;transition-delay:1.6s}
+#sxVs svg.tis .nrv.hotA{fill:#E0A93B;filter:none;transition-delay:2.6s}
+#sxVs .lam{transition:fill-opacity .8s .6s,opacity .8s .6s}
+#sxVs #vB.on path.bone.lam{stroke-dasharray:4 4;stroke:#D93A55}
+#sxVs .tisL{opacity:0;transition:opacity .5s}
+#sxVs .tisL .vt{font-size:17px;font-weight:500}
+#sxVs svg.tis .tisL{opacity:1}
+#sxVs .trk{stroke-width:2;stroke:#141317;stroke-opacity:.15}
+#sxVs .trk.e{stroke:#8A2240;stroke-opacity:.25}
+#sxVs .node{opacity:.35;transition:opacity .4s}
+#sxVs .node.cur{opacity:1}
+#sxVs .nodeC{fill:url(#sxNode);stroke:#141317;stroke-width:1.2;transition:stroke .4s,stroke-width .4s}
+#sxVs .node.e .nodeC{stroke:#8A2240}
+#sxVs .node.e.cur .nodeC{stroke:#2F7A57;stroke-width:2.6}
+#sxVs .nodeI{fill:none;stroke:#141317;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+#sxVs .node.e .nodeI{stroke:#8A2240}
+#sxVs .badge{fill:url(#sxNode);stroke:#141317;stroke-width:1.2}
+#sxVs .badge.e{stroke:#8A2240}
+
+@media (max-width:960px){ .metodo3 .steps{grid-template-columns:1fr 1fr} }
+@media (max-width:760px){
+  .sx.full .lbl text{font-size:42px}
+  .sx.full .olab{font-size:40px;stroke-width:11px}
+  .sx.crop .olab{font-size:30px;stroke-width:9px}
+  .sx .bm .bt{font-size:26px}
+  #sxVs .vt{font-size:17px}
+  #sxVs .vt.serif{font-size:34px}
+  .sx-capRow{flex-direction:column;gap:4px}
+  .vs-heads{font-size:9.5px;letter-spacing:.12em}
+}
+@media (max-width:600px){ .metodo3 .steps{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){
+  .sx *{transition-duration:0s!important;transition-delay:0s!important;animation:none!important}
+}
 </style>
 </head>
 <body class="on-dark">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <defs>
+  <linearGradient id="sxBone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCF7EE"/><stop offset=".55" stop-color="#F1E6D4"/><stop offset="1" stop-color="#DCCBB2"/></linearGradient>
+  <linearGradient id="sxSkin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5E1D7"/><stop offset=".55" stop-color="#EBCDBF"/><stop offset="1" stop-color="#D9B2A2"/></linearGradient>
+  <radialGradient id="sxDisc" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#EDB29C"/><stop offset="1" stop-color="#C47A64"/></radialGradient>
+  <radialGradient id="sxNuc" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#FFF1EA"/><stop offset="1" stop-color="#F0C2B0"/></radialGradient>
+  <radialGradient id="sxHer" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FF8A9C"/><stop offset=".6" stop-color="#D93A55"/><stop offset="1" stop-color="#A9233E"/></radialGradient>
+  <radialGradient id="sxPain" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#D93A55" stop-opacity=".55"/><stop offset=".55" stop-color="#E07A93" stop-opacity=".25"/><stop offset="1" stop-color="#E07A93" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sxMus" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9677F" stop-opacity=".42"/><stop offset=".6" stop-color="#E08C9F" stop-opacity=".38"/><stop offset="1" stop-color="#F0B3C0" stop-opacity=".35"/></linearGradient>
+  <radialGradient id="sxLight"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".25" stop-color="#FFE8A0" stop-opacity=".8"/><stop offset="1" stop-color="#F3C95A" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sxCav" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#2A0D16"/><stop offset="1" stop-color="#0E0408"/></linearGradient>
+  <linearGradient id="sxFadeTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAFAF9"/><stop offset="1" stop-color="#FAFAF9" stop-opacity="0"/></linearGradient>
+  <radialGradient id="sxNode" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#F3ECEE"/></radialGradient>
+  <filter id="sxGlowR" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="sxGlowG" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="sxShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#5A1828" flood-opacity=".18"/></filter>
+  <pattern id="sxHatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#D93A55" fill-opacity=".12"/><line x1="0" y1="0" x2="0" y2="9" stroke="#D93A55" stroke-opacity=".5" stroke-width="2.5"/></pattern>
+  <pattern id="sxHatchG" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#8A8590" fill-opacity=".25"/><line x1="0" y1="0" x2="0" y2="8" stroke="#6E6A76" stroke-opacity=".45" stroke-width="2"/></pattern>
+  <pattern id="sxFib" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><line x1="0" y1="0" x2="12" y2="0" stroke="#8A2240" stroke-opacity=".14" stroke-width="1.2"/></pattern>
+  <pattern id="sxTex" width="160" height="160" patternUnits="userSpaceOnUse"><image id="sxTexImg" width="160" height="160"/></pattern>
+ </defs>
+</svg>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- ===== HEADER ===== -->
@@ -927,14 +1241,7 @@ body.public [data-claim]{display:none!important}
 <!-- ===== HERO ===== -->
 <section class="hero dark" id="inicio" data-dark data-label="Início" aria-label="Apresentação">
   <div class="hero-photo"><img src="img/dr-savio-hero.jpg" srcset="img/dr-savio-hero-sm.jpg 916w, img/dr-savio-hero.jpg 1832w" sizes="100vw" alt="Dr. Sávio Reis, sorridente, sentado em uma poltrona em seu consultório, com estante iluminada ao fundo." fetchpriority="high"></div>
-  <canvas id="shader" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-
-  <div class="spine-wrap" id="spineWrap" aria-hidden="true">
-    <svg id="spineBase" viewBox="0 0 480 900"></svg>
-    <svg id="spineXray" class="xray" viewBox="0 0 480 900"></svg>
-  </div>
-  <div class="lens" id="lens" aria-hidden="true"><span class="lens-read mono" id="lensRead">Plano sagital<br>Coluna lombar</span></div>
 
   <div class="hero-in">
     <div class="hero-copy">
@@ -947,97 +1254,67 @@ body.public [data-claim]{display:none!important}
       </div>
     </div>
     <div class="hero-foot">
-      <span class="scroll mono"><i aria-hidden="true"></i><span class="hint-d">Mova o cursor para ver a coluna · </span>Role para continuar</span>
+      <span class="scroll mono"><i aria-hidden="true"></i>Role para continuar</span>
       <span class="crm mono">Dr. Sávio Reis · Neurocirurgião <span class="pending">CRM-MG · RQE</span></span>
     </div>
   </div>
 </section>
 
 <!-- ===== CENA · A DOR QUE INTERROMPE A VIDA ===== -->
-<section class="iris cena" id="cena" data-label="A dor" aria-labelledby="cena-t">
-  <div class="iris-stage">
-    <div class="iris-panel">
-      <div class="cena-video" id="cenaVideo" aria-hidden="true">
-        <img class="cena-still" id="cenaStill" src="media/cena-start.jpg" alt="" decoding="async">
-        <video id="cenaV" muted playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
-        <div class="cena-wash"></div>
-      </div>
-      <div class="cena-type">
-        <h2 class="cena-h" id="cena-t"><span class="c1" id="cenaL1">Não é só a coluna que dói.</span><span class="c2" id="cenaL2">É a brincadeira que fica <em>para depois.</em></span></h2>
-        <p class="cena-p" id="cenaP">Para quem convive com dor nas costas, gestos simples — levantar, abaixar, brincar, dormir — viram negociações diárias. <em>E o corpo costuma dar sinais.</em></p>
-        <p class="cena-cap mono" aria-hidden="true">Cena ilustrativa · dramatização</p>
-      </div>
-    </div>
-    <div class="iris-ring" aria-hidden="true"></div>
-    <p class="iris-hint mono" aria-hidden="true">Abrindo a lente</p>
+<section class="cena2" id="cena" data-dark data-label="A dor" aria-labelledby="cena-t">
+  <div class="cena2-media" aria-hidden="true">
+    <video id="cenaV" muted playsinline loop preload="none" poster="media/cena-poster.jpg" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+  </div>
+  <div class="cena2-copy">
+    <p class="sec-idx mono rv"><b>—</b> A dor no dia a dia</p>
+    <h2 class="h2 rv d1" id="cena-t">Não é só a coluna que dói. É a brincadeira que fica <em>para depois.</em></h2>
+    <p class="sec-lede rv d2">Para quem convive com dor nas costas, gestos simples — levantar, abaixar, brincar, dormir — viram negociações diárias. <em>E o corpo costuma dar sinais.</em></p>
+    <p class="cena2-cap mono">Cena ilustrativa · dramatização</p>
   </div>
 </section>
 
 <!-- ===== A DOR ===== -->
-<section class="pain" id="dor" data-label="Sinais" aria-labelledby="dor-t">
-  <div class="sec pain-head">
-    <div class="sec-head">
-      <div>
-        <p class="sec-idx mono rv"><b>—</b> Sinais possíveis</p>
-        <h2 class="h2 rv d1" id="dor-t">O corpo<br>dá <em>sinais.</em></h2>
-      </div>
-      <p class="sec-lede rv d2">Quatro manifestações que podem acompanhar problemas na coluna — como a hérnia de disco, mas não apenas ela. Nem todas as pessoas sentem todas. Só a avaliação define a causa.</p>
+<section class="sec sinais" id="dor" data-label="Sinais" aria-labelledby="dor-t">
+  <div class="sec-head">
+    <div>
+      <p class="sec-idx mono rv"><b>—</b> Sinais possíveis</p>
+      <h2 class="h2 rv d1" id="dor-t">O corpo<br>dá <em>sinais.</em></h2>
+    </div>
+    <p class="sec-lede rv d2">Quatro manifestações que podem acompanhar problemas na coluna — como a hérnia de disco, mas não apenas ela. Nem todas as pessoas sentem todas. Só a avaliação define a causa.</p>
+  </div>
+  <div class="sinais-grid">
+    <figure class="sx-card rv">
+      <div class="sx" data-kind="body" id="sxSinais"></div>
+      <figcaption class="sx-note mono">Ilustração esquemática · os sinais acendem em sequência</figcaption>
+    </figure>
+    <div class="cards">
+      <article class="card rv"><i class="ic card-ic" data-ic="target" aria-hidden="true"></i><p class="card-tag mono">01 · Dor lombar</p><h3>Uma dor que se instala na base das costas.</h3><p>Pode piorar ao levantar, abaixar ou permanecer muito tempo na mesma posição.</p></article>
+      <article class="card rv d1"><i class="ic card-ic" data-ic="route" aria-hidden="true"></i><p class="card-tag mono">02 · Glúteo e perna</p><h3>Quando a dor desce pelo trajeto do nervo.</h3><p>Ela pode alcançar o glúteo, a coxa, a panturrilha ou o pé — às vezes mais intensa na perna do que nas costas.</p></article>
+      <article class="card rv d2"><i class="ic card-ic" data-ic="bolt" aria-hidden="true"></i><p class="card-tag mono">03 · Sensibilidade</p><h3>Choques, formigamento ou dormência.</h3><p>Alterações de sensibilidade podem acompanhar a dor ou aparecer sozinhas, numa área específica da perna ou do pé.</p></article>
+      <article class="card rv d3"><i class="ic card-ic" data-ic="shoe" aria-hidden="true"></i><p class="card-tag mono">04 · Força e movimento</p><h3>Perda de força ou de movimento.</h3><p>Dificuldade para apoiar o pé, caminhar ou realizar alguns movimentos merece avaliação médica.</p></article>
     </div>
   </div>
-
-  <div class="pain-track" id="painTrack">
-    <div class="pain-stage">
-      <div class="pain-vig" aria-hidden="true"></div>
-      <div class="pain-copy" id="painCopy">
-        <article class="p-moment on">
-          <div class="p-clock"><b>Lombar</b><span class="mono">01 · Dor lombar</span></div>
-          <h3>Uma dor que se instala na base das costas.</h3>
-          <p>Pode piorar ao levantar, abaixar ou permanecer muito tempo na mesma posição.</p>
-        </article>
-        <article class="p-moment">
-          <div class="p-clock"><b>Irradiada</b><span class="mono">02 · Glúteo e perna</span></div>
-          <h3>Quando a dor desce pelo trajeto do nervo.</h3>
-          <p>Ela pode alcançar o glúteo, a coxa, a panturrilha ou o pé — às vezes mais intensa na perna do que nas costas.</p>
-        </article>
-        <article class="p-moment">
-          <div class="p-clock"><b>Formigamento</b><span class="mono">03 · Sensibilidade</span></div>
-          <h3>Choques, formigamento ou dormência.</h3>
-          <p>Alterações de sensibilidade podem acompanhar a dor ou aparecer sozinhas, numa área específica da perna ou do pé.</p>
-        </article>
-        <article class="p-moment">
-          <div class="p-clock"><b>Fraqueza</b><span class="mono">04 · Força e movimento</span></div>
-          <h3>Perda de força ou de movimento.</h3>
-          <p>Dificuldade para apoiar o pé, caminhar ou realizar alguns movimentos merece avaliação médica.</p><p class="p-bridge" id="pBridge">Reconhecer os sinais é o primeiro passo. O segundo é saber que existem possibilidades de tratamento.</p>
-        </article>
-      </div>
-      <div class="pain-fig" aria-hidden="true"><svg id="bodySvg" viewBox="0 0 380 700"></svg></div>
-      <p class="pain-note mono" aria-hidden="true">Ilustração · sinais possíveis</p>
-      <div class="pain-day" aria-hidden="true">
-        <svg class="pain-wave" id="painWave" viewBox="0 0 1000 56" preserveAspectRatio="none"><path id="painWaveP" fill="none" stroke="#8A2240" stroke-width="1.4" vector-effect="non-scaling-stroke"/></svg>
-        <div class="pain-axis" id="painAxis"><span class="fill"></span><i></i></div>
-        <div class="pain-hours mono"><span>Lombar</span><span>Irradiada</span><span>Formigamento</span><span>Fraqueza</span></div>
-      </div>
-    </div>
-  </div>
+  <p class="bridge rv">Reconhecer os sinais é o primeiro passo. O segundo é saber que existem <em>possibilidades de tratamento.</em></p>
 </section>
 
 <!-- ===== REVELAÇÃO ===== -->
-<section class="reveal" id="revelacao" data-label="Tratamento" aria-labelledby="rev-t">
-  <div class="rev-track" id="revTrack">
-    <div class="rev-stage" id="revStage">
-      <canvas class="rev-cv" id="revCv" aria-hidden="true"></canvas>
-      <svg class="rev-anat" id="revAnat" viewBox="-400 -380 800 760" aria-hidden="true"></svg>
-      <div class="rev-copy">
-        <p class="rev-k mono">Cirurgia endoscópica da coluna</p>
-        <h2 class="rev-h" id="rev-t"><span class="r1">Para algumas hérnias de disco,</span><span class="r2">existe um caminho</span><span class="r3">menor.</span></h2>
-        <p class="rev-p">Uma cirurgia minimamente invasiva, feita por uma pequena incisão, com câmera de alta definição e instrumentos que chegam até o nervo comprimido. Em pacientes selecionados, pode significar menor comprometimento dos tecidos no acesso e benefícios para a recuperação.</p>
-        <ul class="rev-facts"><li><b>Pequena incisão</b><span>Para a passagem da cânula</span></li><li><b>Visão ampliada</b><span>Câmera e luz próprias</span></li><li><b>Indicação individual</b><span>Não é para todos os casos</span></li></ul>
-      </div>
-      <p class="rev-cap mono" aria-hidden="true">Representação ilustrativa</p>
-      <div class="rev-white" aria-hidden="true"></div>
-      <span class="rev-ring" aria-hidden="true"></span>
-      <div class="rev-flood" aria-hidden="true"></div>
+<section class="revela" id="revelacao" data-dark data-label="Tratamento" aria-labelledby="rev-t">
+  <div class="revela-grid">
+    <div>
+      <p class="sec-idx mono rv"><b>—</b> Cirurgia endoscópica da coluna</p>
+      <h2 class="h2 rv d1" id="rev-t">Para algumas hérnias de disco, existe um caminho <em>menor.</em></h2>
+      <p class="sec-lede rv d2">Uma cirurgia minimamente invasiva, feita por uma pequena incisão, com câmera de alta definição e instrumentos que chegam até o nervo comprimido. Em pacientes selecionados, pode significar menor comprometimento dos tecidos no acesso e benefícios para a recuperação.</p>
+      <ul class="facts rv">
+        <li><i class="ic" data-ic="bandage" aria-hidden="true"></i><b>Pequena incisão</b><span>Para a passagem da cânula</span></li>
+        <li><i class="ic" data-ic="video" aria-hidden="true"></i><b>Visão ampliada</b><span>Câmera e luz próprias</span></li>
+        <li><i class="ic" data-ic="stethoscope" aria-hidden="true"></i><b>Indicação individual</b><span>Não é para todos os casos</span></li>
+      </ul>
     </div>
+    <figure class="sx-card rv">
+      <div class="sx crop" data-kind="cmp" id="sxCaminho"></div>
+      <div class="sx-capRow"><p class="sx-text" id="sxCaminhoCap" aria-live="polite"></p></div>
+      <div class="sx-segs" id="sxCaminhoSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    </figure>
   </div>
 </section>
 
@@ -1080,88 +1357,54 @@ body.public [data-claim]{display:none!important}
 </section>
 
 <!-- ===== VERSUS ===== -->
-<section class="vs" id="comparativo" data-label="Comparação" aria-labelledby="vs-t">
-  <p class="sec-idx mono rv"><b>—</b> Comparação entre técnicas</p>
-  <h2 class="vs-title rv d1" id="vs-t"><span class="a">Aberta</span><span class="x">×</span><span class="e">Endoscópica</span></h2>
-  <div class="vs-sub rv">
-    <p class="sec-lede">Duas formas de chegar ao mesmo nervo. Compare característica por característica — sabendo que cada técnica tem as suas indicações.</p>
-    <p class="vs-legend mono"><i aria-hidden="true"></i>Possível benefício em casos selecionados</p>
-  </div>
-  <div class="vs-body">
-    <div class="vs-visual" aria-hidden="true">
-      <div class="vs-sticky">
-        <div class="vs-heads"><span>Cirurgia aberta</span><i>×</i><span>Cirurgia endoscópica</span></div>
-        <svg id="vsSvg" viewBox="70 30 860 520"></svg>
-        <p class="vs-now mono" id="vsNow">01 · Incisão</p>
-      </div>
+<section class="sec vs2" id="comparativo" data-label="Comparação" aria-labelledby="vs-t">
+  <div class="sec-head">
+    <div>
+      <p class="sec-idx mono rv"><b>—</b> Comparação entre técnicas</p>
+      <h2 class="h2 rv d1" id="vs-t">Aberta <span class="vs2-x">×</span><br><em>endoscópica.</em></h2>
     </div>
-    <ol class="vs-rows" id="vsRows"></ol>
+    <div>
+      <p class="sec-lede rv d2">Duas formas de chegar ao mesmo nervo. Compare característica por característica — sabendo que cada técnica tem as suas indicações.</p>
+      <p class="vs2-legend mono rv d2"><i aria-hidden="true"></i>Possível benefício em casos selecionados</p>
+    </div>
+  </div>
+  <figure class="sx-card vs-vis rv">
+    <div class="vs-heads" aria-hidden="true"><span>Cirurgia aberta</span><i>×</i><span>Cirurgia endoscópica</span></div>
+    <div class="sx" id="sxVs"></div>
+    <p class="sx-now mono" id="sxVsNow" aria-live="polite">01 · Incisão</p>
+    <div class="sx-segs" id="sxVsSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+  </figure>
+  <div class="vs2-table rv" role="table" aria-label="Comparação entre cirurgia aberta e cirurgia endoscópica">
+    <div class="vs2-head" role="row"><span role="columnheader">Característica</span><span role="columnheader">Cirurgia aberta</span><span role="columnheader">Cirurgia endoscópica</span></div>
+    <div id="vsRows" role="rowgroup"></div>
   </div>
   <p class="vs-foot">Comparação entre técnicas, não entre resultados. Internação, recuperação, retorno às atividades e eventuais restrições de movimento são definidos caso a caso. Infecção, sangramento, lesão neural, fístula liquórica e recidiva são riscos possíveis nas duas abordagens. <span class="pending">Conteúdo a validar com o Dr. Sávio</span></p>
-  <div class="vs-bridge">
-    <p class="rv">Agora, veja por dentro como a endoscopia <em>chega até o nervo.</em></p>
-    <span class="arrow" aria-hidden="true"></span>
-  </div>
 </section>
 
 <!-- ===== MÉTODO ===== -->
-<section class="method" id="metodo" data-label="Método" aria-labelledby="metodo-t">
-  <div class="sec method-intro">
-    <div class="sec-head">
-      <div>
-        <p class="sec-idx mono rv"><b>—</b> O método</p>
-        <h2 class="h2 rv d1" id="metodo-t">Como funciona<br>a <em>endoscopia.</em></h2>
-      </div>
-      <p class="sec-lede rv d2">Etapa por etapa, num corte transversal da coluna lombar. Role para avançar.</p>
+<section class="sec metodo2" id="metodo" data-label="Método" aria-labelledby="metodo-t">
+  <div class="sec-head">
+    <div>
+      <p class="sec-idx mono rv"><b>—</b> O método</p>
+      <h2 class="h2 rv d1" id="metodo-t">Como funciona<br>a <em>endoscopia.</em></h2>
     </div>
+    <p class="sec-lede rv d2">Etapa por etapa, do disco intervertebral à recuperação.</p>
   </div>
-
-  <div class="method-track" id="methodTrack" style="--steps:7">
-    <div class="method-stage">
-      <div class="m-steps" id="mSteps">
-        <article class="m-step on" data-i="0">
-          <p class="m-num mono">01 / 07 · Anatomia</p>
-          <h3>O disco intervertebral</h3>
-          <p>Um amortecedor entre as vértebras: núcleo gelatinoso envolvido pelo ânulo fibroso.</p>
-        </article>
-        <article class="m-step" data-i="1">
-          <p class="m-num mono">02 / 07 · Hérnia</p>
-          <h3>Quando o núcleo se desloca</h3>
-          <p>Parte do núcleo atravessa o ânulo e pode comprimir uma raiz nervosa.</p>
-        </article>
-        <article class="m-step" data-i="2">
-          <p class="m-num mono">03 / 07 · Indicação</p>
-          <h3>Antes de tudo, a avaliação</h3>
-          <p>Muitas hérnias melhoram sem cirurgia. A indicação é sempre individual.</p>
-        </article>
-        <article class="m-step" data-i="3">
-          <p class="m-num mono">04 / 07 · Acesso</p>
-          <h3>Uma via estreita</h3>
-          <p>Por uma pequena incisão, a cânula guiada por imagem chega ao local da compressão.</p>
-        </article>
-        <article class="m-step" data-i="4">
-          <p class="m-num mono">05 / 07 · Visualização</p>
-          <h3>Câmera e luz</h3>
-          <p>O endoscópio amplia a imagem num monitor, com irrigação contínua de soro.</p>
-        </article>
-        <article class="m-step" data-i="5">
-          <p class="m-num mono">06 / 07 · Descompressão</p>
-          <h3>Liberar a raiz nervosa</h3>
-          <p>Instrumentos delicados removem o fragmento que comprime o nervo.</p>
-        </article>
-        <article class="m-step" data-i="6">
-          <p class="m-num mono">07 / 07 · Depois</p>
-          <h3>O cuidado continua</h3>
-          <p>Alta e recuperação são individuais, com acompanhamento em cada etapa.</p>
-        </article>
-      </div>
-
-      <div class="m-figure">
-        <svg id="axial" viewBox="0 0 800 760" role="img" aria-label="Ilustração esquemática de um corte axial da coluna lombar no nível L4–L5, mostrando disco intervertebral, saco dural, raízes nervosas, articulações facetárias e o acesso endoscópico."></svg>
-        <p class="m-caption mono">Corte axial · L4–L5 · esquemático</p>
-      </div>
-      <div class="m-prog" id="mProg" aria-hidden="true"></div>
-    </div>
+  <div class="metodo3">
+    <figure class="sx-card rv">
+      <div class="sx full withlabels" data-kind="endo" id="sxMetodo"></div>
+      <div class="sx-capRow"><span class="sx-num mono" id="sxMetodoNum">01 / 04</span><p class="sx-text" id="sxMetodoCap" aria-live="polite"></p></div>
+      <div class="sx-segs" id="sxMetodoSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    </figure>
+    <ol class="steps">
+      <li class="step rv"><i class="ic card-ic" data-ic="disc" aria-hidden="true"></i><p class="card-tag mono">01 / 07 · Anatomia</p><h3>O disco intervertebral</h3><p>Um amortecedor entre as vértebras: núcleo gelatinoso envolvido pelo ânulo fibroso.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="alert-circle" aria-hidden="true"></i><p class="card-tag mono">02 / 07 · Hérnia</p><h3>Quando o núcleo se desloca</h3><p>Parte do núcleo atravessa o ânulo e pode comprimir uma raiz nervosa.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="stethoscope" aria-hidden="true"></i><p class="card-tag mono">03 / 07 · Indicação</p><h3>Antes de tudo, a avaliação</h3><p>Muitas hérnias melhoram sem cirurgia. A indicação é sempre individual.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="crosshair" aria-hidden="true"></i><p class="card-tag mono">04 / 07 · Acesso</p><h3>Uma via estreita</h3><p>Por uma pequena incisão, a cânula guiada por imagem chega ao local da compressão.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="video" aria-hidden="true"></i><p class="card-tag mono">05 / 07 · Visualização</p><h3>Câmera e luz</h3><p>O endoscópio amplia a imagem num monitor, com irrigação contínua de soro.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="arrows-maximize" aria-hidden="true"></i><p class="card-tag mono">06 / 07 · Descompressão</p><h3>Liberar a raiz nervosa</h3><p>Instrumentos delicados removem o fragmento que comprime o nervo.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="heart" aria-hidden="true"></i><p class="card-tag mono">07 / 07 · Depois</p><h3>O cuidado continua</h3><p>Alta e recuperação são individuais, com acompanhamento em cada etapa.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -1208,31 +1451,31 @@ body.public [data-claim]{display:none!important}
     <i class="journey-line" aria-hidden="true"></i>
     <div class="j-item rv">
       <span class="mono">Etapa 01</span>
-      <svg class="j-icon" viewBox="0 0 76 76" aria-hidden="true"><rect x="12" y="18" width="52" height="46" rx="4"/><path d="M12 30h52M26 12v10M50 12v10"/><path class="w" d="M28 47l7 7 13-13"/></svg>
+      <i class="ic j-icon" data-ic="calendar-check" aria-hidden="true"></i>
       <h3>Avaliação inicial</h3>
       <p>O primeiro contato é feito com a equipe. Na consulta, o Dr. Sávio escuta a sua história e examina você com atenção.</p>
     </div>
     <div class="j-item rv d1">
       <span class="mono">Etapa 02</span>
-      <svg class="j-icon" viewBox="0 0 76 76" aria-hidden="true"><rect x="16" y="10" width="44" height="56" rx="3"/><path class="w" d="M38 18v40"/><path d="M30 22h16M30 31h16M30 40h16M30 49h16"/></svg>
+      <i class="ic j-icon" data-ic="file-text" aria-hidden="true"></i>
       <h3>Sintomas e exames</h3>
       <p>Os sintomas e os exames de imagem são analisados em conjunto, para entender a causa da dor.</p>
     </div>
     <div class="j-item rv d2">
       <span class="mono">Etapa 03</span>
-      <svg class="j-icon" viewBox="0 0 76 76" aria-hidden="true"><path d="M38 66V42"/><path d="M38 42C38 30 24 28 20 16M38 42C38 30 52 28 56 16"/><path class="w" d="M14 21l6-6 6 6M50 21l6-6 6 6"/></svg>
+      <i class="ic j-icon" data-ic="arrows-split" aria-hidden="true"></i>
       <h3>Possibilidades de tratamento</h3>
       <p>As opções são discutidas com clareza, incluindo as não cirúrgicas. A decisão é tomada com você.</p>
     </div>
     <div class="j-item rv d3">
       <span class="mono">Etapa 04</span>
-      <svg class="j-icon" viewBox="0 0 76 76" aria-hidden="true"><rect x="18" y="12" width="40" height="54" rx="4"/><path d="M29 12v-3h18v3"/><path class="w" d="M27 32l5 5 10-10"/><path d="M27 48h22M27 56h14"/></svg>
+      <i class="ic j-icon" data-ic="clipboard-list" aria-hidden="true"></i>
       <h3>Preparo</h3>
       <p>Quando há indicação de procedimento, você recebe orientações de preparo detalhadas e um canal para dúvidas.</p>
     </div>
     <div class="j-item rv">
       <span class="mono">Etapa 05</span>
-      <svg class="j-icon" viewBox="0 0 76 76" aria-hidden="true"><path d="M14 18h48v32H34l-12 10V50h-8z"/><path class="w" d="M26 34h24"/></svg>
+      <i class="ic j-icon" data-ic="messages" aria-hidden="true"></i>
       <h3>Acompanhamento</h3>
       <p>Retornos programados e orientações de recuperação, ajustadas à evolução de cada pessoa.</p>
     </div>
@@ -1264,7 +1507,7 @@ body.public [data-claim]{display:none!important}
   <div class="g-filters" id="gFilters" role="group" aria-label="Filtrar galeria"></div>
   <div class="g-strip" id="gStrip" tabindex="0" aria-label="Galeria de fotos e vídeos"></div>
   <div class="g-nav"><button id="gPrev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 8H2M7 3L2 8l5 5"/></svg></button><button id="gNext" aria-label="Próximo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div>
-  <p class="g-note">Imagens provisórias, ilustradas. Serão substituídas pelo material fotográfico e audiovisual do consultório e do centro cirúrgico. Pela Resolução CFM nº 2.336/2023, a filmagem de procedimentos por terceiros é vedada — vídeos de cirurgia exigem avaliação antes da publicação.</p>
+  <p class="g-note">Espaços reservados para fotos. Serão substituídas pelo material fotográfico e audiovisual do consultório e do centro cirúrgico. Pela Resolução CFM nº 2.336/2023, a filmagem de procedimentos por terceiros é vedada — vídeos de cirurgia exigem avaliação antes da publicação.</p>
 </section>
 
 <!-- ===== FAQ ===== -->
@@ -1326,260 +1569,6 @@ const lerp = (a,b,t) => a+(b-a)*t;
 const ease = t => 1-Math.pow(1-t,3);
 const seg = (v,a,b) => clamp((v-a)/(b-a));
 const NS = 'http://www.w3.org/2000/svg';
-
-/* ================= COLUNA SAGITAL (hero) ================= */
-function vert(i, xray){
-  const t = i/5;
-  const cx = 222 - 50*Math.sin(Math.PI*(t*.92+.06));
-  const cy = 92 + i*142;
-  const dx = -50*Math.PI*.92*Math.cos(Math.PI*(t*.92+.06))/5;
-  let a = Math.atan2(-dx,142)*180/Math.PI;
-  if(i===5) a += 30;
-  const bone = xray ? 'fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.88)"' : 'fill="none" stroke="rgba(255,255,255,.11)"';
-  const sw = xray ? 1.2 : 1;
-  let g = `<g transform="translate(${cx.toFixed(1)} ${cy}) rotate(${a.toFixed(2)})" stroke-width="${sw}" ${bone}>`;
-  if(i<5){
-    g += `<path d="M-58 -55 L56 -55 Q64 -55 64 -47 L62 47 Q62 55 54 55 L-56 55 Q-64 55 -63 47 Q-54 0 -63 -47 Q-64 -55 -58 -55Z"/>`;
-    if(xray) g += `<path d="M-48 -40 Q0 -30 52 -40 M-48 40 Q0 30 52 40" stroke="rgba(255,255,255,.25)" fill="none"/>`;
-    g += `<path d="M64 -44 L104 -40 L104 -10 L64 -14Z"/>`;
-    g += `<path d="M98 -44 L108 -80 L122 -76 L120 -30Z"/>`;
-    g += `<path d="M104 -32 Q120 -26 122 -12 L206 6 Q214 12 208 24 L198 40 L116 34 Q108 20 104 -10Z"/>`;
-    g += `<path d="M114 30 L120 74 L134 72 L130 22Z"/>`;
-    const herni = i===3;
-    const disc = xray ? (herni ? 'fill="rgba(224,122,147,.55)" stroke="#E07A93"' : 'fill="rgba(224,122,147,.22)" stroke="rgba(224,122,147,.8)"') : 'fill="none" stroke="rgba(255,255,255,.12)"';
-    g += `<path ${disc} d="M-60 60 Q0 55 60 60 L58 82 Q0 87 -60 82Z"/>`;
-    if(herni && xray){
-      g += `<path fill="#E07A93" stroke="none" d="M58 62 Q90 66 84 74 Q78 84 58 80Z"><animate attributeName="opacity" values=".65;1;.65" dur="2.4s" repeatCount="indefinite"/></path>`;
-      g += `<circle cx="96" cy="72" r="7" fill="none" stroke="#E07A93" stroke-width="1"><animate attributeName="r" values="6;14;6" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0;.9" dur="2.4s" repeatCount="indefinite"/></circle>`;
-    }
-  } else {
-    g += `<path d="M-62 -55 L58 -55 Q68 -52 64 -38 L34 150 Q24 178 -4 172 L-38 120 Q-72 0 -62 -55Z"/>`;
-    g += `<path d="M66 -42 L118 -30 L104 40 L54 70" fill="none"/>`;
-    if(xray) g += `<path d="M-50 10 Q0 18 50 10 M-40 70 Q0 78 36 70" stroke="rgba(255,255,255,.25)" fill="none"/>`;
-  }
-  g += `</g>`;
-  if(xray){
-    const lab = ['L1','L2','L3','L4','L5','S1'][i];
-    g += `<text x="${(cx-96).toFixed(1)}" y="${cy+4}" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" letter-spacing="2" fill="rgba(255,255,255,.7)">${lab}</text>`;
-    g += `<line x1="${(cx-88).toFixed(1)}" y1="${cy}" x2="${(cx-70).toFixed(1)}" y2="${cy}" stroke="rgba(255,255,255,.4)"/>`;
-    if(i===3) g += `<text x="${(cx+150).toFixed(1)}" y="${cy+96}" font-family="Geist Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#E07A93">L4–L5 · HÉRNIA</text>`;
-  }
-  return g;
-}
-function buildSpine(){
-  let base='', x='';
-  for(let i=0;i<6;i++){ base += vert(i,false); x += vert(i,true); }
-  let grid='';
-  for(let y=0;y<=900;y+=50) grid += `<line x1="0" y1="${y}" x2="480" y2="${y}" stroke="rgba(224,122,147,.10)"/>`;
-  for(let xx=0;xx<=480;xx+=50) grid += `<line x1="${xx}" y1="0" x2="${xx}" y2="900" stroke="rgba(224,122,147,.10)"/>`;
-  $('#spineBase').innerHTML = base;
-  $('#spineXray').innerHTML = grid + x;
-}
-buildSpine();
-
-/* lente */
-const hero = $('#inicio'), wrap = $('#spineWrap'), lens = $('#lens'), xr = $('#spineXray');
-let lensT = {x: innerWidth*.5, y: innerHeight*.45}, lensP = {...lensT}, pointerActive = false, lastMove = 0;
-hero.addEventListener('pointermove', e => { lensT.x = e.clientX; lensT.y = e.clientY + scrollY - hero.offsetTop; pointerActive = true; lastMove = performance.now(); });
-hero.addEventListener('pointerleave', () => { pointerActive = false; });
-function lensTick(now){
-  const r = innerWidth < 700 ? 105 : 150;
-  hero.style.setProperty('--lr', r+'px');
-  if(!pointerActive || now - lastMove > 4000){
-    const wr = wrap.getBoundingClientRect();
-    const k = now/1000;
-    lensT.x = wr.left + wr.width*(.48 + .16*Math.sin(k*.45));
-    lensT.y = (wr.top + scrollY - hero.offsetTop) + wr.height*(.5 + .3*Math.sin(k*.31));
-  }
-  const f = reduce ? 1 : .12;
-  lensP.x = lerp(lensP.x, lensT.x, f); lensP.y = lerp(lensP.y, lensT.y, f);
-  hero.style.setProperty('--gx', lensP.x+'px'); hero.style.setProperty('--gy', lensP.y+'px');
-  const wr = wrap.getBoundingClientRect();
-  xr.style.setProperty('--lx', (lensP.x - wr.left)+'px');
-  xr.style.setProperty('--ly', (lensP.y - (wr.top + scrollY - hero.offsetTop))+'px');
-  // leitura do nível vertebral
-  const rel = (lensP.y - (wr.top + scrollY - hero.offsetTop))/wr.height;
-  const lv = ['L1','L1–L2','L2','L2–L3','L3','L3–L4','L4','L4–L5','L5','L5–S1','S1'][clamp(Math.round(rel*10.4-0.6),0,10)];
-  $('#lensRead').innerHTML = `Plano sagital<br>Nível ${lv}`;
-}
-
-/* ================= SHADER (WebGL) ================= */
-const cvs = $('#shader');
-let gl, prog, uR, uT, uM, mouse = [ .7, .6 ], heroVisible = true;
-try{
-  gl = cvs.getContext('webgl', {premultipliedAlpha:false, antialias:false});
-  const vs = `attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
-  const fs = `precision mediump float;uniform vec2 r;uniform float t;uniform vec2 m;
-  float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
-  float n(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),u.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),u.x),u.y);}
-  float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.03;a*=.5;}return v;}
-  void main(){vec2 uv=gl_FragCoord.xy/r;float as=r.x/r.y;vec2 p=uv;p.x*=as;
-    float s=fbm(p*1.8+vec2(t*.025,-t*.018)+fbm(p*2.6-t*.04));
-    vec2 L=vec2(.40*as,.62);float d=length((p-L)*vec2(1.,1.4));float beam=exp(-d*2.6);
-    vec2 M=m;M.x*=as;float md=exp(-length(p-M)*3.2);
-    float dust=pow(n(p*60.+t*.4),18.)*.9;
-    vec3 wine=vec3(.56,.14,.26);
-    vec3 col=wine*(beam*.55*s+md*.32*s)+vec3(1.,.86,.9)*(beam*.05*s)+vec3(1.)*dust*beam*.6;
-    gl_FragColor=vec4(col,1.);}`;
-  const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if(!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw gl.getShaderInfoLog(s); return s; };
-  prog = gl.createProgram(); gl.attachShader(prog, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(prog); gl.useProgram(prog);
-  const b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
-  const loc = gl.getAttribLocation(prog,'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
-  uR = gl.getUniformLocation(prog,'r'); uT = gl.getUniformLocation(prog,'t'); uM = gl.getUniformLocation(prog,'m');
-}catch(err){ gl = null; cvs.style.display='none'; }
-function sizeShader(){ if(!gl) return; const dpr = Math.min(devicePixelRatio,1.5)*.6; cvs.width = Math.round(cvs.clientWidth*dpr); cvs.height = Math.round(cvs.clientHeight*dpr); gl.viewport(0,0,cvs.width,cvs.height); }
-sizeShader(); addEventListener('resize', sizeShader);
-hero.addEventListener('pointermove', e => { const r = hero.getBoundingClientRect(); mouse = [ (e.clientX-r.left)/r.width, 1-(e.clientY-r.top)/r.height ]; });
-let mS = [...mouse];
-function drawShader(now){
-  if(!gl || !heroVisible) return;
-  mS[0] = lerp(mS[0], mouse[0], .05); mS[1] = lerp(mS[1], mouse[1], .05);
-  gl.uniform2f(uR, cvs.width, cvs.height); gl.uniform1f(uT, reduce ? 10 : now/1000); gl.uniform2f(uM, mS[0], mS[1]);
-  gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-}
-new IntersectionObserver(es => es.forEach(e => heroVisible = e.isIntersecting)).observe(hero);
-
-/* ================= MANIFESTO ================= */
-const man = $('#cenaL1');
-const keys = ['dói.'];
-man.innerHTML = man.textContent.trim().split(/\s+/).map(w => `<span class="w${keys.includes(w.toLowerCase())?' k':''}">${w}</span> `).join('');
-const words = $$('.w', man);
-
-/* ================= CORTE AXIAL (método) ================= */
-const ax = $('#axial');
-ax.innerHTML = `
-<defs>
-  <radialGradient id="gNuc" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#F3DCE2"/><stop offset="1" stop-color="#E7C3CD"/></radialGradient>
-  <radialGradient id="gEndo" cx="45%" cy="40%" r="70%"><stop offset="0" stop-color="#C4637A"/><stop offset=".6" stop-color="#8E2C45"/><stop offset="1" stop-color="#3E0F1C"/></radialGradient>
-  <radialGradient id="gTip" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#E07A93" stop-opacity=".9"/><stop offset="1" stop-color="#E07A93" stop-opacity="0"/></radialGradient>
-  <clipPath id="cEndo"><circle cx="668" cy="118" r="92"/></clipPath>
-  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#141317" stroke-opacity=".07" stroke-width="1"/></pattern>
-</defs>
-<g id="axAll">
-  <g id="soft" stroke="#141317" stroke-opacity=".35" stroke-width="1" fill="#F5F3F4">
-    <ellipse cx="180" cy="268" rx="70" ry="98" transform="rotate(-22 180 268)"/>
-    <ellipse cx="620" cy="268" rx="70" ry="98" transform="rotate(22 620 268)"/>
-    <path d="M250 560 Q240 640 290 690 Q340 720 372 690 L380 560 Q330 540 250 560Z"/>
-    <path d="M550 560 Q560 640 510 690 Q460 720 428 690 L420 560 Q470 540 550 560Z"/>
-  </g>
-  <g id="disc">
-    <path d="M220 250 C220 140 300 100 400 100 C500 100 580 140 580 250 C580 332 532 372 470 374 C440 375 425 362 400 362 C375 362 360 375 330 374 C268 372 220 332 220 250Z" fill="#FFFFFF" stroke="#141317" stroke-width="1.4"/>
-    <path d="M220 250 C220 140 300 100 400 100 C500 100 580 140 580 250 C580 332 532 372 470 374 C440 375 425 362 400 362 C375 362 360 375 330 374 C268 372 220 332 220 250Z" fill="url(#hatch)"/>
-    <g fill="none" stroke="#141317" stroke-opacity=".22" stroke-width=".9">
-      <path transform="translate(400 238) scale(.86) translate(-400 -238)" d="M220 250 C220 140 300 100 400 100 C500 100 580 140 580 250 C580 332 532 372 470 374 C440 375 425 362 400 362 C375 362 360 375 330 374 C268 372 220 332 220 250Z"/>
-      <path transform="translate(400 238) scale(.72) translate(-400 -238)" d="M220 250 C220 140 300 100 400 100 C500 100 580 140 580 250 C580 332 532 372 470 374 C440 375 425 362 400 362 C375 362 360 375 330 374 C268 372 220 332 220 250Z"/>
-      <path transform="translate(400 238) scale(.58) translate(-400 -238)" d="M220 250 C220 140 300 100 400 100 C500 100 580 140 580 250 C580 332 532 372 470 374 C440 375 425 362 400 362 C375 362 360 375 330 374 C268 372 220 332 220 250Z"/>
-    </g>
-    <ellipse id="nucleus" cx="400" cy="244" rx="82" ry="58" fill="url(#gNuc)" stroke="#8A2240" stroke-opacity=".35"/>
-    <path id="fissure" d="M452 284 Q458 320 446 366" fill="none" stroke="#8A2240" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"/>
-  </g>
-  <g id="post" stroke="#141317" stroke-width="1.3" fill="#FFFFFF">
-    <path d="M300 372 Q290 400 262 420 L242 452 Q258 470 282 462 Q300 440 318 432Z"/>
-    <path d="M500 372 Q510 400 538 420 L558 452 Q542 470 518 462 Q500 440 482 432Z"/>
-    <ellipse cx="282" cy="478" rx="36" ry="22" transform="rotate(38 282 478)"/>
-    <ellipse cx="518" cy="478" rx="36" ry="22" transform="rotate(-38 518 478)"/>
-    <ellipse cx="312" cy="512" rx="34" ry="20" transform="rotate(38 312 512)"/>
-    <ellipse cx="488" cy="512" rx="34" ry="20" transform="rotate(-38 488 512)"/>
-    <path d="M330 524 Q400 566 470 524 L452 566 L424 690 Q400 708 376 690 L348 566Z"/>
-    <path d="M338 500 Q400 540 462 500" fill="none" stroke="#8A2240" stroke-opacity=".35" stroke-width="7" stroke-linecap="round"/>
-  </g>
-  <g id="neural">
-    <ellipse cx="400" cy="438" rx="70" ry="46" fill="#FFFFFF" stroke="#141317" stroke-width="1.3"/>
-    <g fill="#141317" fill-opacity=".18">
-      <circle cx="372" cy="430" r="4"/><circle cx="386" cy="446" r="4"/><circle cx="400" cy="428" r="4"/><circle cx="414" cy="446" r="4"/><circle cx="428" cy="430" r="4"/><circle cx="392" cy="462" r="3.5"/><circle cx="408" cy="462" r="3.5"/><circle cx="362" cy="450" r="3.5"/><circle cx="438" cy="450" r="3.5"/>
-    </g>
-    <circle cx="318" cy="414" r="13" fill="#FFFFFF" stroke="#141317" stroke-width="1.3"/>
-    <g id="rootR"><circle id="rootRc" cx="482" cy="414" r="13" fill="#FFFFFF" stroke="#141317" stroke-width="1.3"/><circle id="rootPulse" cx="482" cy="414" r="13" fill="none" stroke="#8A2240" stroke-width="1.2" opacity="0"/></g>
-    <circle cx="250" cy="398" r="11" fill="#FFFFFF" stroke="#141317" stroke-width="1.1"/>
-    <circle cx="550" cy="398" r="11" fill="#FFFFFF" stroke="#141317" stroke-width="1.1"/>
-  </g>
-  <path id="hernia" d="M430 364 C436 392 458 408 474 402 C488 396 486 376 472 366 C458 360 444 360 430 364Z" fill="#8A2240" stroke="#661830" stroke-width="1" transform="translate(452 366) scale(0) translate(-452 -366)"/>
-  <g id="cannula" opacity="0">
-    <line id="canLine" x1="780" y1="720" x2="512" y2="420" stroke="#141317" stroke-width="16" stroke-linecap="round" stroke-opacity=".9" stroke-dasharray="410" stroke-dashoffset="410"/>
-    <line id="canIn" x1="780" y1="720" x2="512" y2="420" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-dasharray="410" stroke-dashoffset="410"/>
-    <circle id="tipGlow" cx="512" cy="420" r="38" fill="url(#gTip)" opacity="0"/>
-    <path id="fov" d="M512 420 L462 376 A66 66 0 0 1 452 452Z" fill="#E07A93" fill-opacity=".12" stroke="#E07A93" stroke-opacity=".4" opacity="0"/>
-  </g>
-  <g id="dimmer" opacity="0"><rect x="0" y="0" width="800" height="760" fill="#FFFFFF" fill-opacity=".55"/>
-    <g transform="translate(400 300)"><circle r="96" fill="none" stroke="#8A2240" stroke-dasharray="3 6"/><text text-anchor="middle" y="-6" font-family="Instrument Serif, serif" font-size="30" fill="#141317">Avaliação</text><text text-anchor="middle" y="24" font-family="Instrument Serif, serif" font-style="italic" font-size="30" fill="#8A2240">individual</text></g>
-  </g>
-  <g id="endo" opacity="0">
-    <line x1="512" y1="420" x2="604" y2="180" stroke="#8A2240" stroke-dasharray="3 5" stroke-width="1"/>
-    <circle cx="668" cy="118" r="98" fill="#FFFFFF" stroke="#141317" stroke-opacity=".15"/>
-    <g clip-path="url(#cEndo)">
-      <rect x="570" y="20" width="200" height="200" fill="url(#gEndo)"/>
-      <g fill="none" stroke="#F3C6D1" stroke-opacity=".25" stroke-width="1"><path d="M580 60 Q640 80 760 50"/><path d="M576 180 Q660 150 760 190"/><path d="M590 120 Q620 100 650 130"/></g>
-      <path d="M572 140 C620 120 660 112 766 96 L766 128 C680 140 630 150 572 172Z" fill="#F6E9EC" stroke="#FFFFFF" stroke-opacity=".6"/>
-      <path d="M580 140 C630 126 680 118 760 106" fill="none" stroke="#D9B8C1" stroke-width="1"/>
-      <path id="frag" d="M640 70 C668 60 700 72 702 96 C704 120 672 132 650 122 C628 112 620 82 640 70Z" fill="#FFFFFF" stroke="#E9D7DC"/>
-      <g id="grasp" transform="translate(120 120)"><path d="M770 220 L700 116" stroke="#2A272D" stroke-width="10" stroke-linecap="round"/><path d="M700 116 L688 98 M700 116 L708 96" stroke="#2A272D" stroke-width="4" stroke-linecap="round"/></g>
-      <circle cx="668" cy="118" r="92" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="24"/>
-    </g>
-    <circle cx="668" cy="118" r="92" fill="none" stroke="#141317" stroke-width="1.2"/>
-    <text x="668" y="236" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#76727A">VISÃO ENDOSCÓPICA · ESQUEMÁTICA</text>
-  </g>
-  <g class="lbl" id="labels">
-    <polyline points="400,244 400,60 300,60"/><text x="296" y="64" text-anchor="end">Núcleo pulposo</text>
-    <polyline points="232,200 120,120"/><text x="116" y="116" text-anchor="end">Ânulo fibroso</text>
-    <polyline points="132,300 90,330"/><text x="86" y="344" text-anchor="end">Psoas</text>
-    <polyline points="400,438 210,560"/><text x="206" y="574" text-anchor="end">Saco dural</text>
-    <polyline points="318,414 150,450"/><text x="146" y="454" text-anchor="end">Raiz L5</text>
-    <polyline points="250,398 120,400"/><text x="116" y="390" text-anchor="end">Raiz L4</text>
-    <polyline points="518,478 650,500"/><text x="654" y="504">Faceta articular</text>
-    <polyline points="400,640 560,720"/><text x="564" y="724">Processo espinhoso</text>
-    <polyline points="400,520 640,600"/><text x="644" y="604">Ligamento amarelo</text>
-  </g>
-  <g id="labels2" class="lbl" opacity="0">
-    <polyline points="474,396 640,330"/><text x="644" y="334" style="fill:#8A2240">Hérnia</text>
-    <polyline points="482,414 660,400"/><text x="664" y="404" style="fill:#8A2240">Raiz comprimida</text>
-  </g>
-  <text class="ori" x="400" y="30" text-anchor="middle">ANTERIOR</text>
-  <text class="ori" x="400" y="752" text-anchor="middle">POSTERIOR</text>
-  <text class="ori" x="24" y="250">D</text><text class="ori" x="768" y="250">E</text>
-</g>`;
-const A = id => ax.getElementById ? ax.querySelector('#'+id) : null;
-const elH = A('hernia'), elF = A('fissure'), elRoot = A('rootRc'), elPulse = A('rootPulse'), elCan = A('cannula'), elCL = A('canLine'), elCI = A('canIn'), elTip = A('tipGlow'), elFov = A('fov'), elEndo = A('endo'), elFrag = A('frag'), elGrasp = A('grasp'), elDim = A('dimmer'), elL1 = A('labels'), elL2 = A('labels2');
-
-const steps = $$('.m-step'), mProg = $('#mProg');
-mProg.innerHTML = steps.map(()=>'<i></i>').join('') + '<span class="mono" id="mPct">01/07</span>';
-const progBars = $$('i', mProg);
-let curStep = 0;
-function setAxial(s){
-  // s: 0..7
-  const hIn = ease(seg(s,1.05,1.8)), hOut = ease(seg(s,5.15,5.85));
-  const h = hIn*(1-hOut);
-  const hx = hOut*58, hy = hOut*38, hs = Math.max(0.0001, h*(1-hOut*.6));
-  elH.setAttribute('transform', `translate(${452+hx} ${366+hy}) scale(${hs}) translate(-452 -366)`);
-  elH.style.opacity = 1-hOut;
-  elF.setAttribute('stroke-dashoffset', 100*(1-ease(seg(s,.85,1.35))));
-  elF.style.opacity = 1 - seg(s,5.6,6.2)*.7;
-  const comp = h;
-  elRoot.setAttribute('fill', comp>.4 ? '#F3D5DD' : '#FFFFFF');
-  elRoot.setAttribute('stroke', comp>.4 ? '#8A2240' : '#141317');
-  A('rootR').setAttribute('transform', `translate(${comp*7} ${comp*5})`);
-  elPulse.style.opacity = comp>.4 ? 1 : 0;
-  elDim.style.opacity = seg(s,2.1,2.4) * (1-seg(s,2.75,3.05));
-  const cIn = ease(seg(s,3.05,3.8)), cOut = ease(seg(s,6.1,6.7));
-  elCan.style.opacity = seg(s,3.0,3.08)*(1-seg(s,6.55,6.7));
-  const off = Math.min(410, 410*(1-cIn) + 410*cOut);
-  elCL.setAttribute('stroke-dashoffset', off); elCI.setAttribute('stroke-dashoffset', off);
-  elCL.style.transform = elCI.style.transform = '';
-  elTip.style.opacity = seg(s,3.6,3.9)*(1-cOut);
-  elFov.style.opacity = seg(s,4.0,4.3)*(1-seg(s,5.9,6.2));
-  const eIn = seg(s,4.05,4.45), eOut = seg(s,5.85,6.15);
-  elEndo.style.opacity = eIn*(1-eOut);
-  const g = ease(seg(s,5.0,5.5)), pull = ease(seg(s,5.4,5.85));
-  elGrasp.setAttribute('transform', `translate(${120*(1-g) + pull*40} ${120*(1-g) + pull*60})`);
-  elFrag.setAttribute('transform', `translate(${pull*40} ${pull*60})`);
-  elFrag.style.opacity = 1-seg(s,5.6,5.9);
-  elL1.style.opacity = s<1 ? 1 : lerp(1,.0,seg(s,1,1.4)) + seg(s,6.2,6.6)*.9;
-  elL2.style.opacity = seg(s,1.6,1.9)*(1-seg(s,2.1,2.3)) + seg(s,3.0,3.3)*(1-seg(s,4.0,4.2));
-  const i = clamp(Math.floor(s),0,steps.length-1);
-  if(i!==curStep){ curStep=i; steps.forEach((el,k)=>{ el.classList.toggle('on',k===i); el.classList.toggle('past',k<i); }); }
-  progBars.forEach((b,k)=> b.style.setProperty('--f', clamp(s-k)));
-  $('#mPct').textContent = String(i+1).padStart(2,'0')+'/07';
-}
-setAxial(0);
 
 /* ================= RELATOS ================= */
 const STORIES = [
@@ -1677,17 +1666,9 @@ rm.addEventListener('scroll', ()=>{ const p = rm.scrollTop/(rm.scrollHeight-rm.c
 addEventListener('keydown', e => { if(e.key==='Escape'){ if(rm.classList.contains('open')) closeReader(); if(menu.classList.contains('open')) toggleMenu(false); } });
 
 /* ================= PLACEHOLDERS ILUSTRADOS ================= */
-const ART = {
-  or: `<svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9EEF0"/><stop offset="1" stop-color="#D5DDE0"/></linearGradient><radialGradient id="a2" cx="50%" cy="20%" r="50%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="400" height="300" fill="url(#a1)"/><rect y="210" width="400" height="90" fill="#C9D3D7"/><ellipse cx="200" cy="40" rx="70" ry="22" fill="#F7F9FA" stroke="#B9C4C9"/><ellipse cx="200" cy="40" rx="46" ry="12" fill="#FFF8E8"/><rect width="400" height="300" fill="url(#a2)"/><path d="M200 62 L130 220 L270 220Z" fill="#fff" opacity=".25"/><rect x="110" y="190" width="180" height="22" rx="4" fill="#E8EDEF" stroke="#AEB9BE"/><rect x="185" y="212" width="30" height="60" fill="#B7C2C7"/><rect x="300" y="110" width="70" height="50" rx="4" fill="#2B3236"/><rect x="306" y="116" width="58" height="38" rx="2" fill="#3E6B7A"/><path d="M306 140 Q320 128 334 138 T364 132" stroke="#8FD0DB" fill="none"/><rect x="330" y="160" width="10" height="70" fill="#9AA6AB"/><rect x="40" y="120" width="40" height="110" rx="3" fill="#DCE3E6" stroke="#AEB9BE"/></svg>`,
-  office: `<svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#F3F0EE"/><rect x="250" y="0" width="150" height="300" fill="#E9E4E1"/><rect x="270" y="30" width="110" height="150" fill="#fff" stroke="#DDD6D2"/><path d="M270 30 L380 180" stroke="#EEE9E6"/><rect y="230" width="400" height="70" fill="#E4DEDA"/><rect x="60" y="170" width="170" height="10" rx="2" fill="#8A6B55"/><rect x="70" y="180" width="6" height="60" fill="#6E5545"/><rect x="214" y="180" width="6" height="60" fill="#6E5545"/><rect x="100" y="140" width="60" height="30" rx="3" fill="#DAD3CE"/><path d="M40 200 Q40 160 70 150 L70 230 L40 230Z" fill="#7A2238" opacity=".85"/><circle cx="330" cy="215" r="10" fill="#7B9A6E"/><path d="M330 215 Q320 180 340 160 M330 215 Q345 190 360 185" stroke="#7B9A6E" fill="none" stroke-width="3"/><rect x="318" y="215" width="24" height="18" rx="3" fill="#CFC6C0"/></svg>`,
-  equip: `<svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#1E2326"/><radialGradient id="e1" cx="55%" cy="45%" r="60%"><stop offset="0" stop-color="#3A4A52"/><stop offset="1" stop-color="#1E2326"/></radialGradient><rect width="400" height="300" fill="url(#e1)"/><rect x="90" y="60" width="220" height="140" rx="8" fill="#0E1214" stroke="#4A5A62"/><circle cx="200" cy="130" r="56" fill="#5E1A2C"/><circle cx="200" cy="130" r="56" fill="none" stroke="#000" stroke-opacity=".5" stroke-width="12"/><path d="M160 140 C185 128 215 124 244 118 L244 132 C215 138 185 146 160 154Z" fill="#F2E2E6" opacity=".9"/><rect x="180" y="200" width="40" height="50" fill="#2A3236"/><rect x="130" y="250" width="140" height="12" rx="3" fill="#2F383C"/><circle cx="300" cy="74" r="4" fill="#8FD0DB"/></svg>`,
-  care: `<svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#F4F1EF"/><rect x="0" y="0" width="400" height="160" fill="#ECE7E4"/><rect x="40" y="30" width="120" height="110" fill="#FBFAF9" stroke="#DED7D3"/><rect y="200" width="400" height="100" fill="#E2DCD8"/><rect x="170" y="150" width="200" height="56" rx="10" fill="#fff" stroke="#D8D0CC"/><rect x="170" y="150" width="60" height="56" rx="10" fill="#F2EEEB"/><rect x="160" y="200" width="220" height="14" rx="4" fill="#C9C0BB"/><path d="M60 230 Q60 190 92 186 Q124 190 124 230Z" fill="#8A2240" opacity=".9"/><circle cx="92" cy="170" r="14" fill="#D8BFB0"/></svg>`,
-  slippers: `<svg class="art" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice"><rect width="300" height="400" fill="#7A1D37"/><radialGradient id="s1" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#9B3352"/><stop offset="1" stop-color="#5E1529"/></radialGradient><rect width="300" height="400" fill="url(#s1)"/><g transform="rotate(-8 150 200)"><g id="sl"><path d="M95 90 C132 90 142 130 140 170 C138 220 128 260 126 300 C124 334 70 334 68 300 C66 260 56 220 54 170 C52 130 60 90 95 90Z" fill="#F7F2F3"/><path d="M56 150 C60 108 132 108 138 150 L139 206 C120 190 74 190 55 206Z" fill="#E9DADE"/></g><use href="#sl" transform="translate(100 24)"/><text x="97" y="174" text-anchor="middle" font-family="Instrument Serif, serif" font-style="italic" font-size="16" fill="#8A2240">nome</text></g></svg>`,
-  flowers: `<svg class="art" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><rect width="300" height="200" fill="#6E1A32"/><g stroke="#F4C9D3" stroke-width="1.4" fill="none" opacity=".9"><path d="M150 200 L150 110 M150 150 Q120 120 110 90 M150 150 Q180 120 196 96"/></g><g fill="#F7E4E9"><circle cx="150" cy="96" r="14"/><circle cx="108" cy="82" r="11"/><circle cx="198" cy="88" r="12"/></g><g fill="#E7A9BA"><circle cx="150" cy="96" r="6"/><circle cx="108" cy="82" r="5"/><circle cx="198" cy="88" r="5"/></g></svg>`,
-  card: `<svg class="art" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><rect width="300" height="200" fill="#6E1A32"/><g transform="rotate(-6 150 100)"><rect x="80" y="44" width="150" height="104" rx="3" fill="#FBF7F8"/><path d="M98 76 Q130 70 170 76 M98 92 Q140 86 200 92 M98 108 Q130 104 160 108" stroke="#B88A97" fill="none"/><text x="190" y="134" font-family="Instrument Serif, serif" font-style="italic" font-size="14" fill="#8A2240">com carinho</text></g></svg>`,
-};
+const PH_ICON = { or:'building-hospital', equip:'device-desktop', care:'bed', office:'armchair', slippers:'shoe', flowers:'flower', card:'mail' };
 function ph(kind, label, tone){
-  return `<div class="ph${tone==='wine'?' on-wine':''}">${ART[kind]||''}<span class="tag">${label}</span></div>`;
+  return `<div class="ph${tone==='wine'?' on-wine':''}"><span class="ph-ic"><i class="ic" data-ic="${PH_ICON[kind]||'camera'}" aria-hidden="true"></i></span><span class="tag">${label}</span></div>`;
 }
 $$('.gesture-objects figure').forEach(f => { f.innerHTML = ph(f.dataset.ph, f.dataset.label, f.dataset.tone); });
 
@@ -1751,389 +1732,60 @@ $('#reviewBtn').addEventListener('click', e => { const on = document.body.classL
 const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
 $$('.rv').forEach(el => io.observe(el));
 
-/* ================= A DOR — corpo, trajeto e ritmo ================= */
-const bodySvg = $('#bodySvg');
-const ARM_A = [210,146, 222,186, 230,226, 232,262, 233,290, 234,312, 234,334];
-const ARM_B = [210,146, 228,182, 242,222, 238,260, 228,290, 206,316, 184,332];
-const armD = b => { const a = ARM_A.map((v,k)=>lerp(v,ARM_B[k],b)); return [`M${a[0]} ${a[1]} C${a[2]} ${a[3]} ${a[4]} ${a[5]} ${a[6]} ${a[7]} C${a[8]} ${a[9]} ${a[10]} ${a[11]} ${a[12]} ${a[13]}`, a[12], a[13]]; };
-(() => {
-  const INK = 'stroke="#141317" stroke-opacity=".72"';
-  const limb = (d,w,id='') => `<path ${id?`id="${id}o"`:''} d="${d}" ${INK} stroke-width="${w+2.2}" fill="none" stroke-linecap="round"/><path ${id?`id="${id}i"`:''} d="${d}" stroke="#fff" stroke-width="${w}" fill="none" stroke-linecap="round"/>`;
-  let s = `<defs><radialGradient id="pg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8A2240" stop-opacity=".55"/><stop offset=".45" stop-color="#8A2240" stop-opacity=".18"/><stop offset="1" stop-color="#8A2240" stop-opacity="0"/></radialGradient></defs>`;
-  s += limb('M124 372 C118 460 122 560 126 662',42) + limb('M176 372 C182 460 178 560 174 662',42,'legR');
-  s += `<path d="M107 672 Q126 664 145 672 Q146 684 126 686 Q106 684 107 672Z" fill="#2A262B" fill-opacity=".85"/><path id="shoeR" d="M155 672 Q174 664 193 672 Q194 684 174 686 Q154 684 155 672Z" fill="#2A262B" fill-opacity=".85"/>`;
-  s += `<path d="M150 400 L150 440" ${INK}/><path d="M126 560 Q120 572 128 584 M174 560 Q180 572 172 584" stroke="#141317" stroke-opacity=".16" fill="none"/>`;
-  s += `<g id="upper">`;
-  s += limb('M90 146 C74 196 68 256 66 334',22) + `<ellipse cx="66" cy="344" rx="9" ry="12" fill="#fff" ${INK} stroke-width="1.1"/>`;
-  s += `<path d="M136 110 C118 114 94 118 86 136 C82 170 90 210 100 250 C104 275 102 300 98 330 C94 352 96 372 104 392 C120 404 180 404 196 392 C204 372 206 352 202 330 C198 300 196 275 200 250 C210 210 218 170 214 136 C206 118 182 114 164 110 Z" fill="#fff" ${INK} stroke-width="1.1"/>`;
-  s += `<path d="M102 374 Q150 386 198 374" ${INK} stroke-width="1" fill="none"/><path d="M112 150 Q122 186 140 196 M188 150 Q178 186 160 196" stroke="#141317" stroke-opacity=".16" fill="none"/>`;
-  for(let y=118;y<=370;y+=12.5) s += `<line x1="147" y1="${y}" x2="153" y2="${y}" stroke="#141317" stroke-opacity=".26"/>`;
-  const [ad, hx, hy] = armD(0);
-  s += limb(ad,22,'armR') + `<ellipse id="handR" cx="${hx}" cy="${hy+10}" rx="9" ry="12" fill="#fff" ${INK} stroke-width="1.1"/>`;
-  s += `<g id="headG"><path d="M139 90 L137 112 M161 90 L163 112" ${INK} stroke-width="1.1"/>
-    <ellipse cx="120.5" cy="66" rx="5" ry="9" fill="#fff" ${INK} stroke-width="1"/><ellipse cx="179.5" cy="66" rx="5" ry="9" fill="#fff" ${INK} stroke-width="1"/>
-    <ellipse cx="150" cy="62" rx="29" ry="35" fill="#fff" ${INK} stroke-width="1.1"/>
-    <path d="M121.5 60 C120 34 136 26 150 26 C166 26 181 34 178.5 60 C177.5 76 171 87 164 93 C156 89 144 89 136 93 C129 87 122.5 76 121.5 60Z" fill="#3A3337" fill-opacity=".82"/>
-    <path d="M132 44 Q150 36 168 44 M128 58 Q150 48 172 58" stroke="#fff" stroke-opacity=".12" fill="none"/></g>`;
-  s += `</g>`;
-  const NERVE = 'M151 352 C160 366 168 378 174 396 C180 430 182 470 180 520 C179 560 178 600 176 640 C176 650 175 660 174 668';
-  s += `<path d="${NERVE}" stroke="#8A2240" stroke-opacity=".1" stroke-width="2" fill="none"/>`;
-  s += `<path id="nerve" d="${NERVE}" stroke="#8A2240" stroke-width="2.2" fill="none" stroke-linecap="round"/>`;
-  // formigamento: partículas ao longo da perna e do pé
-  let tg = '<g id="tingle" opacity="0">';
-  const tp = [[168,520],[190,540],[172,566],[186,590],[166,612],[190,628],[170,648],[184,664],[160,676],[192,680],[176,600],[164,560]];
-  tp.forEach(([x,y],k)=>{ tg += `<circle class="tq" cx="${x}" cy="${y}" r="2.2" fill="#8A2240"/>`; });
-  tg += `<path d="M206 560 l8 -6 l-2 10 l8 -6" stroke="#8A2240" fill="none" stroke-width="1.2"/><path d="M206 632 l8 -6 l-2 10 l8 -6" stroke="#8A2240" fill="none" stroke-width="1.2"/>`;
-  tg += `<line x1="198" y1="600" x2="262" y2="600" stroke="#8A2240" stroke-opacity=".45" stroke-width=".7"/><text class="lbl" x="268" y="603.5">Formigamento</text></g>`;
-  // fraqueza
-  const wk = `<g id="weak" opacity="0"><path d="M206 520 v70 m-8 -10 l8 12 l8 -12" stroke="#8A2240" fill="none" stroke-width="1.3"/><line x1="214" y1="556" x2="262" y2="556" stroke="#8A2240" stroke-opacity=".45" stroke-width=".7"/><text class="lbl" x="268" y="559.5">Força</text></g>`;
-  const nodes = [[151,352,'Lombar'],[173,394,'Glúteo'],[181,474,'Coxa'],[178,584,'Panturrilha'],[174,660,'Pé']];
-  let nd='';
-  nodes.forEach(([x,y,l],k) => {
-    nd += `<g class="pn" data-k="${k}" opacity="0"><circle cx="${x}" cy="${y}" r="34" fill="url(#pg)"/><circle cx="${x}" cy="${y}" r="3.6" fill="#8A2240"/><circle class="pr" cx="${x}" cy="${y}" r="8" fill="none" stroke="#8A2240" stroke-width="1"/>
-      <g class="pl"><line x1="${x+10}" y1="${y}" x2="262" y2="${y}" stroke="#8A2240" stroke-opacity=".45" stroke-width=".7"/><text class="lbl" x="268" y="${y+3.5}">${l}</text></g></g>`;
-  });
-  bodySvg.innerHTML = s + nd + tg + wk;
-})();
-const nerve = $('#nerve', bodySvg), NL = nerve.getTotalLength();
-nerve.style.strokeDasharray = NL; nerve.style.strokeDashoffset = NL;
-const pNodes = $$('.pn', bodySvg), pRings = $$('.pr', bodySvg), pLbls = $$('.pl', bodySvg);
-const armRo = $('#armRo', bodySvg), armRi = $('#armRi', bodySvg), handR = $('#handR', bodySvg), headG = $('#headG', bodySvg), upperG = $('#upper', bodySvg);
-const legRo = $('#legRo', bodySvg), tingle = $('#tingle', bodySvg), tqs = $$('.tq', bodySvg), weak = $('#weak', bodySvg), shoeR = $('#shoeR', bodySvg);
-const painTrack = $('#painTrack'), painStage = $('.pain-stage'), pMoments = $$('.p-moment'), waveP = $('#painWaveP'), painAxis = $('#painAxis'), pBridge = $('#pBridge');
-const NM = pMoments.length; // 4
-const P_LEVEL = [.5,.72,.82,.92];
-let pCur = -1, painLvl = 0, armB = 0, tilt = 0, lean = 0;
-function updatePain(vh, now){
-  const r = painTrack.getBoundingClientRect();
-  const p = clamp(-r.top/(r.height - vh));
-  const s = p*NM;
-  const i = clamp(Math.floor(s),0,NM-1);
-  if(i!==pCur){ pCur=i; pMoments.forEach((m,k)=>{ m.classList.toggle('on',k===i); m.classList.toggle('past',k<i); }); painAxis.style.setProperty('--dx', (i/(NM-1)*100)+'%'); }
-  const calmOut = seg(p,.93,1);   // silêncio antes da revelação
-  const f = reduce ? 1 : .07;
-  painLvl = lerp(painLvl, P_LEVEL[i]*(1-calmOut*.8), f);
-  painStage.querySelector('.pain-vig').style.setProperty('--pv', (painLvl*.95).toFixed(3));
-  // 01 lombar · 02 irradiação · 03 formigamento · 04 fraqueza
-  nerve.style.strokeDashoffset = NL*(1 - clamp((s-.85)/.9));
-  nerve.style.opacity = 1 - calmOut*.6;
-  pNodes.forEach((n,k)=>{ const on = k===0 ? seg(s,0,.3) : seg(s, .85 + k*.2, 1.05 + k*.2); n.setAttribute('opacity', (on*(1-calmOut*.7)).toFixed(3)); });
-  pLbls.forEach((l,k)=> l.style.opacity = (k===0 || (s>=1 && s<2)) ? 1 : .0);
-  const pulse = reduce ? 1 : (1 + .5*Math.sin(now/260));
-  pRings.forEach(c=>{ c.setAttribute('r', (8 + painLvl*7*pulse).toFixed(2)); c.setAttribute('stroke-opacity', (.25 + painLvl*.5).toFixed(2)); });
-  const tOn = seg(s,2,2.3)*(1-seg(s,3.05,3.3));
-  tingle.setAttribute('opacity', tOn.toFixed(3));
-  if(tOn>0){ const t = now/90; tqs.forEach((c,k)=>{ const v = reduce ? .8 : (.25 + .75*Math.abs(Math.sin(t*.13 + k*1.7))); c.setAttribute('opacity', v.toFixed(2)); c.setAttribute('r', (1.4 + v*1.6).toFixed(2)); }); }
-  const wOn = seg(s,3,3.3)*(1-calmOut);
-  weak.setAttribute('opacity', wOn.toFixed(3));
-  legRo.setAttribute('stroke-dasharray', wOn>.05 ? '5 5' : 'none');
-  legRo.setAttribute('stroke-opacity', (.72 - wOn*.4).toFixed(2));
-  shoeR.setAttribute('fill-opacity', (.85 - wOn*.45).toFixed(2));
-  if(pBridge) pBridge.style.setProperty('--bo', seg(p,.84,.95).toFixed(3));
-  armB = lerp(armB, calmOut>.5 ? 0 : 1, reduce ? 1 : .07);
-  const [ad, hx, hy] = armD(armB);
-  armRo.setAttribute('d', ad); armRi.setAttribute('d', ad);
-  handR.setAttribute('cx', hx.toFixed(1)); handR.setAttribute('cy', (hy + 10*(1-armB) + 2*armB).toFixed(1));
-  tilt = lerp(tilt, -(2 + painLvl*4) - (i===3 ? 4 : 0), reduce ? 1 : .06);
-  lean = lerp(lean, painLvl*2.4 + (i===3 ? 1.6 : 0), reduce ? 1 : .06);
-  headG.setAttribute('transform', `rotate(${tilt.toFixed(2)} 150 108)`);
-  upperG.setAttribute('transform', `rotate(${lean.toFixed(2)} 150 392)`);
-  if(r.top < vh && r.bottom > 0){
-    const t = reduce ? 0 : now/1000, A = painLvl;
-    let d = '';
-    for(let x=0;x<=1000;x+=8){
-      const n = Math.sin(x*.021+t*2.2)*.5 + Math.sin(x*.067-t*3.1)*.3 + Math.sin(x*.19+t*6.3)*.2*A;
-      const spike = A>.6 ? Math.max(0, Math.sin(x*.013 - t*1.3))**18 * (A-.6)*2.4 : 0;
-      const y = 28 - (n*A*18) - spike*22*(x%16<8?1:-.4);
-      d += (x?'L':'M') + x + ' ' + y.toFixed(2);
-    }
-    waveP.setAttribute('d', d);
-    waveP.setAttribute('stroke-opacity', (.25 + A*.75).toFixed(2));
-  }
+/* ================= CENA — vídeo em loop (sem scroll) ================= */
+const cenaV = $('#cenaV');
+if(!reduce && 'IntersectionObserver' in window){
+  new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ if(!cenaV.src) cenaV.src = innerWidth < 900 ? 'media/cena-854.mp4' : 'media/cena-1280.mp4'; const pr = cenaV.play(); pr && pr.catch(()=>{}); }
+    else cenaV.pause();
+  }), {threshold:.25}).observe(cenaV);
 }
 
-/* ================= CENA — vídeo controlado pelo scroll ================= */
-const cena = $('#cena'), cenaV = $('#cenaV'), cenaVideo = $('#cenaVideo'), cenaStill = $('#cenaStill'), cenaType = $('.cena-type');
-const mqMobile = matchMedia('(max-width:900px)');
-let vReady = false, vT = 0, vDur = 8;
-if(reduce){ cenaStill.src = 'media/cena-poster.jpg'; }
-else {
-  new IntersectionObserver((es, ob) => es.forEach(e => { if(e.isIntersecting && !cenaV.src){
-    cenaV.src = innerWidth < 900 ? 'media/cena-854.mp4' : 'media/cena-1280.mp4';
-    cenaV.load(); ob.disconnect(); } }), {rootMargin:'120% 0px'}).observe(cena);
-  cenaV.addEventListener('loadeddata', () => { vReady = true; vDur = cenaV.duration || 8; cenaV.classList.add('ready'); cenaV.pause(); });
-  cenaV.addEventListener('error', () => { cenaStill.src = 'media/cena-poster.jpg'; });
-  // iOS: um toque libera a decodificação dos quadros
-  addEventListener('touchstart', () => { if(cenaV.src && cenaV.paused && !vReady){ const pr = cenaV.play(); pr && pr.then(()=>cenaV.pause()).catch(()=>{}); } }, {once:true, passive:true});
-}
-function updateCena(ip){
-  if(reduce){
-    cenaVideo.style.setProperty('--vo', ip > 0 ? .9 : 0); cenaVideo.style.setProperty('--sat', .9); cenaVideo.style.setProperty('--vs', 1);
-    cenaType.style.setProperty('--c2o', 1); cenaType.style.setProperty('--c2y','0px'); cenaType.style.setProperty('--c2b','0px'); cenaType.style.setProperty('--po', 0);
-    return;
-  }
-  const vin = seg(ip,.18,.3), vout = seg(ip,.8,.93);
-  const target = seg(ip,.24,.79) * (vDur - .05);
-  vT = lerp(vT, target, .2);
-  if(vReady && !cenaV.seeking && Math.abs(cenaV.currentTime - vT) > .035) { try{ cenaV.currentTime = vT; }catch(e){} }
-  if(!vReady){ const want = vT > 1.5 ? 'media/cena-poster.jpg' : 'media/cena-start.jpg'; if(!cenaStill.src.endsWith(want)) cenaStill.src = want; }
-  // presença no momento da dor (≈1,6 s em diante)
-  const pres = seg(vT, 1.0, 2.6) * (1 - seg(vT, 6.4, 8)*.35);
-  cenaVideo.style.setProperty('--vo', (vin*(1-vout)*(.72 + pres*.24)).toFixed(3));
-  cenaVideo.style.setProperty('--sat', (.5 + pres*.45).toFixed(3));
-  cenaVideo.style.setProperty('--vs', (1.07 - pres*.05 + vout*.04).toFixed(4));
-  cenaVideo.style.setProperty('--vb', (vout*8).toFixed(2)+'px');
-  if(!mqMobile.matches){ cenaVideo.style.setProperty('--mx', (50 + pres*14 - vout*30).toFixed(1)+'%'); cenaVideo.style.setProperty('--my', (54 + pres*14 - vout*30).toFixed(1)+'%'); }
-  const c2 = seg(vT, 2.1, 3.1);
-  const tout = seg(ip,.8,.86);
-  cenaType.style.setProperty('--c2o', (c2*(1-tout)).toFixed(3));
-  cenaType.style.setProperty('--c2y', ((1-c2)*24 - vout*30).toFixed(1)+'px');
-  cenaType.style.setProperty('--c2b', ((1-c2)*6).toFixed(2)+'px');
-  cenaType.style.setProperty('--c1o', (1-tout).toFixed(3));
-  cenaType.style.setProperty('--c1y', (-vout*40).toFixed(1)+'px');
-  const po = seg(ip,.86,.95);
-  cenaType.style.setProperty('--po', po.toFixed(3)); cenaType.style.setProperty('--py', ((1-po)*24).toFixed(1)+'px');
-}
-
-/* ================= REVELAÇÃO — a luz entra ================= */
-const revTrack = $('#revTrack'), revStage = $('#revStage'), revCv = $('#revCv'), revAnat = $('#revAnat');
-const rctx = revCv.getContext('2d');
-revAnat.innerHTML = `<defs><filter id="rg" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<g transform="translate(-455 -385)" fill="none" stroke="#E07A93" stroke-width="1.2" filter="url(#rg)">
-  <path stroke-opacity=".55" d="M220 250 C220 140 300 100 400 100 C500 100 580 140 580 250 C580 332 532 372 470 374 C440 375 425 362 400 362 C375 362 360 375 330 374 C268 372 220 332 220 250Z"/>
-  <ellipse stroke-opacity=".35" cx="400" cy="244" rx="82" ry="58"/>
-  <ellipse stroke-opacity=".45" cx="400" cy="438" rx="70" ry="46"/>
-  <circle stroke-opacity=".45" cx="318" cy="414" r="13"/>
-  <path stroke-opacity=".4" d="M330 524 Q400 566 470 524 L452 566 L424 690 Q400 708 376 690 L348 566Z"/>
-  <ellipse stroke-opacity=".3" cx="282" cy="478" rx="36" ry="22" transform="rotate(38 282 478)"/><ellipse stroke-opacity=".3" cx="518" cy="478" rx="36" ry="22" transform="rotate(-38 518 478)"/>
-  <path id="raH" fill="#E07A93" fill-opacity=".45" stroke-opacity=".9" d="M430 364 C436 392 458 408 474 402 C488 396 486 376 472 366 C458 360 444 360 430 364Z"/>
-  <circle id="raR" cx="482" cy="414" r="13" stroke-opacity=".9"/>
-</g>`;
-const raH = $('#raH', revAnat);
-let rW=0, rH=0, dust=[];
-function sizeRev(){ const d = Math.min(devicePixelRatio,1.5); rW = revStage.clientWidth; rH = revStage.clientHeight; revCv.width = rW*d; revCv.height = rH*d; rctx.setTransform(d,0,0,d,0,0);
-  dust = Array.from({length: innerWidth<900 ? 46 : 90}, () => ({ u: Math.random(), v: (Math.random()-.5), z: Math.random(), s: .4+Math.random()*1.4 })); }
-sizeRev(); addEventListener('resize', sizeRev);
-let revVis = false; new IntersectionObserver(es=>es.forEach(e=>revVis=e.isIntersecting)).observe(revStage);
-function drawBeam(bp, lens, glow, now){
-  rctx.clearRect(0,0,rW,rH);
-  const mob = innerWidth < 900;
-  const F = [rW*(mob?.74:.75), rH*(mob?.2:.54)];
-  const S = [rW*1.04, mob ? -rH*.04 : -rH*.08];
-  const T = [lerp(S[0],F[0],bp), lerp(S[1],F[1],bp)];
-  const dx = F[0]-S[0], dy = F[1]-S[1], L = Math.hypot(dx,dy), ux = dx/L, uy = dy/L;
-  if(bp <= 0) return;
-  // haste de luz (o trajeto)
-  rctx.lineCap = 'round';
-  rctx.strokeStyle = 'rgba(224,122,147,.07)'; rctx.lineWidth = 34; rctx.beginPath(); rctx.moveTo(S[0],S[1]); rctx.lineTo(T[0],T[1]); rctx.stroke();
-  rctx.strokeStyle = 'rgba(224,122,147,.16)'; rctx.lineWidth = 10; rctx.beginPath(); rctx.moveTo(S[0],S[1]); rctx.lineTo(T[0],T[1]); rctx.stroke();
-  rctx.save(); rctx.shadowBlur = 18; rctx.shadowColor = 'rgba(224,122,147,.95)';
-  rctx.strokeStyle = 'rgba(255,232,238,.95)'; rctx.lineWidth = 1.6; rctx.beginPath(); rctx.moveTo(S[0],S[1]); rctx.lineTo(T[0],T[1]); rctx.stroke(); rctx.restore();
-  // cone de luz à frente da ponta
-  const R = (mob? 180: 320) * lens;
-  if(R > 2){
-    const ang = Math.atan2(uy,ux), spread = .42;
-    const g = rctx.createRadialGradient(T[0],T[1],0,T[0],T[1],R);
-    g.addColorStop(0,'rgba(255,236,241,'+(.42*glow).toFixed(3)+')'); g.addColorStop(.35,'rgba(224,122,147,'+(.16*glow).toFixed(3)+')'); g.addColorStop(1,'rgba(224,122,147,0)');
-    rctx.fillStyle = g; rctx.beginPath(); rctx.moveTo(T[0],T[1]); rctx.arc(T[0],T[1],R,ang-spread,ang+spread); rctx.closePath(); rctx.fill();
-    const h = rctx.createRadialGradient(T[0],T[1],0,T[0],T[1],R*.42);
-    h.addColorStop(0,'rgba(255,240,244,'+(.55*glow).toFixed(3)+')'); h.addColorStop(1,'rgba(224,122,147,0)');
-    rctx.fillStyle = h; rctx.beginPath(); rctx.arc(T[0],T[1],R*.42,0,Math.PI*2); rctx.fill();
-    // poeira suspensa no feixe
-    const t = reduce ? 0 : now/1000;
-    dust.forEach(d => { const dist = (d.u*R*1.1); const off = d.v * dist * spread * 1.6;
-      const x = T[0] + ux*dist - uy*off + Math.sin(t*.6 + d.z*9)*3, y = T[1] + uy*dist + ux*off + Math.cos(t*.5 + d.z*7)*3;
-      const a = (1 - d.u) * .55 * glow * (.5 + .5*Math.sin(t*1.3 + d.z*20));
-      rctx.fillStyle = 'rgba(255,236,241,'+a.toFixed(3)+')'; rctx.beginPath(); rctx.arc(x,y,d.s,0,Math.PI*2); rctx.fill(); });
-  }
-  // anel da lente na ponta
-  rctx.strokeStyle = 'rgba(224,122,147,'+(.6*lens).toFixed(3)+')'; rctx.lineWidth = 1;
-  rctx.beginPath(); rctx.arc(T[0],T[1], 10 + 26*lens, 0, Math.PI*2); rctx.stroke();
-}
-let revDark = false;
-function updateReveal(vh, now){
-  const r = revTrack.getBoundingClientRect();
-  let p = clamp(-r.top/(r.height - vh));
-  if(reduce) p = r.top < vh*.5 ? .66 : 0;
-  const st = revStage.style;
-  const hq = seg(p,0,.16), hole = hq<.5 ? 2*hq*hq : 1-Math.pow(-2*hq+2,2)/2;
-  st.setProperty('--hole', (hole*Math.hypot(innerWidth,innerHeight)*.56).toFixed(1)+'px');
-  st.setProperty('--hr', (seg(p,0,.02)*(1-seg(p,.1,.15))).toFixed(3));
-  const o1 = seg(p,.1,.2), o2 = seg(p,.18,.3), o3 = ease(seg(p,.24,.4)), o4 = seg(p,.42,.54), o5 = seg(p,.5,.62);
-  const fade = 1 - seg(p,.82,.9);
-  st.setProperty('--o1', (o1*fade).toFixed(3)); st.setProperty('--o2', (o2*fade).toFixed(3)); st.setProperty('--o3', (o3*fade).toFixed(3));
-  st.setProperty('--o4', (o4*fade).toFixed(3)); st.setProperty('--o5', (o5*fade).toFixed(3));
-  st.setProperty('--ls', lerp(.1,-.02,o3).toFixed(3)+'em');
-  const bp = ease(seg(p,.14,.38)), lens = ease(seg(p,.32,.5)), glow = seg(p,.3,.5) * (.85 + (reduce?0:.15*Math.sin(now/600)));
-  st.setProperty('--gl', (glow*fade).toFixed(3));
-  st.setProperty('--ao', (seg(p,.4,.56)*.95*fade).toFixed(3));
-  st.setProperty('--as', lerp(.9,1,seg(p,.4,.7)).toFixed(3));
-  if(raH) raH.setAttribute('fill-opacity', (.45*(1-seg(p,.6,.78))).toFixed(3));
-  const fl = ease(seg(p,.86,.97));
-  st.setProperty('--fl', (fl*Math.hypot(innerWidth,innerHeight)*1.05).toFixed(1)+'px');
-  revDark = r.top < 60 && r.bottom > 60 && hole > .5 && fl < .5;
-  if(revVis) drawBeam(bp, lens, glow, now);
-}
-
-/* ================= VERSUS ================= */
+/* ================= COMPARATIVO — tabela ================= */
 const VS_ROWS = [
-  { k:'Incisão', sc:'A', a:'Incisão maior, geralmente na linha média das costas, para afastar a musculatura.', e:'Pequena incisão para a passagem da cânula; a localização depende da via de acesso escolhida.', g:true },
-  { k:'Acesso às estruturas', sc:'B', a:'Visão direta da coluna, com afastadores e, muitas vezes, remoção de parte do osso.', e:'Cânula guiada por imagem até o local da compressão, com câmera de alta definição.', g:false },
-  { k:'Abordagem dos tecidos', sc:'B2', a:'Os músculos são descolados e afastados para abrir o campo cirúrgico.', e:'Trajeto estreito, que busca preservar músculos e ligamentos.', g:true },
-  { k:'Tempo de internação', sc:'C', n:0, a:'Varia conforme a extensão do procedimento e a recuperação inicial.', e:'Em casos selecionados, tende a ser mais curto.', g:true },
-  { k:'Mobilidade pós-operatória', sc:'C', n:1, a:'A movimentação é retomada de forma progressiva, respeitando a cicatrização.', e:'Com menor agressão no acesso, a movimentação pode ser retomada com mais conforto.', g:true },
-  { k:'Recuperação', sc:'C', n:2, a:'Acompanha a cicatrização dos músculos e tecidos afastados.', e:'Pode ser mais confortável em pacientes com indicação adequada.', g:true },
-  { k:'Retorno às atividades', sc:'C', n:3, a:'Definido individualmente, conforme a evolução.', e:'Também definido individualmente; pode ser mais precoce em casos selecionados.', g:true },
-  { k:'Cuidados e limitações', sc:'D', a:'Segue indicada em diversas situações em que a endoscopia não é a melhor escolha.', e:'Nem todo caso é candidato, e pode haver conversão para a técnica aberta.', g:false },
+  { k:'Incisão', ic:'bandage', a:'Incisão maior, geralmente na linha média das costas, para afastar a musculatura.', e:'Pequena incisão para a passagem da cânula; a localização depende da via de acesso escolhida.', g:true },
+  { k:'Acesso às estruturas', ic:'search', a:'Visão direta da coluna, com afastadores e, muitas vezes, remoção de parte do osso.', e:'Cânula guiada por imagem até o local da compressão, com câmera de alta definição.', g:false },
+  { k:'Abordagem dos tecidos', ic:'shield-check', a:'Os músculos são descolados e afastados para abrir o campo cirúrgico.', e:'Trajeto estreito, que busca preservar músculos e ligamentos.', g:true },
+  { k:'Tempo de internação', ic:'bed', a:'Varia conforme a extensão do procedimento e a recuperação inicial.', e:'Em casos selecionados, tende a ser mais curto.', g:true },
+  { k:'Mobilidade pós-operatória', ic:'walk', a:'A movimentação é retomada de forma progressiva, respeitando a cicatrização.', e:'Com menor agressão no acesso, a movimentação pode ser retomada com mais conforto.', g:true },
+  { k:'Recuperação', ic:'heartbeat', a:'Acompanha a cicatrização dos músculos e tecidos afastados.', e:'Pode ser mais confortável em pacientes com indicação adequada.', g:true },
+  { k:'Retorno às atividades', ic:'briefcase', a:'Definido individualmente, conforme a evolução.', e:'Também definido individualmente; pode ser mais precoce em casos selecionados.', g:true },
+  { k:'Cuidados e limitações', ic:'alert-circle', a:'Segue indicada em diversas situações em que a endoscopia não é a melhor escolha.', e:'Nem todo caso é candidato, e pode haver conversão para a técnica aberta.', g:false },
 ];
-const vsRows = $('#vsRows'), vsSvg = $('#vsSvg'), vsNow = $('#vsNow');
-vsRows.innerHTML = VS_ROWS.map((r,i)=>`<li class="vs-row${i===0?' on':''}" data-i="${i}"><p class="vs-k mono"><b>${String(i+1).padStart(2,'0')}</b>${r.k}</p>
-  <div class="vs-cells"><div class="vs-c a"><span class="mono">Aberta</span><p>${r.a}</p></div><div class="vs-c e"><span class="mono">Endoscópica</span><p>${r.e}</p>${r.g?'<span class="vs-g">Possível benefício</span>':''}</div></div></li>`).join('');
-(() => {
-  const back = cx => `<path d="M${cx-150} 70 C${cx-160} 210 ${cx-168} 316 ${cx-146} 400 C${cx-128} 458 ${cx-70} 498 ${cx} 506 C${cx+70} 498 ${cx+128} 458 ${cx+146} 400 C${cx+168} 316 ${cx+160} 210 ${cx+150} 70" fill="none" stroke="#141317" stroke-width="1.3"/>
-    <line x1="${cx}" y1="86" x2="${cx}" y2="440" stroke="#141317" stroke-opacity=".45" stroke-dasharray="1.5 7"/>
-    <path d="M${cx-112} 352 Q${cx} 326 ${cx+112} 352" fill="none" stroke="#141317" stroke-opacity=".22" stroke-dasharray="3 5"/>
-    <path d="M${cx-80} 492 Q${cx-30} 462 ${cx} 474 Q${cx+30} 462 ${cx+80} 492" fill="none" stroke="#141317" stroke-opacity=".18"/>
-    <text class="sm" x="${cx+10}" y="262" style="fill:#76727A;font-size:10px">L3</text><text class="sm" x="${cx+10}" y="314" style="fill:#76727A;font-size:10px">L4</text><text class="sm" x="${cx+10}" y="366" style="fill:#76727A;font-size:10px">L5</text>`;
-  const anat = (cls) => `<g fill="#F5F3F4" stroke="#141317" stroke-opacity=".35"><ellipse cx="-150" cy="-110" rx="44" ry="70" transform="rotate(-18 -150 -110)"/><ellipse cx="150" cy="-110" rx="44" ry="70" transform="rotate(18 150 -110)"/>
-      <ellipse class="musc ${cls}L" cx="-90" cy="146" rx="86" ry="70"/><ellipse class="musc ${cls}R" cx="90" cy="146" rx="86" ry="70"/></g>
-    <path d="M-130 -130 C-130 -205 -70 -230 0 -230 C70 -230 130 -205 130 -130 C130 -75 95 -48 50 -46 C28 -45 18 -54 0 -54 C-18 -54 -28 -45 -50 -46 C-95 -48 -130 -75 -130 -130Z" fill="#fff" stroke="#141317" stroke-width="1.3"/>
-    <ellipse cx="0" cy="-134" rx="62" ry="44" fill="#F3DCE2" stroke="#8A2240" stroke-opacity=".3"/>
-    <g fill="#fff" stroke="#141317" stroke-width="1.2"><path d="M-70 -48 L-90 0 L-64 20 L-38 -8Z"/><path d="M70 -48 L90 0 L64 20 L38 -8Z"/><path d="M-54 22 Q0 54 54 22 L38 54 L16 162 Q0 176 -16 162 L-38 54Z"/></g>
-    <ellipse cx="0" cy="-8" rx="44" ry="30" fill="#fff" stroke="#141317" stroke-width="1.2"/>
-    <circle cx="-46" cy="-24" r="9" fill="#fff" stroke="#141317"/><circle cx="46" cy="-24" r="9" fill="#fff" stroke="#141317"/>
-    <path d="M-330 300 Q0 366 330 300" fill="none" stroke="#141317" stroke-width="1.3"/>`;
-  const node = (cx, y, ic, lbl, side, k) => `<g class="node n${k} ${side}" data-k="${k}"><circle cx="${cx}" cy="${y}" r="30" fill="#fff" stroke="${side==='e'?'#8A2240':'#141317'}" stroke-width="1.2"/>
-    <g transform="translate(${cx} ${y}) scale(.95)" fill="none" stroke="${side==='e'?'#8A2240':'#141317'}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${ic}</g>
-    <text x="${side==='e'?cx+46:cx-46}" y="${y+4}" text-anchor="${side==='e'?'start':'end'}">${lbl}</text></g>`;
-  const IC = ['<path d="M-18 8H18M-18 8V-6M18 8V1M-6 -1H16"/><circle cx="-11" cy="-4" r="4"/>',
-              '<circle cx="2" cy="-18" r="4.5"/><path d="M1 -13L-1 3M-1 3L-9 17M-1 3L7 10L9 18M-8 -3L1 -9L9 -1"/>',
-              '<path d="M0 14C-12 4 -18 -2 -18 -9C-18 -15 -13 -19 -8 -19C-4 -19 -1 -17 0 -14C1 -17 4 -19 8 -19C13 -19 18 -15 18 -9C18 -2 12 4 0 14Z"/>',
-              '<circle cx="0" cy="-18" r="4.5"/><path d="M0 -13V4M0 4L-6 18M0 4L6 18M0 -8L-8 2M0 -8L9 -2"/><rect x="7" y="-2" width="9" height="11" rx="1.5"/>'];
-  const LB = ['Internação','Mobilidade','Recuperação','Retorno'];
-  const ys = [130,230,330,430];
-  const trk = (cx, side) => `<line x1="${cx}" y1="${ys[0]}" x2="${cx}" y2="${ys[3]}" stroke="${side==='e'?'#8A2240':'#141317'}" stroke-opacity=".25" stroke-width="2"/>` + ys.map((y,k)=>node(cx,y,IC[k],LB[k],side,k)).join('');
-  vsSvg.innerHTML = `
-  <defs>
-    <pattern id="vhK" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#141317" stroke-opacity=".3" stroke-width="1.2"/></pattern>
-    <pattern id="vhW" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#8A2240" stroke-opacity=".4" stroke-width="1.2"/></pattern>
-    <radialGradient id="vRing" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8A2240" stop-opacity=".35"/><stop offset="1" stop-color="#8A2240" stop-opacity="0"/></radialGradient>
-  </defs>
-  <line x1="500" y1="40" x2="500" y2="540" stroke="#141317" stroke-opacity=".12" stroke-dasharray="2 6"/>
-  <g class="vsc on" id="vA">${back(250)}${back(750)}
-    <line class="draw" x1="246" y1="232" x2="246" y2="372" stroke="#141317" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="140" stroke-dashoffset="140"/>
-    <g class="fade" stroke="#141317" stroke-width="1.2">${Array.from({length:7},(_,k)=>`<line x1="239" y1="${244+k*20}" x2="253" y2="${244+k*20}"/>`).join('')}</g>
-    <g class="fade"><path d="M222 232 H212 V372 H222" fill="none" stroke="#141317" stroke-width=".8"/><text x="204" y="298" text-anchor="end">Incisão</text><text x="204" y="314" text-anchor="end" style="fill:#76727A">maior</text></g>
-    <g class="fade"><circle cx="814" cy="300" r="38" fill="url(#vRing)"/><circle cx="814" cy="300" r="15" fill="none" stroke="#8A2240"/><line x1="814" y1="293" x2="814" y2="307" stroke="#8A2240" stroke-width="3.4" stroke-linecap="round"/>
-      <circle cx="840" cy="278" r="5" fill="#2F7A57"/><text x="858" y="296" style="fill:#8A2240">Pequena</text><text x="858" y="312" style="fill:#8A2240">incisão</text></g>
-  </g>
-  <g class="vsc" id="vB">
-    <g transform="translate(250 300) scale(.6)">${anat('mK')}
-      <path class="fade" d="M-10 304 L-4 46 L-46 36 L-128 290Z" fill="url(#vhK)" stroke="#141317" stroke-opacity=".35"/>
-      <line class="draw" x1="-84" y1="318" x2="-42" y2="44" stroke="#141317" stroke-width="9" stroke-linecap="round" stroke-dasharray="290" stroke-dashoffset="290"/>
-      <line class="draw" x1="-14" y1="318" x2="-6" y2="48" stroke="#141317" stroke-width="9" stroke-linecap="round" stroke-dasharray="280" stroke-dashoffset="280"/>
-      <path class="fade" d="M-46 30 Q-26 44 -6 46" fill="none" stroke="#141317" stroke-width="3" stroke-dasharray="3 4"/>
-    </g>
-    <g transform="translate(750 300) scale(.6)">${anat('mE')}
-      <path class="fade" d="M256 296 L268 304 L62 -16 L50 -22Z" fill="url(#vhW)"/>
-      <line class="draw" x1="262" y1="300" x2="58" y2="-18" stroke="#141317" stroke-width="13" stroke-linecap="round" stroke-dasharray="380" stroke-dashoffset="380"/>
-      <line class="draw" x1="262" y1="300" x2="58" y2="-18" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-dasharray="380" stroke-dashoffset="380"/>
-      <circle class="fade" cx="58" cy="-18" r="26" fill="url(#vRing)"/>
-    </g>
-    <g class="fade sm"><text x="160" y="536" text-anchor="middle">Afastadores</text><text x="842" y="536" text-anchor="middle" style="fill:#8A2240">Cânula</text></g>
-    <g class="tisL"><text x="250" y="66" text-anchor="middle" style="fill:#8A2240">Músculos afastados</text><text x="750" y="66" text-anchor="middle" style="fill:#2F7A57">Músculos preservados</text></g>
-  </g>
-  <g class="vsc" id="vC">${trk(250,'k')}${trk(750,'e')}
-    <text class="sm" x="500" y="532" text-anchor="middle" style="fill:#76727A;font-size:9.5px">Sem escala de tempo · cada etapa é definida individualmente</text></g>
-  <g class="vsc" id="vD">
-    <g transform="translate(250 230)"><circle r="54" fill="#fff" stroke="#141317" stroke-width="1.2"/><path d="M0 -26 L22 -16 V4 C22 18 12 26 0 32 C-12 26 -22 18 -22 4 V-16Z M-10 2 L-2 10 L12 -6" fill="none" stroke="#141317" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></g>
-    <text x="250" y="342" text-anchor="middle" style="font-family:'Instrument Serif',serif;text-transform:none;letter-spacing:0;font-size:30px;fill:#141317">Indicada em</text>
-    <text x="250" y="376" text-anchor="middle" style="font-family:'Instrument Serif',serif;text-transform:none;letter-spacing:0;font-size:30px;fill:#141317">diversas situações</text>
-    <g transform="translate(750 230)"><circle r="54" fill="#fff" stroke="#8A2240" stroke-width="1.2"/><path d="M0 -24 V8 M0 20 V22" fill="none" stroke="#8A2240" stroke-width="3" stroke-linecap="round"/></g>
-    <text x="750" y="342" text-anchor="middle" style="font-family:'Instrument Serif',serif;text-transform:none;letter-spacing:0;font-size:30px;fill:#8A2240">Casos</text>
-    <text x="750" y="376" text-anchor="middle" style="font-family:'Instrument Serif',serif;text-transform:none;letter-spacing:0;font-size:30px;fill:#8A2240">selecionados</text>
-    <text class="sm" x="500" y="460" text-anchor="middle" style="fill:#76727A">As duas técnicas têm riscos · a escolha é individual</text>
-  </g>
-  <circle cx="500" cy="300" r="22" fill="#fff" stroke="#141317" stroke-opacity=".2"/><text x="500" y="309" text-anchor="middle" style="font-family:'Instrument Serif',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:26px;fill:#76727A">×</text>`;
-})();
-const vsStyle = document.createElement('style');
-vsStyle.textContent = `#vsSvg .musc{transition:transform 1s var(--ease),fill .6s,stroke .6s;transform-box:fill-box;transform-origin:center}
-#vsSvg #vB.on .mKL{transform:translateX(-26px) scaleX(.78)}
-#vsSvg.tis .mKL{fill:#F1D6DE;stroke:#8A2240;stroke-opacity:.6}
-#vsSvg.tis .mER{stroke:#2F7A57;stroke-width:2.6;stroke-opacity:1}
-#vsSvg .tisL{opacity:0;transition:opacity .5s}#vsSvg.tis .tisL{opacity:1}
-#vsSvg .node{opacity:.35;transition:opacity .4s}#vsSvg .node.cur{opacity:1}
-#vsSvg .node.e.cur circle{stroke:#2F7A57;stroke-width:2.4}`;
-document.head.appendChild(vsStyle);
-const vsRowEls = $$('.vs-row', vsRows), vsScenes = {A:$('#vA',vsSvg), B:$('#vB',vsSvg), C:$('#vC',vsSvg), D:$('#vD',vsSvg)};
-let vsCur = -1;
-function updateVs(vh){
-  const anchor = mqMobile.matches ? vh*.66 : vh*.5;
-  let best = 0, bd = 1e9;
-  vsRowEls.forEach((el,k)=>{ const r = el.getBoundingClientRect(); const d = Math.abs((r.top + r.bottom)/2 - anchor); if(d < bd){ bd = d; best = k; } });
-  if(best === vsCur) return;
-  vsCur = best;
-  vsRowEls.forEach((el,k)=> el.classList.toggle('on', k===best));
-  const row = VS_ROWS[best], sc = row.sc === 'B2' ? 'B' : row.sc;
-  Object.entries(vsScenes).forEach(([k,g])=> g.classList.toggle('on', k===sc));
-  vsSvg.classList.toggle('tis', row.sc === 'B2');
-  $$('.node', vsSvg).forEach(n => n.classList.toggle('cur', row.sc==='C' && +n.dataset.k === row.n));
-  vsNow.textContent = String(best+1).padStart(2,'0') + ' · ' + row.k;
-}
+$('#vsRows').innerHTML = VS_ROWS.map((r,i)=>`<div class="vs2-row" role="row"><p class="vs2-k" role="rowheader"><i class="ic" data-ic="${r.ic}" aria-hidden="true"></i><span><b>${String(i+1).padStart(2,'0')}</b>${r.k}</span></p>
+  <p class="vs2-c a" role="cell"><span class="mono">Aberta</span>${r.a}</p>
+  <p class="vs2-c e" role="cell"><span class="mono">Endoscópica</span>${r.e}${r.g?'<br><span class="vs2-g">Possível benefício</span>':''}</p></div>`).join('');
 
 /* ================= AUTORIDADE — nome em parallax ================= */
-const authGhost = $('#authGhost'), authSec = $('#trajetoria');
-function updateAuth(vh){ const r = authSec.getBoundingClientRect(); if(r.bottom < 0 || r.top > vh) return; const p = clamp((vh - r.top)/(vh + r.height)); authGhost.style.setProperty('--gx', (-p*12).toFixed(2)+'vw'); }
+function _unusedAuth(vh){ const r = authSec.getBoundingClientRect(); if(r.bottom < 0 || r.top > vh) return; const p = clamp((vh - r.top)/(vh + r.height)); authGhost.style.setProperty('--gx', (-p*12).toFixed(2)+'vw'); }
 
 /* modo público: oculta alegações em validação (#publico) */
 function publicMode(){ document.body.classList.toggle('public', location.hash === '#publico'); }
 publicMode(); addEventListener('hashchange', publicMode);
 
-/* ================= LOOP DE SCROLL ================= */
-const iris = $('#cena'), irisStage = $('.iris-stage'), mTrack = $('#methodTrack'), hdr = $('#hdr'), journey = $('#journey'), jItems = $$('.j-item');
-function onFrame(now){
-  const vh = innerHeight, y = scrollY;
-  // íris
-  const ir = iris.getBoundingClientRect();
-  let ip = clamp(-ir.top/(ir.height - vh));
-  if(reduce) ip = ir.top < vh*.5 ? 1 : 0;
-  const open = ease(seg(ip,0,.16));
-  const R = lerp(3.2, 150, open);
-  irisStage.style.setProperty('--ir', R+'vmin');
-  irisStage.style.setProperty('--ro', String(1-seg(ip,.1,.16)));
-  irisStage.style.setProperty('--ho', String(1-seg(ip,.01,.06)));
-  const wp = reduce ? 1 : seg(ip,.07,.2);
-  const nLit = Math.round(wp*words.length);
-  words.forEach((w,k)=>w.classList.toggle('lit', k<nLit));
+const TI = {"alert-circle": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0\" /> <path d=\"M12 8v4\" /> <path d=\"M12 16h.01\" /> </svg>", "armchair": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M5 11a2 2 0 0 1 2 2v2h10v-2a2 2 0 1 1 4 0v4a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-4a2 2 0 0 1 2 -2z\" /> <path d=\"M5 11v-5a3 3 0 0 1 3 -3h8a3 3 0 0 1 3 3v5\" /> <path d=\"M6 19v2\" /> <path d=\"M18 19v2\" /> </svg>", "arrows-maximize": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M16 4l4 0l0 4\" /> <path d=\"M14 10l6 -6\" /> <path d=\"M8 20l-4 0l0 -4\" /> <path d=\"M4 20l6 -6\" /> <path d=\"M16 20l4 0l0 -4\" /> <path d=\"M14 14l6 6\" /> <path d=\"M8 4l-4 0l0 4\" /> <path d=\"M4 4l6 6\" /> </svg>", "arrows-split": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M21 17h-8l-3.5 -5h-6.5\" /> <path d=\"M21 7h-8l-3.495 5\" /> <path d=\"M18 10l3 -3l-3 -3\" /> <path d=\"M18 20l3 -3l-3 -3\" /> </svg>", "bandage": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M14 12l0 .01\" /> <path d=\"M10 12l0 .01\" /> <path d=\"M12 10l0 .01\" /> <path d=\"M12 14l0 .01\" /> <path d=\"M4.5 12.5l8 -8a4.94 4.94 0 0 1 7 7l-8 8a4.94 4.94 0 0 1 -7 -7\" /> </svg>", "bed": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M7 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" /> <path d=\"M22 17v-3h-20\" /> <path d=\"M2 8v9\" /> <path d=\"M12 14h10v-2a3 3 0 0 0 -3 -3h-7v5z\" /> </svg>", "bolt": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11\" /> </svg>", "briefcase": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z\" /> <path d=\"M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2\" /> <path d=\"M12 12l0 .01\" /> <path d=\"M3 13a20 20 0 0 0 18 0\" /> </svg>", "building-hospital": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M3 21l18 0\" /> <path d=\"M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16\" /> <path d=\"M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4\" /> <path d=\"M10 9l4 0\" /> <path d=\"M12 7l0 4\" /> </svg>", "calendar-check": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6\" /> <path d=\"M16 3v4\" /> <path d=\"M8 3v4\" /> <path d=\"M4 11h16\" /> <path d=\"M15 19l2 2l4 -4\" /> </svg>", "camera": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2\" /> <path d=\"M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0\" /> </svg>", "clipboard-list": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2\" /> <path d=\"M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z\" /> <path d=\"M9 12l.01 0\" /> <path d=\"M13 12l2 0\" /> <path d=\"M9 16l.01 0\" /> <path d=\"M13 16l2 0\" /> </svg>", "crosshair": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /> <path d=\"M4 16v2a2 2 0 0 0 2 2h2\" /> <path d=\"M16 4h2a2 2 0 0 1 2 2v2\" /> <path d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" /> <path d=\"M9 12l6 0\" /> <path d=\"M12 9l0 6\" /> </svg>", "device-desktop": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z\" /> <path d=\"M7 20h10\" /> <path d=\"M9 16v4\" /> <path d=\"M15 16v4\" /> </svg>", "disc": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /> <path d=\"M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /> <path d=\"M7 12a5 5 0 0 1 5 -5\" /> <path d=\"M12 17a5 5 0 0 0 5 -5\" /> </svg>", "file-text": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M14 3v4a1 1 0 0 0 1 1h4\" /> <path d=\"M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z\" /> <path d=\"M9 9l1 0\" /> <path d=\"M9 13l6 0\" /> <path d=\"M9 17l6 0\" /> </svg>", "flower": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0\" /> <path d=\"M12 2a3 3 0 0 1 3 3c0 .562 -.259 1.442 -.776 2.64l-.724 1.36l1.76 -1.893c.499 -.6 .922 -1 1.27 -1.205a2.968 2.968 0 0 1 4.07 1.099a3.011 3.011 0 0 1 -1.09 4.098c-.374 .217 -.99 .396 -1.846 .535l-2.664 .366l2.4 .326c1 .145 1.698 .337 2.11 .576a3.011 3.011 0 0 1 1.09 4.098a2.968 2.968 0 0 1 -4.07 1.098c-.348 -.202 -.771 -.604 -1.27 -1.205l-1.76 -1.893l.724 1.36c.516 1.199 .776 2.079 .776 2.64a3 3 0 0 1 -6 0c0 -.562 .259 -1.442 .776 -2.64l.724 -1.36l-1.76 1.893c-.499 .601 -.922 1 -1.27 1.205a2.968 2.968 0 0 1 -4.07 -1.098a3.011 3.011 0 0 1 1.09 -4.098c.374 -.218 .99 -.396 1.846 -.536l2.664 -.366l-2.4 -.325c-1 -.145 -1.698 -.337 -2.11 -.576a3.011 3.011 0 0 1 -1.09 -4.099a2.968 2.968 0 0 1 4.07 -1.099c.348 .203 .771 .604 1.27 1.205l1.76 1.894c-1 -2.292 -1.5 -3.625 -1.5 -4a3 3 0 0 1 3 -3z\" /> </svg>", "heart": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572\" /> </svg>", "heartbeat": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572\" /> <path d=\"M3 13h2l2 3l2 -6l1 3h3\" /> </svg>", "mail": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z\" /> <path d=\"M3 7l9 6l9 -6\" /> </svg>", "messages": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10\" /> <path d=\"M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2\" /> </svg>", "route": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M3 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0\" /> <path d=\"M19 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4z\" /> <path d=\"M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5\" /> </svg>", "search": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0\" /> <path d=\"M21 21l-6 -6\" /> </svg>", "shield-check": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06\" /> <path d=\"M15 19l2 2l4 -4\" /> </svg>", "shoe": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M4 6h5.426a1 1 0 0 1 .863 .496l1.064 1.823a3 3 0 0 0 1.896 1.407l4.677 1.114a4 4 0 0 1 3.074 3.89v2.27a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1z\" /> <path d=\"M14 13l1 -2\" /> <path d=\"M8 18v-1a4 4 0 0 0 -4 -4h-1\" /> <path d=\"M10 12l1.5 -3\" /> </svg>", "stethoscope": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M6 4h-1a2 2 0 0 0 -2 2v3.5h0a5.5 5.5 0 0 0 11 0v-3.5a2 2 0 0 0 -2 -2h-1\" /> <path d=\"M8 15a6 6 0 1 0 12 0v-3\" /> <path d=\"M11 3v2\" /> <path d=\"M6 3v2\" /> <path d=\"M20 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\" /> </svg>", "target": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /> <path d=\"M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0\" /> <path d=\"M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" /> </svg>", "video": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z\" /> <path d=\"M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z\" /> </svg>", "walk": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M13 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\" /> <path d=\"M7 21l3 -4\" /> <path d=\"M16 21l-2 -4l-3 -3l1 -6\" /> <path d=\"M6 12l2 -3l4 -1l3 3l3 1\" /> </svg>"};
+const paintIcons = (root=document) => root.querySelectorAll('[data-ic]').forEach(el => { if(!el.firstChild) el.innerHTML = TI[el.dataset.ic] || ''; });
+paintIcons();
 
-  updateCena(ip); updatePain(vh, now); updateReveal(vh, now); updateVs(vh); updateAuth(vh);
-  // método
-  const mr = mTrack.getBoundingClientRect();
-  const mp = clamp(-mr.top/(mr.height - vh));
-  setAxial(mp*7 - (mp>=1?0.0001:0));
-
-  // jornada
-  const jr = journey.getBoundingClientRect();
-  const jp = clamp((vh*.8 - jr.top)/(vh*.6));
-  journey.style.setProperty('--j', jp);
-  jItems.forEach((it,k)=> it.classList.toggle('lit', jp > k/jItems.length + .05));
-
-  // tema escuro do header/rail
-  const hr = hero.getBoundingClientRect();
-  const darkNow = (hr.bottom > 60) || (ir.top < 60 && ir.bottom > 60 && open < .5) || revDark || ($('.foot').getBoundingClientRect().top < 60);
-  document.body.classList.toggle('on-dark', darkNow);
-  document.body.classList.toggle('at-hero', hr.bottom > vh*.5);
-  hdr.classList.toggle('scrolled', y > 40 && !(ir.top < 60 && ir.bottom > 60));
-
-  // seção ativa
-  let act = 0; SECTIONS.forEach((s,i)=>{ if(s.getBoundingClientRect().top < vh*.45) act = i; });
+/* ================= SCROLL (leve, só quando rola) ================= */
+const hero = $('#inicio'), hdr = $('#hdr'), DARKS = $$('[data-dark]'), foot = $('.foot');
+$$('.j-item').forEach(it => it.classList.add('lit'));
+$('#journey').style.setProperty('--j', 1);
+let ticking = false;
+function onScroll(){
+  ticking = false;
+  const vh = innerHeight;
+  const under = el => { const r = el.getBoundingClientRect(); return r.top < 60 && r.bottom > 60; };
+  document.body.classList.toggle('on-dark', DARKS.some(under) || (foot && foot.getBoundingClientRect().top < 60));
+  document.body.classList.toggle('at-hero', hero.getBoundingClientRect().bottom > vh*.5);
+  hdr.classList.toggle('scrolled', scrollY > 40);
+  let act = 0; SECTIONS.forEach((sec,i)=>{ if(sec.getBoundingClientRect().top < vh*.45) act = i; });
   rb.forEach((b,i)=>b.classList.toggle('on', i===act));
-
-  if(heroVisible){ lensTick(now); drawShader(now); }
-  requestAnimationFrame(onFrame);
 }
-requestAnimationFrame(onFrame);
+const req = () => { if(!ticking){ ticking = true; requestAnimationFrame(onScroll); } };
+addEventListener('scroll', req, {passive:true}); addEventListener('resize', req); onScroll();
 })();
 </script>
+<script src="js/anatomia.js" defer></script>
 </body>
 </html>
