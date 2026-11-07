@@ -203,14 +203,6 @@ function player({watch, figs, durs, segs, onStep, still}){
 }
 const mount = (id, vb, html, aria) => { const el = $(id); if (el) el.innerHTML = `<svg viewBox="${vb}" role="img" aria-label="${aria}">${html}</svg>`; return el; };
 
-/* --- O corpo dá sinais --- */
-const fBody = mount('sxSinais', '0 0 640 780', buildBody(), 'Pessoa vista de costas com a coluna desenhada. Em sequência: dor na região lombar, a dor descendo pelo nervo ciático do glúteo até a perna, formigamento na panturrilha e no pé, e fraqueza na perna.');
-if (fBody) {
-  const cards = [...document.querySelectorAll('#dor .card')];
-  player({watch: fBody, figs: [fBody], durs: [1400, 3400, 3600, 3400, 3800], still: 4,
-    onStep: n => cards.forEach((c, i) => c.classList.toggle('on', i === n - 1))});
-}
-
 /* --- Como funciona a endoscopia --- */
 const fMet = mount('sxMetodo', '0 0 1100 770', buildSpine('m', true), 'Coluna vista de lado com uma hérnia de disco apertando o nervo; um tubo fino com câmera entra por um pequeno corte, retira a hérnia e o nervo fica livre.');
 if (fMet) {

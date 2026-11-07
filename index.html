@@ -850,7 +850,7 @@ body.public [data-claim]{display:none!important}
 .cena2{position:relative;isolation:isolate;overflow:hidden;background:var(--night);color:#fff;display:flex;align-items:center;min-height:min(100svh,64vw);padding:clamp(96px,11vw,160px) var(--pad)}
 .cena2-media{position:absolute;inset:0;z-index:-1;background:#000}
 .cena2-media video{width:100%;height:100%;object-fit:cover;object-position:70% 35%;display:block}
-.cena2-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,14,.96) 0%,rgba(12,11,14,.88) 26%,rgba(12,11,14,.5) 44%,rgba(12,11,14,0) 62%),linear-gradient(0deg,rgba(12,11,14,.6) 0%,rgba(12,11,14,0) 30%),linear-gradient(180deg,rgba(12,11,14,.45) 0%,rgba(12,11,14,0) 22%)}
+.cena2-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,14,.96) 0%,rgba(12,11,14,.88) 26%,rgba(12,11,14,.5) 44%,rgba(12,11,14,0) 62%),linear-gradient(0deg,#0C0B0E 0%,rgba(12,11,14,.7) 14%,rgba(12,11,14,0) 38%),linear-gradient(180deg,rgba(12,11,14,.45) 0%,rgba(12,11,14,0) 22%)}
 .cena2-copy{position:relative;max-width:min(540px,42%)}
 .cena2 .h2{font-size:clamp(38px,4vw,64px)}
 .cena2 .h2 em,.revela .h2 em{color:var(--wine-glow)}
@@ -1141,6 +1141,38 @@ body.public [data-claim]{display:none!important}
   .cena2-media::after{background:linear-gradient(180deg,rgba(12,11,14,.4) 0%,rgba(12,11,14,0) 20%,rgba(12,11,14,0) 50%,rgba(12,11,14,.8) 80%,var(--night) 100%)}
   .cena2-copy{max-width:none}
 }
+
+/* ================= cena · destaques ================= */
+.cena2 .cena-h{line-height:1.06}
+.cena-h .hd{font-size:1.12em;margin:.04em 0 .1em}
+.hd{position:relative;display:inline-block;white-space:nowrap;padding:0 .04em .08em 0}
+.hd-w{font-style:italic;letter-spacing:-.005em;background:linear-gradient(100deg,#F7BFCB 0%,#E07A93 42%,#C2456C 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(224,122,147,.28))}
+.hd-nerve{position:absolute;left:0;right:0;bottom:-.2em;width:100%;height:.3em;overflow:visible;pointer-events:none}
+.hd-nerve path{fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.hd-line{stroke:#E07A93;stroke-width:2.2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s cubic-bezier(.65,0,.25,1) .55s}
+.hd-glow{stroke:rgba(224,122,147,.35);stroke-width:7;filter:blur(3px);opacity:0;transition:opacity 1.2s ease 1.6s}
+.hd-dot{position:absolute;left:66.6%;bottom:-.05em;width:.16em;height:.16em;margin-left:-.08em;border-radius:50%;background:#FF5C86;box-shadow:0 0 0 0 rgba(255,92,134,.55),0 0 14px 2px rgba(255,92,134,.55);opacity:0;transform:scale(.4);transition:opacity .5s ease 1.75s,transform .5s cubic-bezier(.3,1.6,.5,1) 1.75s}
+.cena-h.in .hd-line{stroke-dashoffset:0}
+.cena-h.in .hd-glow{opacity:1}
+.cena-h.in .hd-dot{opacity:1;transform:scale(1);animation:hdPulse 2.6s ease-in-out 2.4s infinite}
+@keyframes hdPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,92,134,.5),0 0 14px 2px rgba(255,92,134,.5)}55%{box-shadow:0 0 0 .22em rgba(255,92,134,0),0 0 22px 4px rgba(255,92,134,.75)}}
+
+.cena-lede .sac{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:.24em;margin-top:22px;font-family:var(--serif);font-style:italic;font-size:clamp(32px,3.1vw,48px);line-height:1.05;letter-spacing:-.01em;color:#fff}
+.cena-lede .sac::before{content:"";flex:0 0 auto;align-self:center;width:44px;height:1px;margin-right:.3em;background:linear-gradient(90deg,rgba(224,122,147,0),#E07A93);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.65,0,.25,1) .7s}
+.cena-lede .sac .w{display:inline-block;opacity:0;filter:blur(8px);transform:translateY(.22em);transition:opacity 1s ease,filter 1.2s ease,transform 1.2s var(--ease)}
+.cena-lede .sac .w:nth-child(1){transition-delay:.95s}
+.cena-lede .sac .w:nth-child(2){transition-delay:1.07s}
+.cena-lede .sac .w:nth-child(3){transition-delay:1.19s}
+.cena-lede .sac .w:nth-child(4){transition-delay:1.45s;text-shadow:0 0 28px rgba(224,122,147,.45)}
+.cena-lede.in .sac::before{transform:scaleX(1)}
+.cena-lede.in .sac .w{opacity:1;filter:none;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .hd-line{stroke-dashoffset:0;transition:none}
+  .hd-glow{opacity:1;transition:none}
+  .hd-dot,.cena-h.in .hd-dot{opacity:1;transform:none;transition:none;animation:none}
+  .cena-lede .sac::before{transform:none;transition:none}
+  .cena-lede .sac .w{opacity:1;filter:none;transform:none;transition:none}
+}
 /* ================= auditoria · ajustes ================= */
 .ledger{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
 .ledger a{color:inherit;text-decoration:none}
@@ -1190,7 +1222,6 @@ body.public [data-claim]{display:none!important}
     <span class="role mono">Neurocirurgia · Coluna</span>
   </a>
   <nav aria-label="Principal">
-    <a href="#dor">Sinais</a>
     <a href="#revelacao">Tratamento</a>
     <a href="#trajetoria">Dr. Sávio</a>
     <a href="#comparativo">Comparação</a>
@@ -1206,14 +1237,13 @@ body.public [data-claim]{display:none!important}
   <div class="menu-top"><span class="brand"><span class="name">Sávio Reis</span></span><button class="mono" id="menuClose">Fechar ✕</button></div>
   <ol>
     <li><a href="#cena"><span>01</span>A dor</a></li>
-    <li><a href="#dor"><span>02</span>Sinais</a></li>
-    <li><a href="#revelacao"><span>03</span>Tratamento</a></li>
-    <li><a href="#trajetoria"><span>04</span>Dr. Sávio</a></li>
-    <li><a href="#comparativo"><span>05</span>Comparação</a></li>
-    <li><a href="#metodo"><span>06</span>Método</a></li>
-    <li><a href="#relatos"><span>07</span>Avaliações</a></li>
-    <li><a href="#cuidado"><span>08</span>Atendimento</a></li>
-    <li><a href="#contato"><span>09</span>Agendar avaliação</a></li>
+    <li><a href="#revelacao"><span>02</span>Tratamento</a></li>
+    <li><a href="#trajetoria"><span>03</span>Dr. Sávio</a></li>
+    <li><a href="#comparativo"><span>04</span>Comparação</a></li>
+    <li><a href="#metodo"><span>05</span>Método</a></li>
+    <li><a href="#relatos"><span>06</span>Avaliações</a></li>
+    <li><a href="#cuidado"><span>07</span>Atendimento</a></li>
+    <li><a href="#contato"><span>08</span>Agendar avaliação</a></li>
   </ol>
 </div>
 
@@ -1252,33 +1282,9 @@ body.public [data-claim]{display:none!important}
   </div>
   <div class="cena2-copy">
     <p class="sec-idx mono rv">A dor no dia a dia</p>
-    <h2 class="h2 rv d1" id="cena-t">Não é só a coluna que dói. É a brincadeira que fica <em>para depois.</em></h2>
-    <p class="sec-lede rv d2">Para quem convive com dor nas costas, gestos simples (levantar, abaixar, brincar, dormir) viram negociações diárias. <em>E o corpo costuma dar sinais.</em></p>
+    <h2 class="h2 rv d1 cena-h" id="cena-t">Quantos momentos a <span class="hd"><span class="hd-w">hérnia de disco</span><svg class="hd-nerve" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="hd-glow" d="M2 12C40 6 70 16 110 11S170 4 200 10 260 17 298 9"/><path class="hd-line" d="M2 12C40 6 70 16 110 11S170 4 200 10 260 17 298 9" pathLength="1"/></svg><i class="hd-dot" aria-hidden="true"></i></span><br> já tirou de você?</h2>
+    <p class="sec-lede rv d2 cena-lede">Dor ao levantar, dificuldade para caminhar, formigamento nas pernas. Até os momentos mais simples com quem você mais ama <span class="sac"><span class="w">se</span> <span class="w">tornam</span> <span class="w">um</span> <span class="w">sacrifício.</span></span></p>
   </div>
-</section>
-
-<!-- ===== A DOR ===== -->
-<section class="sec sinais" id="dor" data-label="Sinais" aria-labelledby="dor-t">
-  <div class="sec-head">
-    <div>
-      <p class="sec-idx mono rv">Sinais possíveis</p>
-      <h2 class="h2 rv d1" id="dor-t">O corpo<br>dá <em>sinais.</em></h2>
-    </div>
-    <p class="sec-lede rv d2">Quatro manifestações que podem acompanhar problemas na coluna, como a hérnia de disco, mas não apenas ela. Nem todas as pessoas sentem todas. Só a avaliação define a causa.</p>
-  </div>
-  <div class="sinais-grid">
-    <figure class="sx-card rv">
-      <div class="sx" data-kind="body" id="sxSinais"></div>
-      <figcaption class="sx-note mono">Ilustração esquemática · os sinais acendem em sequência</figcaption>
-    </figure>
-    <div class="cards">
-      <article class="card rv"><i class="ic card-ic" data-ic="target" aria-hidden="true"></i><p class="card-tag mono">01 · Dor lombar</p><h3>Uma dor que se instala na base das costas.</h3><p>Pode piorar ao levantar, abaixar ou permanecer muito tempo na mesma posição.</p></article>
-      <article class="card rv d1"><i class="ic card-ic" data-ic="route" aria-hidden="true"></i><p class="card-tag mono">02 · Glúteo e perna</p><h3>Quando a dor desce pelo trajeto do nervo.</h3><p>Ela pode alcançar o glúteo, a coxa, a panturrilha ou o pé, às vezes mais intensa na perna do que nas costas.</p></article>
-      <article class="card rv d2"><i class="ic card-ic" data-ic="bolt" aria-hidden="true"></i><p class="card-tag mono">03 · Sensibilidade</p><h3>Choques, formigamento ou dormência.</h3><p>Alterações de sensibilidade podem acompanhar a dor ou aparecer sozinhas, numa área específica da perna ou do pé.</p></article>
-      <article class="card rv d3"><i class="ic card-ic" data-ic="shoe" aria-hidden="true"></i><p class="card-tag mono">04 · Força e movimento</p><h3>Perda de força ou de movimento.</h3><p>Dificuldade para apoiar o pé, caminhar ou realizar alguns movimentos merece avaliação médica.</p></article>
-    </div>
-  </div>
-  <p class="bridge rv">Reconhecer os sinais é o primeiro passo. O segundo é saber que existem <em>possibilidades de tratamento.</em></p>
 </section>
 
 <!-- ===== REVELAÇÃO ===== -->
