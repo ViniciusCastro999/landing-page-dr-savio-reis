@@ -10,7 +10,7 @@ Itens ocultos na interface pública. Para vê-los destacados na prévia, abra a 
 ## Alegações em validação (visíveis na prévia com o selo "Em validação")
 Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a página com `#revisao`.
 - [ ] "+1.000 procedimentos": número, período e fonte (registro de procedimentos)
-- [ ] "Atuação pioneira na introdução da técnica em Minas Gerais": comprovação documental
+- [ ] "1º a realizar a cirurgia endoscópica da coluna em Minas Gerais": publicado a pedido (destaque e selo na seção Dr. Sávio). Guardar a comprovação documental e validar a redação com o jurídico (CFM 2.336/2023)
 - [ ] "Pacientes de diferentes idades e graus de complexidade": confirmar a redação com a equipe
 
 ## Comparação aberta × endoscópica
