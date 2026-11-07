@@ -17,6 +17,12 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   ├── dr-savio-hero.jpg
 │   ├── dr-savio-hero-sm.jpg
 │   └── dr-savio-retrato.jpg
+├── media/       # cena em vídeo (dramatização) e imagens estáticas de apoio
+│   ├── cena-1280.mp4   # desktop, sem áudio, keyframes curtos para acompanhar o scroll
+│   ├── cena-854.mp4    # celular
+│   ├── cena-start.jpg  # quadro inicial (fallback)
+│   └── cena-poster.jpg # momento da dor (fallback e movimento reduzido)
+├── PENDENCIAS.md  # pendências editoriais, médicas e alegações em validação
 ├── .nojekyll    # faz o GitHub Pages servir os arquivos sem processar com Jekyll
 └── README.md
 ```
@@ -38,7 +44,13 @@ O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` 
 ## Status do conteúdo
 
 - **Conteúdo demonstrativo:** os relatos de pacientes são fictícios e estão marcados como tal.
-- **Pendências editoriais/médicas** (CRM, RQE, formação, endereço, dados clínicos) aparecem destacadas no botão **"Revisão"** da página e devem ser confirmadas antes da divulgação oficial.
+- **Pendências editoriais/médicas** ficam fora da interface pública. Abra a página com `#revisao` no fim do endereço para vê-las destacadas.
+- **Alegações em validação** (+1.000 procedimentos, pioneirismo em MG) aparecem com o selo "Em validação". Abra com `#publico` para ver a página sem elas.
+- Lista completa em [`PENDENCIAS.md`](PENDENCIAS.md).
+
+## Narrativa (branch `versao-video`)
+
+Hero → cena em vídeo (dramatização) → sinais → revelação da cirurgia endoscópica → Dr. Sávio → comparação aberta × endoscópica → animação do método → relatos → atendimento → perguntas → agendamento.
 
 ## Próximos passos
 
