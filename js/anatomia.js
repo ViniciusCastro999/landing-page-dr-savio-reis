@@ -215,7 +215,7 @@ if (fBody) {
 const fMet = mount('sxMetodo', '0 0 1100 770', buildSpine('m', true), 'Coluna vista de lado com uma hérnia de disco apertando o nervo; um tubo fino com câmera entra por um pequeno corte, retira a hérnia e o nervo fica livre.');
 if (fMet) {
   const T = [
-    ['O disco saiu do lugar e apertou o nervo', 'O disco é um amortecedor entre as vértebras. Quando parte dele sai do lugar — a hérnia —, aperta o nervo e a dor pode descer para a perna.'],
+    ['O disco saiu do lugar e apertou o nervo', 'O disco é um amortecedor entre as vértebras. Quando parte dele sai do lugar (a hérnia), aperta o nervo e a dor pode descer para a perna.'],
     ['Um corte de cerca de 8 mm', 'Por ele entra um tubo fino, que passa entre os músculos sem precisar soltá-los do osso.'],
     ['Uma câmera mostra a hérnia, que é retirada', 'Pela câmera na ponta do tubo, o médico vê e remove o pedaço do disco que apertava o nervo.'],
     ['Nervo livre, músculos preservados', 'O tubo sai e fica apenas o pequeno corte na pele.'],
