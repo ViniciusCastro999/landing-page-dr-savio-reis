@@ -1699,7 +1699,7 @@ const FAQ = [
 $('#faqList').innerHTML = FAQ.map(([q,a],i)=>`<details class="rv"><summary><span class="mono">${String(i+1).padStart(2,'0')}</span><h3>${q}</h3><i aria-hidden="true"></i></summary><div class="ans"><div>${a.map(p=>`<p>${p}</p>`).join('')}</div></div></details>`).join('');
 
 /* ================= RAIL / MENU / REVISÃO ================= */
-const SECTIONS = $$('[data-label]').filter(s => getComputedStyle(s).display !== 'none');
+const SECTIONS = $$('section[data-label]').filter(s => s.offsetParent !== null);
 const rail = $('#rail');
 rail.innerHTML = SECTIONS.map((s,i)=>`<button data-t="${s.id}" aria-label="${s.dataset.label}"><span>${String(i).padStart(2,'0')} · ${s.dataset.label}</span></button>`).join('');
 rail.addEventListener('click', e => { const b = e.target.closest('button'); if(b) document.getElementById(b.dataset.t).scrollIntoView({behavior: reduce?'auto':'smooth'}); });
