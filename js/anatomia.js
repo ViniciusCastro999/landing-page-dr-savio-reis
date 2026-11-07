@@ -225,10 +225,11 @@ if (fCam) {
     ['Para chegar à hérnia, há dois caminhos', ''],
     ['Na cirurgia aberta, a área mexida é grande', 'Corte de vários centímetros e músculos afastados.'],
     ['Na endoscopia, o caminho é um tubo fino', 'Um corte de cerca de 8 mm, passando entre os músculos.'],
-    ['Mesmo destino, caminho menor', 'Em casos selecionados, menos tecido mexido no acesso.'],
+    ['Pelo tubo, a câmera chega e a hérnia é retirada', 'O médico vê o pedaço do disco que apertava o nervo e o remove.'],
+    ['Nervo livre, por um caminho menor', 'Em casos selecionados, menos tecido mexido no acesso.'],
   ];
   const cap = $('sxCaminhoCap');
-  player({watch: fCam, figs: [fCam], durs: [2800, 3800, 4200, 5200], segs: $('sxCaminhoSegs'), still: 3,
+  player({watch: fCam, figs: [fCam], durs: [2800, 3800, 4200, 6200, 5200], segs: $('sxCaminhoSegs'), still: 4,
     onStep: n => swap(cap, `<b>${T[n][0]}</b>${T[n][1]}`)});
 }
 /* ================= ABERTA × ENDOSCÓPICA (vista de cima) ================= */
