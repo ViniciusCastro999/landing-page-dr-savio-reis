@@ -18,7 +18,7 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [ ] Confirmar quais linhas recebem o marcador verde "possível benefício"
 
 ## Cena em vídeo
-- [ ] Confirmar o direito de uso do vídeo do avô e da criança (dramatização) e manter o aviso "cena ilustrativa"
+- [ ] Confirmar o direito de uso do vídeo do avô e da criança (dramatização). O aviso "Cena ilustrativa · dramatização" foi retirado a pedido; avaliar com o jurídico se precisa voltar
 
 ## Autoridade (seção "Dr. Sávio Reis")
 - [ ] Graduação: instituição e ano
