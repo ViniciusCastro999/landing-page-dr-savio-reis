@@ -174,7 +174,7 @@ body.on-dark .rail button.on{background:var(--wine-glow);border-color:var(--wine
   .eyebrow{margin-bottom:22px}
   
   .review-btn{bottom:10px;right:10px;padding:7px 11px;font-size:12px}
-  .hero-foot{flex-direction:column;align-items:flex-start}
+  .hero-foot{flex-direction:column;align-items:flex-start;margin-top:32px}
   .hero-foot .crm{text-align:left}
   
 }
@@ -829,7 +829,7 @@ body.public [data-claim]{display:none!important}
   .rv{opacity:1;transform:none}
   .grain{display:none}
   .hero h1 .ln > span{transform:none}
-  .hero-lede,.hero-cta{opacity:1}
+  .hero-lede,.hero-cta,.hero-proof{opacity:1}
 }
 
 /* ================= v6 · seções estáticas (sem animação presa ao scroll) ================= */
@@ -1261,7 +1261,7 @@ body.public [data-claim]{display:none!important}
 .ledger{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
 .ledger a{color:inherit;text-decoration:none}
 .ledger .stars,.g-score .stars{width:86px;height:15px;fill:#E0A93B;display:block}
-.hero-proof{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:rgba(255,255,255,.82);font-size:14px;text-decoration:none}
+.hero-proof{display:inline-flex;align-items:center;gap:10px;margin-top:20px;opacity:0;animation:fade 1.2s .7s var(--ease) forwards;color:rgba(255,255,255,.82);font-size:14px;text-decoration:none}
 .hero-proof .stars{width:76px;height:13px;fill:#E0A93B}
 .hero-proof b{font-weight:500;color:#fff}
 .reviews .rv-score{display:flex;justify-content:flex-end}
@@ -1348,10 +1348,10 @@ body.public [data-claim]{display:none!important}
       <p class="eyebrow mono">Dr. Sávio Reis · Neurocirurgia da coluna · Pouso Alegre, MG</p>
       <h1><span class="ln"><span>A hérnia de disco está</span></span><span class="ln"><span><em>atrapalhando a sua vida?</em></span></span></h1>
       <p class="hero-lede">Com a cirurgia endoscópica da coluna, ofereço uma abordagem minimamente invasiva para tratar a hérnia de disco, buscando aliviar sua dor e proporcionar uma recuperação mais rápida.</p>
+      <a class="hero-proof" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><svg class="stars" viewBox="0 0 90 16" aria-hidden="true"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span><b>5,0</b> · 203 avaliações no Google</span></a>
       <div class="hero-cta">
         <a class="btn btn-wine" href="#contato">Agendar uma avaliação <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
       </div>
-      <a class="hero-proof" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><svg class="stars" viewBox="0 0 90 16" aria-hidden="true"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span><b>5,0</b> · 203 avaliações no Google</span></a>
     </div>
     <div class="hero-foot">
       <span class="crm mono">Dr. Sávio Reis · Neurocirurgião · CRM-MG 60801 · RQE 50166</span>
