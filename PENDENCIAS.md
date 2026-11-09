@@ -30,8 +30,11 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [ ] Validar o texto biográfico
 
 ## Relatos
-- [ ] Substituir os 3 textos fictícios por relatos reais, com autorização formal (LGPD). Enquanto isso, a seção fictícia fica oculta (só em `#revisao`) e o site mostra a nota 5,0 e 3 trechos de avaliações públicas do Google
+- [ ] Substituir os 3 textos fictícios por relatos reais, com autorização formal (LGPD). Enquanto isso, a seção fictícia fica oculta (só em `#revisao`) e o site mostra a nota 5,0 e 5 trechos de avaliações públicas do Google, com nome e foto
 - [ ] Validar com o jurídico o uso dos trechos de avaliações do Google (CFM 2.336/2023)
+- [ ] A seção de avaliações agora mostra nome e foto de perfil de 5 pacientes (Heloisa Machado, Camila Soares, Andressa Niltanielle, Luciano Fernandes Silva e Márcio Ronan), com trechos das avaliações públicas no Google. Nome e foto ligam a pessoa a um tratamento de coluna (dado de saúde, LGPD). Ideal: pedir autorização a cada um. O trecho do Márcio ("você volta a sua vida normal") soa como promessa de resultado; validar com o jurídico
+- [ ] A foto da seção "Atendimento" (`img/dr-savio-consultorio.jpg`, com o modelo da coluna) veio do Instagram do Dr. Sávio (post de 2022). Confirmar com ele que pode usar e se há crédito de fotógrafo. Se houver uma versão original em alta resolução, trocar
+- [ ] As fotos foram baixadas do Google para `img/avaliacoes/`. Se alguém pedir remoção, apagar o arquivo e o card
 - [ ] Indicar qual relato real abre a seção (o mais significativo)
 - [ ] Nome, foto e contexto de cada relato, só se autorizados
 - [ ] Revisar se os relatos atendem à CFM 2.336/2023: sóbrios, sem adjetivos de superioridade, sem promessa de resultado

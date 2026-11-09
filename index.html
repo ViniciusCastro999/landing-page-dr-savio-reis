@@ -1272,6 +1272,174 @@ body.public [data-claim]{display:none!important}
 .g-quotes blockquote{margin:0;padding:30px 28px;border:1px solid var(--line);border-radius:18px;background:var(--white);font-family:var(--serif);font-size:clamp(22px,2vw,28px);line-height:1.2;letter-spacing:-.01em}
 .g-src{margin-top:22px;color:var(--mute);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 @media (max-width:860px){.g-quotes{grid-template-columns:1fr}.reviews .rv-score{justify-content:flex-start}}
+
+
+
+/* ================= perguntas · acolhimento ================= */
+.faq{background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 40%,#FBF5F3 100%)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);gap:clamp(30px,5vw,80px);align-items:start}
+.faq .faq-list{border-top:0;display:flex;flex-direction:column;gap:12px}
+.faq .faq-list details{border:1px solid var(--line);border-radius:22px;background:#fff;transition:background .45s var(--ease),border-color .45s,box-shadow .45s var(--ease)}
+.faq .faq-list details:hover{border-color:rgba(138,34,64,.25)}
+.faq .faq-list details[open]{background:#FFFBFA;border-color:rgba(138,34,64,.22);box-shadow:0 24px 50px -34px rgba(138,34,64,.5)}
+.faq .faq-list summary{grid-template-columns:44px minmax(0,1fr) 40px;padding:24px 24px 24px 26px}
+.faq .faq-list summary .mono{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:color-mix(in srgb,var(--wine) 9%,#fff);font-size:11.5px}
+.faq .faq-list summary h3{font-size:clamp(21px,1.8vw,27px);line-height:1.15}
+.faq .faq-list .ans{grid-template-columns:44px minmax(0,1fr);padding:0 64px 28px 26px}
+.faq .faq-list .ans div{font-size:16px;line-height:1.75}
+.faq-aside{position:sticky;top:110px}
+.faq-help{position:relative;overflow:hidden;padding:clamp(30px,3vw,42px);border-radius:28px;color:#fff;background:radial-gradient(90% 120% at 0% 0%,#A93654 0%,#8A2240 40%,#4C1024 100%);box-shadow:0 30px 70px -36px rgba(138,34,64,.75)}
+.faq-help::after{content:"";position:absolute;right:-30%;bottom:-40%;width:90%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(224,122,147,.35),transparent);pointer-events:none}
+.faq-help-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.14);margin-bottom:26px}
+.faq-help-ic svg{width:24px;height:24px}
+.faq-help h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,2.6vw,40px);line-height:1.05;letter-spacing:-.01em;margin:0 0 14px}
+.faq-help p{position:relative;z-index:1;margin:0 0 28px;color:rgba(255,255,255,.82);font-weight:300;font-size:15.5px;line-height:1.65}
+.faq-help-btn{position:relative;z-index:1;background:#fff;color:var(--wine)}
+.faq-help-btn:hover{background:#FFE9EF}
+@media (max-width:960px){.faq-grid{grid-template-columns:1fr}.faq-aside{position:relative;top:0}}
+@media (max-width:560px){
+  .faq .faq-list summary{grid-template-columns:34px minmax(0,1fr) 36px;gap:12px;padding:20px 16px 20px 16px}
+  .faq .faq-list summary .mono{width:30px;height:30px}
+  .faq .faq-list summary i{width:36px;height:36px}
+  .faq .faq-list .ans{grid-template-columns:1fr;padding:0 18px 24px}
+  .faq .faq-list .ans div{grid-column:1;font-size:15px}
+}
+
+/* ================= contato · convite ================= */
+.contact{background:#FBF5F3;padding-top:clamp(20px,3vw,40px);padding-bottom:clamp(56px,7vw,110px)}
+.ct-card{position:relative;overflow:hidden;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);padding:clamp(40px,6vw,96px);border-radius:36px;color:#fff;background:radial-gradient(80% 110% at 0% 0%,#A93654 0%,#8A2240 38%,#4C1024 100%);box-shadow:0 50px 100px -50px rgba(76,16,36,.8)}
+.ct-card::before{content:"";position:absolute;z-index:-1;right:-12%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(224,122,147,.32),transparent);pointer-events:none}
+.ct-card::after{content:"";position:absolute;z-index:-1;left:-10%;bottom:-45%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.25),transparent);pointer-events:none}
+.ct-main{display:flex;flex-direction:column}
+.contact .ct-main .sec-idx{color:rgba(255,255,255,.7)}
+.contact .ct-main h2{color:#fff;font-size:clamp(46px,6vw,100px)}
+.contact .ct-main h2 em{color:#FFD3DE}
+.ct-lede{margin-top:28px;max-width:520px;font-size:17px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.85)}
+.ct-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.ct-btn{background:#fff;color:var(--wine);box-shadow:0 14px 34px -14px rgba(0,0,0,.45)}
+.ct-btn:hover{background:#FFE9EF}
+.ct-btn-2{color:#fff;border:1px solid rgba(255,255,255,.3);padding:15px 24px}
+.ct-btn-2:hover{background:rgba(255,255,255,.1)}
+.ct-doc{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:44px}
+.ct-doc img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 18%;box-shadow:0 0 0 3px rgba(255,255,255,.85)}
+.ct-doc span{display:flex;flex-direction:column;gap:3px}
+.ct-doc b{font-weight:500;font-size:16px}
+.ct-doc small{font-size:13px;color:rgba(255,255,255,.7)}
+.ct-side{display:flex;flex-direction:column;justify-content:center}
+.ct-list{display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:26px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px)}
+.ct-row{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;color:#fff;text-decoration:none;transition:background .35s}
+a.ct-row:hover{background:rgba(255,255,255,.1)}
+.ct-row .ct-ic{width:44px;height:44px;padding:11px;border-radius:50%;background:rgba(255,255,255,.12);color:#FFD3DE}
+.ct-row span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ct-row small{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.ct-row b{font-weight:400;font-size:16px;line-height:1.4}
+.ct-row i{font-style:normal;color:rgba(255,255,255,.55);transition:transform .35s var(--ease),color .35s}
+a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
+.ct-note{margin-top:18px;font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.6);padding:0 8px}
+@media (max-width:960px){.ct-card{grid-template-columns:1fr}.ct-doc{padding-top:34px}}
+@media (max-width:560px){
+  .contact{padding-left:12px;padding-right:12px}
+  .ct-card{border-radius:28px;padding:40px 22px 26px}
+  .ct-actions .btn{width:100%;justify-content:center}
+  .ct-list{padding:6px}
+  .ct-row{grid-template-columns:40px minmax(0,1fr) auto;padding:12px 10px;gap:12px}
+  .ct-row .ct-ic{width:40px;height:40px;padding:10px}
+  .ct-row b{font-size:15px}
+}
+/* ================= atendimento · acolhimento ================= */
+.care{background:linear-gradient(180deg,#FFFFFF 0%,#FBF5F3 22%,#FBF5F3 78%,#FFFFFF 100%)}
+.care-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,120px);align-items:start}
+.care-photo{position:sticky;top:110px;margin:0}
+.care-photo::before{content:"";position:absolute;inset:8% -10% -6% -12%;z-index:-1;background:radial-gradient(50% 50% at 50% 50%,rgba(224,122,147,.28),rgba(224,122,147,0) 70%);filter:blur(10px);pointer-events:none}
+.care-frame{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(76,16,36,.55),0 2px 0 rgba(255,255,255,.6) inset}
+.care-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;transform:scale(1.02);transition:transform 1.6s var(--ease)}
+.care-photo:hover .care-frame img{transform:scale(1.05)}
+.care-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(40,10,22,.82) 0%,rgba(40,10,22,.35) 28%,rgba(40,10,22,0) 50%);pointer-events:none}
+.care-frame figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:clamp(22px,3vw,38px);color:#fff;display:flex;flex-direction:column;gap:10px}
+.care-frame figcaption .mono{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.care-frame figcaption b{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.3vw,34px);line-height:1.1;letter-spacing:-.01em;max-width:16ch}
+.care-note{position:absolute;top:28px;right:-22px;display:flex;align-items:center;gap:10px;margin:0;padding:12px 18px 12px 12px;border-radius:999px;background:#fff;color:var(--ink);font-size:14px;box-shadow:0 18px 40px -18px rgba(76,16,36,.45);animation:careFloat 6s ease-in-out infinite}
+.care-note .ic{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:color-mix(in srgb,var(--wine) 12%,#fff);color:var(--wine)}
+.care-note .ic svg{width:16px;height:16px}
+@keyframes careFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.care-steps{list-style:none;margin:0;padding:0;position:relative}
+.care-steps::before{content:"";position:absolute;left:27px;top:28px;bottom:28px;width:1px;background:linear-gradient(180deg,rgba(138,34,64,.45),rgba(138,34,64,.12))}
+.cs-step{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:26px;padding:0 0 clamp(34px,4vw,52px)}
+.cs-step:last-child{padding-bottom:0}
+.cs-step::before{display:none}
+.cs-dot{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff;color:var(--wine);box-shadow:0 0 0 1px rgba(138,34,64,.18),0 12px 26px -14px rgba(138,34,64,.55);transition:background .5s,color .5s}
+.cs-dot .ic svg{width:24px;height:24px}
+.cs-step:hover .cs-dot{background:var(--wine);color:#fff}
+.cs-body{padding:14px 26px 24px;margin:-14px -26px 0;border-radius:22px;transition:background .5s var(--ease)}
+.cs-step:hover .cs-body{background:rgba(255,255,255,.75)}
+.cs-n{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);opacity:.8;margin-bottom:8px}
+.cs-step h3{font-family:var(--serif);font-weight:400;font-size:clamp(27px,2.4vw,36px);line-height:1.05;letter-spacing:-.01em;margin:0 0 12px;color:var(--ink)}
+.cs-step p{margin:0;max-width:52ch;font-size:16px;line-height:1.7;color:var(--ink-2);font-weight:300}
+@media (max-width:900px){
+  .care-grid{grid-template-columns:1fr;gap:56px}
+  .care-photo{position:relative;top:0;max-width:520px}
+  .care-note{right:14px;top:auto;bottom:auto;top:18px}
+}
+@media (max-width:560px){
+  .care-frame{border-radius:24px}
+  .care-note{font-size:13px;top:14px;right:12px}
+  .care-steps::before{left:21px}
+  .cs-step{grid-template-columns:44px minmax(0,1fr);gap:18px}
+  .cs-dot{width:44px;height:44px}
+  .cs-dot .ic svg{width:20px;height:20px}
+  .cs-body{padding:8px 0 0;margin:-8px 0 0}
+  .cs-step h3{font-size:26px}
+  .cs-step p{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.care-note{animation:none}.care-frame img,.care-photo:hover .care-frame img{transform:none;transition:none}}
+/* ================= avaliações · cards ================= */
+.g-wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.gq{position:relative;margin:0;display:flex;flex-direction:column;gap:28px;padding:34px 32px 30px;border-radius:24px;background:var(--white);border:1px solid var(--line);box-shadow:0 1px 0 rgba(20,19,23,.02),0 18px 40px -28px rgba(138,34,64,.35);overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease),opacity 1.1s var(--ease)}
+.gq:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(20,19,23,.02),0 28px 60px -30px rgba(138,34,64,.5)}
+.gq-mark{display:block;height:30px;margin-bottom:-14px;font-family:var(--serif);font-size:84px;line-height:.82;color:var(--wine);opacity:.32;pointer-events:none}
+.gq blockquote{margin:0;flex:1;font-family:var(--serif);font-size:clamp(21px,1.65vw,25px);line-height:1.28;letter-spacing:-.005em;color:var(--ink)}
+.gq blockquote em{font-style:italic;color:var(--wine)}
+.gq-who{display:flex;align-items:center;gap:14px;padding-top:22px;border-top:1px solid var(--line)}
+.gq-av{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 3px var(--white),0 0 0 4px rgba(138,34,64,.28)}
+.gq-id{display:flex;flex-direction:column;gap:5px;min-width:0}
+.gq-id b{font-weight:500;font-size:15.5px;color:var(--ink)}
+.gq-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.gq-stars{width:68px;height:12px;fill:#E0A93B;flex:none}
+.gq-src{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mute)}
+.gq-g{width:13px;height:13px;flex:none}
+/* destaque */
+.gq-feat{grid-column:span 2;color:#fff;border:0;padding:clamp(40px,4vw,60px) clamp(34px,4vw,60px) 34px;background:radial-gradient(90% 120% at 0% 0%,#A93654 0%,#8A2240 38%,#4C1024 100%);box-shadow:0 30px 70px -36px rgba(138,34,64,.75)}
+.gq-feat:hover{box-shadow:0 40px 80px -36px rgba(138,34,64,.85)}
+.gq-feat::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 70% at 100% 100%,rgba(224,122,147,.28),transparent 70%)}
+.gq-feat .gq-mark{position:absolute;margin:0;line-height:.86;color:#FFD3DE;opacity:.22;font-size:300px;height:150px;top:40px;right:clamp(34px,5vw,80px)}
+.gq-feat blockquote{position:relative;z-index:1;color:#fff;font-size:clamp(28px,2.7vw,40px);line-height:1.16;letter-spacing:-.015em;max-width:26ch}
+.gq-feat blockquote em{color:#FFD3DE}
+.gq-feat .gq-who{position:relative;z-index:1;border-top-color:rgba(255,255,255,.18)}
+.gq-feat .gq-av{width:60px;height:60px;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 10px 24px -8px rgba(0,0,0,.5)}
+.gq-feat .gq-id b{color:#fff;font-size:17px}
+.gq-feat .gq-src{color:rgba(255,255,255,.72)}
+.gq-feat .gq-src .gq-g{background:#fff;border-radius:50%;padding:2px;width:17px;height:17px}
+.g-foot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;margin-top:30px}
+.g-foot .g-src{margin-top:0}
+.g-all{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:14.5px;text-decoration:none;transition:border-color .3s,background .3s}
+.g-all:hover{border-color:var(--wine);background:color-mix(in srgb,var(--wine) 5%,var(--white))}
+.g-all .gq-g{width:16px;height:16px}
+@media (max-width:960px){
+  .g-wall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gq-feat{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .g-wall{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 26px;scroll-padding:0 var(--pad);scrollbar-width:none}
+  .g-wall::-webkit-scrollbar{display:none}
+  .gq{flex:0 0 84%;scroll-snap-align:start;padding:28px 24px 24px;gap:22px}
+  .gq-feat{flex-basis:88%}
+  .gq-feat blockquote{font-size:27px}
+  .gq-feat .gq-mark{position:static;height:30px;margin-bottom:-14px;font-size:84px;line-height:.82;opacity:.45}
+  .gq blockquote{font-size:21px}
+  .gq:hover{transform:none}
+  .g-foot{margin-top:8px}
+}
+@media (prefers-reduced-motion:reduce){.gq,.gq:hover{transform:none;transition:none}}
 </style>
 </head>
 <body class="on-dark">
@@ -1494,12 +1662,37 @@ body.public [data-claim]{display:none!important}
       <a class="g-score" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><b>5,0</b><span><svg class="stars" viewBox="0 0 90 16" aria-hidden="true"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><small>203 avaliações no Google ↗</small></span></a>
     </div>
   </div>
-  <div class="g-quotes">
-    <blockquote class="rv">“A primeira vez que fui tão bem atendida por um médico e sua equipe.”</blockquote>
-    <blockquote class="rv d1">“Realizei esse procedimento e graças a Deus e ao doutor estou livre de dor.”</blockquote>
-    <blockquote class="rv d2">“Profissional com excelência no atendimento e foco em resolução do problema.”</blockquote>
+  <div class="g-wall">
+    <figure class="gq gq-feat rv">
+      <span class="gq-mark" aria-hidden="true">“</span>
+      <blockquote>Dr. Sávio me fez <em>voltar a sorrir</em>, voltei a cozinhar para minha família, voltei para a minha vida religiosa que tanto me fez falta enquanto passei pela crise de hérnia de disco.</blockquote>
+      <figcaption class="gq-who"><img class="gq-av" src="img/avaliacoes/heloisa.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"><span class="gq-id"><b>Heloisa Machado</b><span class="gq-meta"><svg class="gq-stars" viewBox="0 0 90 16" role="img" aria-label="5 de 5 estrelas"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span class="gq-src"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliação no Google</span></span></span></figcaption>
+    </figure>
+    <figure class="gq  rv d1">
+      <span class="gq-mark" aria-hidden="true">“</span>
+      <blockquote>…hoje poder <em>caminhar, pedalar e voltar a praticar exercícios</em> tem um significado que talvez só quem já passou por algo assim consiga entender.</blockquote>
+      <figcaption class="gq-who"><img class="gq-av" src="img/avaliacoes/camila.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"><span class="gq-id"><b>Camila Soares</b><span class="gq-meta"><svg class="gq-stars" viewBox="0 0 90 16" role="img" aria-label="5 de 5 estrelas"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span class="gq-src"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliação no Google</span></span></span></figcaption>
+    </figure>
+    <figure class="gq  rv">
+      <span class="gq-mark" aria-hidden="true">“</span>
+      <blockquote>Confesso que eu tinha MUITO medo de operar, principalmente medo de dar errado. Mas o Dr. Sávio foi extremamente paciente comigo, me explicou cada detalhe, tirou minhas dúvidas e me transmitiu <em>uma segurança surreal.</em></blockquote>
+      <figcaption class="gq-who"><img class="gq-av" src="img/avaliacoes/andressa.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"><span class="gq-id"><b>Andressa Niltanielle</b><span class="gq-meta"><svg class="gq-stars" viewBox="0 0 90 16" role="img" aria-label="5 de 5 estrelas"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span class="gq-src"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliação no Google</span></span></span></figcaption>
+    </figure>
+    <figure class="gq  rv d1">
+      <span class="gq-mark" aria-hidden="true">“</span>
+      <blockquote>Enfrentei meus receios com o apoio especializado e humano do Dr. Sávio Reis e fiz a cirurgia. Ao longo de todo o processo <em>me senti acolhido.</em></blockquote>
+      <figcaption class="gq-who"><img class="gq-av" src="img/avaliacoes/luciano.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"><span class="gq-id"><b>Luciano Fernandes Silva</b><span class="gq-meta"><svg class="gq-stars" viewBox="0 0 90 16" role="img" aria-label="5 de 5 estrelas"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span class="gq-src"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliação no Google</span></span></span></figcaption>
+    </figure>
+    <figure class="gq  rv d2">
+      <span class="gq-mark" aria-hidden="true">“</span>
+      <blockquote>Quem tiver um problema e tem medo da cirurgia, afirmo aqui, NÃO TENHA! Pois vale muito a pena e você volta a sua vida normal, <em>como eu voltei pra minha!</em></blockquote>
+      <figcaption class="gq-who"><img class="gq-av" src="img/avaliacoes/marcio.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"><span class="gq-id"><b>Márcio Ronan</b><span class="gq-meta"><svg class="gq-stars" viewBox="0 0 90 16" role="img" aria-label="5 de 5 estrelas"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span class="gq-src"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Avaliação no Google</span></span></span></figcaption>
+    </figure>
   </div>
-  <p class="g-src mono rv">Trechos de avaliações públicas no Google · Resultados variam de pessoa para pessoa</p>
+  <div class="g-foot rv">
+    <a class="g-all" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Ler as 203 avaliações no Google <span aria-hidden="true">↗</span></a>
+    <p class="g-src mono">Trechos de avaliações públicas no Google · Resultados variam de pessoa para pessoa</p>
+  </div>
 </section>
 
 <!-- ===== RELATOS (fictícios · só em #revisao) ===== -->
@@ -1536,43 +1729,65 @@ body.public [data-claim]{display:none!important}
   <div class="sec-head">
     <div>
       <p class="sec-idx mono rv">Atendimento e acompanhamento</p>
-      <h2 class="h2 rv d1" id="cuidado-t">Do primeiro contato<br>à <em>recuperação.</em></h2>
+      <h2 class="h2 rv d1" id="cuidado-t">Do primeiro contato<br>à recuperação,<br><em>ao seu lado.</em></h2>
     </div>
-    <p class="sec-lede rv d2">Saber o que esperar reduz a incerteza. Cada etapa é conduzida com explicações claras e tempo para as suas perguntas.</p>
+    <p class="sec-lede rv d2">A dor cansa, e a ideia de uma cirurgia assusta. Por isso, cada etapa acontece com calma, em palavras simples e com espaço para todas as suas perguntas. Você nunca fica sem saber o que vem a seguir.</p>
   </div>
 
-  <div class="journey" id="journey">
-    <i class="journey-line" aria-hidden="true"></i>
-    <div class="j-item rv">
-      <span class="mono">Etapa 01</span>
-      <i class="ic j-icon" data-ic="calendar-check" aria-hidden="true"></i>
-      <h3>Avaliação inicial</h3>
-      <p>O primeiro contato é feito com a equipe. Na consulta, o Dr. Sávio escuta a sua história e examina você com atenção.</p>
-    </div>
-    <div class="j-item rv d1">
-      <span class="mono">Etapa 02</span>
-      <i class="ic j-icon" data-ic="file-text" aria-hidden="true"></i>
-      <h3>Sintomas e exames</h3>
-      <p>Os sintomas e os exames de imagem são analisados em conjunto, para entender a causa da dor.</p>
-    </div>
-    <div class="j-item rv d2">
-      <span class="mono">Etapa 03</span>
-      <i class="ic j-icon" data-ic="arrows-split" aria-hidden="true"></i>
-      <h3>Possibilidades de tratamento</h3>
-      <p>As opções são discutidas com clareza, incluindo as não cirúrgicas. A decisão é tomada com você.</p>
-    </div>
-    <div class="j-item rv d3">
-      <span class="mono">Etapa 04</span>
-      <i class="ic j-icon" data-ic="clipboard-list" aria-hidden="true"></i>
-      <h3>Preparo</h3>
-      <p>Quando há indicação de procedimento, você recebe orientações de preparo detalhadas e um canal para dúvidas.</p>
-    </div>
-    <div class="j-item rv">
-      <span class="mono">Etapa 05</span>
-      <i class="ic j-icon" data-ic="messages" aria-hidden="true"></i>
-      <h3>Acompanhamento</h3>
-      <p>Retornos programados e orientações de recuperação, ajustadas à evolução de cada pessoa.</p>
-    </div>
+  <div class="care-grid">
+    <figure class="care-photo rv">
+      <div class="care-frame">
+        <img src="img/dr-savio-consultorio.jpg" alt="Dr. Sávio Reis no consultório, segurando um modelo da coluna vertebral" width="960" height="1200" loading="lazy" decoding="async">
+        <figcaption>
+          <span class="mono">No consultório · Pouso Alegre</span>
+          <b>Cada detalhe explicado com calma, olhando para você.</b>
+        </figcaption>
+      </div>
+      <p class="care-note"><i class="ic" data-ic="heart" aria-hidden="true"></i>Tempo para ouvir, explicar e responder</p>
+    </figure>
+
+    <ol class="care-steps" id="journey">
+      <li class="cs-step rv">
+        <span class="cs-dot" aria-hidden="true"><i class="ic" data-ic="messages"></i></span>
+        <div class="cs-body">
+          <span class="cs-n mono">Etapa 01</span>
+          <h3>Um primeiro contato acolhedor</h3>
+          <p>A equipe recebe você com atenção, entende o que você precisa e organiza tudo para a consulta, sem pressa.</p>
+        </div>
+      </li>
+      <li class="cs-step rv d1">
+        <span class="cs-dot" aria-hidden="true"><i class="ic" data-ic="stethoscope"></i></span>
+        <div class="cs-body">
+          <span class="cs-n mono">Etapa 02</span>
+          <h3>Ouvir antes de tudo</h3>
+          <p>Na consulta, o Dr. Sávio escuta a sua história: o que você sente, desde quando e como a dor tem afetado a sua rotina. Depois, examina você com cuidado.</p>
+        </div>
+      </li>
+      <li class="cs-step rv">
+        <span class="cs-dot" aria-hidden="true"><i class="ic" data-ic="file-text"></i></span>
+        <div class="cs-body">
+          <span class="cs-n mono">Etapa 03</span>
+          <h3>Entender juntos a causa</h3>
+          <p>Os sintomas e os exames de imagem são analisados lado a lado e explicados de um jeito simples, para que você entenda o que está acontecendo.</p>
+        </div>
+      </li>
+      <li class="cs-step rv d1">
+        <span class="cs-dot" aria-hidden="true"><i class="ic" data-ic="arrows-split"></i></span>
+        <div class="cs-body">
+          <span class="cs-n mono">Etapa 04</span>
+          <h3>Decidir com você</h3>
+          <p>Todas as possibilidades são apresentadas, inclusive as que não envolvem cirurgia. A decisão é sempre tomada em conjunto, no seu tempo.</p>
+        </div>
+      </li>
+      <li class="cs-step rv">
+        <span class="cs-dot" aria-hidden="true"><i class="ic" data-ic="heart"></i></span>
+        <div class="cs-body">
+          <span class="cs-n mono">Etapa 05</span>
+          <h3>Ao seu lado na recuperação</h3>
+          <p>Se houver indicação de procedimento, você recebe orientações de preparo e um canal direto para dúvidas. Depois, retornos programados acompanham cada passo da sua recuperação.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 
   <div class="gesture rv">
@@ -1609,31 +1824,48 @@ body.public [data-claim]{display:none!important}
   <div class="sec-head">
     <div>
       <p class="sec-idx mono rv">Perguntas frequentes</p>
-      <h2 class="h2 rv d1" id="faq-t">Antes de<br><em>decidir.</em></h2>
+      <h2 class="h2 rv d1" id="faq-t">Antes de decidir,<br><em>tire suas dúvidas.</em></h2>
     </div>
-    <p class="sec-lede rv d2">Respostas gerais para dúvidas comuns. Elas não substituem a consulta: cada caso precisa ser avaliado individualmente.</p>
+    <p class="sec-lede rv d2">É natural ter perguntas, e nenhuma delas é pequena demais. Aqui estão as respostas para as dúvidas mais comuns. Elas são gerais: na consulta, o seu caso é avaliado com calma e individualmente.</p>
   </div>
-  <div class="faq-list" id="faqList"></div>
+  <div class="faq-grid">
+    <div class="faq-list" id="faqList"></div>
+    <aside class="faq-aside rv">
+      <div class="faq-help">
+        <span class="faq-help-ic" aria-hidden="true"><i class="ic" data-ic="messages"></i></span>
+        <h3>Ficou alguma dúvida?</h3>
+        <p>Pergunte para a equipe. Ninguém precisa chegar à consulta com medo do que ainda não entende.</p>
+        <a class="btn faq-help-btn" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Perguntar pelo WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+      </div>
+    </aside>
+  </div>
 </section>
 
 <!-- ===== CONTATO ===== -->
 <section class="sec contact" id="contato" data-label="Agendar" aria-labelledby="contato-t">
-  <div class="contact-in">
-    <div>
+  <div class="ct-card">
+    <div class="ct-main">
       <p class="sec-idx mono rv">Agendar uma avaliação</p>
-      <h2 class="rv d1" id="contato-t">Vamos entender<br>a sua <em>dor.</em></h2>
-      <p class="sec-lede rv d2">Se a dor na coluna está interferindo na sua rotina, uma avaliação ajuda a entender a causa e as possibilidades de tratamento. A equipe orienta sobre agenda, documentos e exames para a consulta.</p>
-      <div class="c-actions rv d2"><a class="btn btn-wine" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Agendar pelo WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+      <h2 class="rv d1" id="contato-t">Vamos entender<br>a sua dor, <em>juntos.</em></h2>
+      <p class="ct-lede rv d2">Você não precisa conviver com a dor sem respostas. Dê o primeiro passo: a equipe recebe você com atenção e orienta sobre agenda, documentos e exames para a consulta.</p>
+      <div class="ct-actions rv d2">
+        <a class="btn ct-btn" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Agendar pelo WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+        <a class="btn ct-btn-2" href="tel:+553536473550">Ligar · (35) 3647-3550</a>
+      </div>
+      <div class="ct-doc rv d3">
+        <img src="img/dr-savio-retrato.jpg" alt="" width="56" height="56" loading="lazy" decoding="async">
+        <span><b>Dr. Sávio Reis</b><small>Neurocirurgião · CRM-MG 60801 · RQE 50166</small></span>
+      </div>
     </div>
-    <div class="rv d2">
-      <div class="c-list">
-        <a class="c-row" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener"><span class="mono">WhatsApp</span><b>(35) 99867-2564 ↗</b></a>
-        <a class="c-row" href="tel:+553536473550"><span class="mono">Telefone</span><b>(35) 3647-3550</b></a>
-        <a class="c-row" href="https://www.instagram.com/drsavioreis.neuro/" rel="noopener"><span class="mono">Instagram</span><b>@drsavioreis.neuro ↗</b></a>
-        <a class="c-row" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><span class="mono">Consultório</span><b>Medical Center · R. Cel. Brito Filho, 469 · Fátima, Pouso Alegre ↗</b></a>
-        <div class="c-row"><span class="mono">Horário</span><b>Segunda a sexta · 7h às 19h</b></div>
-                      </div>
-      <p class="c-note">A agenda pode ter tempo de espera. Este site tem caráter informativo e não substitui a consulta médica.</p>
+    <div class="ct-side rv d2">
+      <div class="ct-list">
+        <a class="ct-row" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener"><svg class="ct-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.9-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-1.9z"/></svg><span><small>WhatsApp</small><b>(35) 99867-2564</b></span><i aria-hidden="true">↗</i></a>
+        <a class="ct-row" href="tel:+553536473550"><svg class="ct-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><small>Telefone</small><b>(35) 3647-3550</b></span><i aria-hidden="true">↗</i></a>
+        <a class="ct-row" href="https://www.instagram.com/drsavioreis.neuro/" target="_blank" rel="noopener"><svg class="ct-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.7" cy="7.3" r=".6" fill="currentColor"/></svg><span><small>Instagram</small><b>@drsavioreis.neuro</b></span><i aria-hidden="true">↗</i></a>
+        <a class="ct-row" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><svg class="ct-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><small>Consultório</small><b>Medical Center · R. Cel. Brito Filho, 469 · Fátima, Pouso Alegre</b></span><i aria-hidden="true">↗</i></a>
+        <div class="ct-row"><svg class="ct-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span><small>Horário</small><b>Segunda a sexta · 7h às 19h</b></span></div>
+      </div>
+      <p class="ct-note">A agenda pode ter tempo de espera. Este site tem caráter informativo e não substitui a consulta médica.</p>
     </div>
   </div>
 </section>
@@ -1794,6 +2026,7 @@ $('#gNext').addEventListener('click', ()=>gStrip.scrollBy({left:gStrip.clientWid
 /* ================= FAQ ================= */
 const FAQ = [
   ['Toda hérnia de disco precisa de cirurgia?', ['Não. Grande parte das hérnias de disco melhora com tratamento conservador, como medicação, fisioterapia e orientação de atividades. A cirurgia é considerada quando há indicação clínica, por exemplo dor persistente apesar do tratamento adequado ou déficit neurológico, e sempre após avaliação individual.']],
+  ['Tenho medo da cirurgia. Isso é normal?', ['Sim, e esse medo merece ser ouvido. Muitas pessoas chegam à consulta assustadas com a palavra cirurgia.','Na consulta, o Dr. Sávio explica o que está acontecendo, quais são as possibilidades (inclusive as que não envolvem cirurgia), os riscos e os benefícios de cada uma. Assim, a decisão é tomada com informação, tranquilidade e no seu tempo.']],
   ['O que é a cirurgia endoscópica da coluna?', ['É uma técnica minimamente invasiva em que o cirurgião utiliza um endoscópio (um sistema óptico com câmera e iluminação) introduzido por uma pequena incisão, para visualizar e tratar a estrutura que comprime o nervo.','A via de acesso e a adequação da técnica dependem do tipo e da localização da hérnia, e são definidas em consulta.']],
   ['Quais as diferenças em relação a outras técnicas?', ['A proposta da endoscopia é reduzir a agressão a músculos e tecidos no trajeto até a coluna. Isso não a torna a melhor opção para todos os casos: em algumas situações, outras técnicas são mais indicadas. A escolha é feita a partir das características de cada paciente.']],
   ['A cirurgia tem riscos?', ['Sim. Como todo procedimento cirúrgico, a cirurgia endoscópica tem riscos, entre eles infecção, sangramento, lesão neural, persistência dos sintomas e recidiva da hérnia, eventualmente com necessidade de nova abordagem. Os riscos e benefícios do seu caso são discutidos de forma transparente antes de qualquer decisão.']],
