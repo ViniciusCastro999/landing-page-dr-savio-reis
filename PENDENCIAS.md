@@ -61,6 +61,7 @@ A seção agora é uma tabela de prazos de retorno (caminhada, dirigir, trabalho
 - [x] Vídeo da seção "A dor" recomprimido: `cena-1280.mp4` de 1,5 MB para 661 KB e `cena-854.mp4` de 827 KB para 368 KB, sem perda visível
 - [ ] Fotos do consultório, dos equipamentos e do atendimento. A galeria demonstrativa foi removida; se as fotos chegarem, criar uma seção nova
 - [x] Card "Gestos de acolhimento" (pantufas, flores e cartão) removido da seção Atendimento
+- [x] Item "Acolhimento" (pantufas, flores e cartão na alta) removido da seção Experiência
 - [ ] Vídeos: avaliar antes de publicar (a CFM veda a filmagem de procedimentos por terceiros). A pasta "iPhone" do iCloud tem 51 vídeos .mov do centro cirúrgico
 - [x] Imagem de compartilhamento (WhatsApp, redes) própria em 1200×630 (`img/og-dr-savio.jpg`), com o rosto centralizado
 - [x] Arquivos sem uso removidos (`img/dr-savio-hero-sm.jpg`, `media/cena-start.jpg`)
