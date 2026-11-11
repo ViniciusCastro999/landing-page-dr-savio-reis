@@ -1758,7 +1758,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 
 <!-- ===== VERSUS ===== -->
 <section class="cmp" id="comparativo" data-dark data-label="Comparação" aria-labelledby="vs-t">
-  <div class="cmp-photo" aria-hidden="true"><video id="cmpV" muted playsinline loop preload="none" poster="media/comparacao-poster.jpg" disablepictureinpicture disableremoteplayback tabindex="-1"></video></div>
+  <div class="cmp-photo" aria-hidden="true"><video id="cmpV" muted playsinline loop preload="none" poster="media/comparacao-poster.jpg?v=2" disablepictureinpicture disableremoteplayback tabindex="-1"></video></div>
   <div class="cmp-in">
     <div class="cmp-head">
       <p class="cmp-eb mono rv"><span>Cirurgia aberta × endoscópica</span></p>
@@ -2040,7 +2040,7 @@ if(!reduce && 'IntersectionObserver' in window){
 const cmpV = $('#cmpV');
 if(cmpV && !reduce && 'IntersectionObserver' in window){
   new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting){ if(!cmpV.src) cmpV.src = innerWidth < 900 ? 'media/comparacao-720.mp4' : 'media/comparacao-1080.mp4'; const pr = cmpV.play(); pr && pr.catch(()=>{}); }
+    if(e.isIntersecting){ if(!cmpV.src) cmpV.src = innerWidth < 900 ? 'media/comparacao-720.mp4?v=2' : 'media/comparacao-1080.mp4?v=2'; const pr = cmpV.play(); pr && pr.catch(()=>{}); }
     else cmpV.pause();
   }), {threshold:.15}).observe(cmpV);
 }
