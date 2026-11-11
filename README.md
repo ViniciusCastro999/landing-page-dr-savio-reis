@@ -25,6 +25,7 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   ├── dr-savio-retrato.jpg      # topo no celular
 │   ├── dr-savio-cirurgia.jpg     # seção Dr. Sávio (centro cirúrgico)
 │   ├── dr-savio-consultorio.jpg  # seção Atendimento
+│   ├── dr-savio-endoscopia.jpg   # fundo da comparação (prazos)
 │   ├── og-dr-savio.jpg           # imagem de compartilhamento (1200×630)
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
 │   └── icons/
@@ -60,7 +61,7 @@ O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` 
 
 ## Ordem das seções
 
-Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio → avaliações → comparação aberta × endoscópica → atendimento → perguntas → agendamento.
+Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio → avaliações → comparação de prazos (aberta × endoscópica) → atendimento → perguntas → agendamento.
 
 ## Próximos passos
 

@@ -14,8 +14,10 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [ ] "Pacientes de diferentes idades e graus de complexidade": confirmar a redação com a equipe
 
 ## Comparação aberta × endoscópica
-- [ ] Validar cada linha do versus (incisão, acesso, tecidos, internação, mobilidade, recuperação, retorno, cuidados)
-- [ ] Confirmar quais linhas recebem o marcador vinho "possível benefício" e quais 4 aparecem na versão resumida (hoje: incisão, abordagem dos tecidos, recuperação e cuidados e limitações)
+A seção agora é uma tabela de prazos de retorno (caminhada, dirigir, trabalho, atividade física e recuperação plena), com foto do centro cirúrgico ao fundo.
+- [ ] Confirmar com o Dr. Sávio os prazos publicados: caminhada 7 dias × 3 horas; dirigir 30 dias × 1 dia; trabalho 30 dias × 3 a 5 dias; atividade física 60 dias × 7 dias; recuperação plena 90 dias × 7 a 10 dias
+- [ ] Validar com o jurídico o título "Por que a cirurgia endoscópica é a melhor opção?" e a comparação de prazos (CFM 2.336/2023 restringe superlativos e promessa de resultado). Abaixo da tabela há a nota "Prazos de referência... só a avaliação individual indica a técnica adequada"
+- [ ] Foto de fundo da seção (`img/dr-savio-endoscopia.jpg`, IMG_1215 da pasta do iCloud): mesma checagem da foto do centro cirúrgico (imagem de procedimento, autorização do hospital e do paciente coberto)
 
 ## Cena em vídeo
 - [ ] Confirmar o direito de uso do vídeo do avô e da criança (dramatização). O aviso "Cena ilustrativa · dramatização" foi retirado a pedido; avaliar com o jurídico se precisa voltar
@@ -41,7 +43,6 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 
 ## Conteúdo clínico a validar com o Dr. Sávio
 - [ ] Legendas da animação "Caminho menor" (corte de cerca de 8 mm, tubo entre os músculos, câmera e retirada da hérnia). A seção "Como funciona a endoscopia" foi removida por repetir esse conteúdo
-- [ ] Comparação entre técnicas: medidas de referência das incisões (a ilustração é esquemática e fora de escala)
 - [ ] Lista de riscos (infecção, sangramento, lesão neural, fístula liquórica, recidiva, conversão)
 - [ ] Respostas das perguntas frequentes
 - [ ] Etapas do atendimento (avaliação, exames, possibilidades, preparo, acompanhamento)
