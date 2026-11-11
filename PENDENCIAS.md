@@ -15,7 +15,7 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 
 ## Comparação aberta × endoscópica
 - [ ] Validar cada linha do versus (incisão, acesso, tecidos, internação, mobilidade, recuperação, retorno, cuidados)
-- [ ] Confirmar quais linhas recebem o marcador verde "possível benefício"
+- [ ] Confirmar quais linhas recebem o marcador vinho "possível benefício" e quais 4 aparecem na versão resumida (hoje: incisão, abordagem dos tecidos, recuperação e cuidados e limitações)
 
 ## Cena em vídeo
 - [ ] Confirmar o direito de uso do vídeo do avô e da criança (dramatização). O aviso "Cena ilustrativa · dramatização" foi retirado a pedido; avaliar com o jurídico se precisa voltar
@@ -41,7 +41,6 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 
 ## Conteúdo clínico a validar com o Dr. Sávio
 - [ ] Legendas da animação "Caminho menor" (corte de cerca de 8 mm, tubo entre os músculos, câmera e retirada da hérnia). A seção "Como funciona a endoscopia" foi removida por repetir esse conteúdo
-- [ ] "Três momentos": duração do procedimento, critérios de alta, recuperação
 - [ ] Comparação entre técnicas: medidas de referência das incisões (a ilustração é esquemática e fora de escala)
 - [ ] Lista de riscos (infecção, sangramento, lesão neural, fístula liquórica, recidiva, conversão)
 - [ ] Respostas das perguntas frequentes
@@ -52,13 +51,15 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [x] Endereço: Medical Center, R. Cel. Brito Filho, 469, Fátima, Pouso Alegre (fonte: Google)
 - [x] Segunda a sexta, 7h às 19h (fonte: Google). Confirmar com a equipe
 - [x] Botões de agendamento levam direto ao WhatsApp do Linktree (wa.me/message/6ZH7KUJVVJMRM1)
-- [ ] Publicar o site no domínio savioreisneuro.com.br (hoje mostra a página padrão da HostGator) e atualizar canonical, Open Graph e sitemap
+- [ ] Publicar o site no domínio savioreisneuro.com.br (hoje mostra a página padrão da HostGator) e atualizar canonical, Open Graph, JSON-LD e sitemap
 
 ## Material visual
 - [ ] Foto do centro cirúrgico na seção "Experiência" (`img/dr-savio-cirurgia.jpg`, IMG_1208 da pasta do iCloud "SAVIO FOTO E VIDEO"). Antes de ir para o ar, validar com o jurídico: a CFM 2.336/2023 restringe imagens de procedimentos feitas por terceiros. Confirmar também a autorização do hospital, da profissional da equipe que aparece de máscara à esquerda e do paciente (coberto, sem rosto). A marca Stryker aparece no endoscópio
 - [ ] Topo no celular agora usa o retrato de terno (`img/dr-savio-retrato.jpg`), que é vertical e mais nítido. Se houver o arquivo original da foto de camisa marrom em alta resolução (pelo menos 2880 px de largura), trocar `img/dr-savio-hero.jpg` para o topo ficar nítido também em telas retina
 - [ ] Credenciais concretas para a seção "Experiência": formação, residência, especializações em endoscopia, sociedades médicas, anos de atuação. Só publicar com dados enviados pelo Dr. Sávio
-- [ ] Vídeo da seção "A dor" (`media/cena-1280.mp4`, 1,5 MB): recomprimir para menos de 800 KB
+- [x] Vídeo da seção "A dor" recomprimido: `cena-1280.mp4` de 1,5 MB para 661 KB e `cena-854.mp4` de 827 KB para 368 KB, sem perda visível
 - [ ] Fotos do consultório, dos equipamentos e do atendimento. A galeria demonstrativa foi removida; se as fotos chegarem, criar uma seção nova
 - [ ] Fotos reais das pantufas, das flores e do cartão da alta (os espaços demonstrativos foram removidos)
 - [ ] Vídeos: avaliar antes de publicar (a CFM veda a filmagem de procedimentos por terceiros). A pasta "iPhone" do iCloud tem 51 vídeos .mov do centro cirúrgico
+- [x] Imagem de compartilhamento (WhatsApp, redes) própria em 1200×630 (`img/og-dr-savio.jpg`), com o rosto centralizado
+- [x] Arquivos sem uso removidos (`img/dr-savio-hero-sm.jpg`, `media/cena-start.jpg`)

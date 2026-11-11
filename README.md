@@ -10,7 +10,7 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 
 - **Ícones:** [Tabler Icons](https://tabler.io/icons) (licença MIT), embutidos como SVG no `index.html`.
 - **Modelo 3D:** coluna lombar modelada por código em `js/coluna3d.js`, renderizada com [three.js](https://threejs.org) 0.160 (licença MIT, carregado do jsDelivr). Sem WebGL, a seção mostra a ilustração em SVG de `js/anatomia.js`.
-- **Ilustrações animadas:** desenhos próprios em SVG gerados por `js/anatomia.js` (sinais no corpo, caminho até a hérnia, comparação aberta × endoscópica e etapas do método). Rodam sozinhas quando aparecem na tela, sem depender do scroll, e respeitam a preferência de movimento reduzido.
+- **Ilustrações animadas:** desenhos próprios em SVG gerados por `js/anatomia.js` (sinais no corpo, caminho até a hérnia, comparação aberta × endoscópica). Rodam sozinhas quando aparecem na tela, sem depender do scroll, e respeitam a preferência de movimento reduzido.
 
 ## Estrutura
 
@@ -18,15 +18,19 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 .
 ├── index.html   # página completa (HTML + CSS + JS embutidos)
 ├── js/
-│   └── anatomia.js  # ilustrações animadas da coluna (SVG)
-├── img/         # fotografias do Dr. Sávio (hero e retrato)
-│   ├── dr-savio-hero.jpg
-│   ├── dr-savio-hero-sm.jpg
-│   └── dr-savio-retrato.jpg
+│   ├── anatomia.js  # ilustrações animadas da coluna (SVG)
+│   └── coluna3d.js  # modelo 3D da coluna (three.js)
+├── img/         # fotografias do Dr. Sávio
+│   ├── dr-savio-hero.jpg         # topo no desktop
+│   ├── dr-savio-retrato.jpg      # topo no celular
+│   ├── dr-savio-cirurgia.jpg     # seção Dr. Sávio (centro cirúrgico)
+│   ├── dr-savio-consultorio.jpg  # seção Atendimento
+│   ├── og-dr-savio.jpg           # imagem de compartilhamento (1200×630)
+│   ├── avaliacoes/               # fotos de perfil das avaliações do Google
+│   └── icons/
 ├── media/       # cena em vídeo (dramatização) e imagens estáticas de apoio
-│   ├── cena-1280.mp4   # desktop, sem áudio, keyframes curtos para acompanhar o scroll
-│   ├── cena-854.mp4    # celular
-│   ├── cena-start.jpg  # quadro inicial (fallback)
+│   ├── cena-1280.mp4   # desktop, sem áudio, em loop (~650 KB)
+│   ├── cena-854.mp4    # celular (~360 KB)
 │   └── cena-poster.jpg # momento da dor (fallback e movimento reduzido)
 ├── PENDENCIAS.md  # pendências editoriais, médicas e alegações em validação
 ├── .nojekyll    # faz o GitHub Pages servir os arquivos sem processar com Jekyll
@@ -54,9 +58,9 @@ O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` 
 - **Alegações em validação** (+1.000 procedimentos, pioneirismo em MG) aparecem com o selo "Em validação". Abra com `#publico` para ver a página sem elas.
 - Lista completa em [`PENDENCIAS.md`](PENDENCIAS.md).
 
-## Narrativa (branch `versao-video`)
+## Ordem das seções
 
-Hero → cena em vídeo (dramatização) → sinais → revelação da cirurgia endoscópica → Dr. Sávio → comparação aberta × endoscópica → animação do método → relatos → atendimento → perguntas → agendamento.
+Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio → avaliações → comparação aberta × endoscópica → atendimento → perguntas → agendamento.
 
 ## Próximos passos
 
