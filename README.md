@@ -28,8 +28,8 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
 │   └── icons/
 ├── media/       # vídeos: cena (dramatização) e fundo da comparação (cirurgia), com posters
-│   ├── cena-1600.mp4   # desktop, sem áudio, em loop (~1,7 MB)
-│   ├── cena-960.mp4    # celular (~620 KB)
+│   ├── cena-1600.mp4   # desktop, sem áudio, em loop (~1,4 MB)
+│   ├── cena-960.mp4    # celular (~500 KB)
 │   └── cena-poster.jpg # momento da dor (fallback e movimento reduzido)
 ├── PENDENCIAS.md  # pendências editoriais, médicas e alegações em validação
 ├── .nojekyll    # faz o GitHub Pages servir os arquivos sem processar com Jekyll
