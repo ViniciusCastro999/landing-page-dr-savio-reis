@@ -1195,27 +1195,6 @@ body.public [data-claim]{display:none!important}
 .ledger .ledger-pio b{flex:0 0 auto;font-size:clamp(84px,8.4vw,132px);line-height:.8}
 .ledger .ledger-pio b em{color:var(--wine);font-style:italic}
 .ledger .ledger-pio p{margin:0;font-family:var(--serif);font-size:clamp(24px,2.3vw,34px);line-height:1.1;letter-spacing:-.01em;color:var(--ink);max-width:15em}
-.auth-photo .seal{position:absolute;left:-64px;top:64px;width:152px;height:152px;z-index:2;filter:drop-shadow(0 18px 30px rgba(60,10,25,.35))}
-.seal svg{display:block;width:100%;height:100%;overflow:visible}
-.seal-bg{fill:#8A2240}
-.seal-in{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1}
-.seal-t{font:500 12.5px "Geist Mono",ui-monospace,monospace;letter-spacing:.06em;fill:rgba(255,255,255,.9)}
-.seal-spin{transform-origin:100px 100px;animation:sealSpin 38s linear infinite}
-.seal-c{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:#fff;line-height:1}
-.seal-c b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:52px;letter-spacing:-.02em}
-.seal-c small{margin-top:4px;font:500 10px "Geist Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
-.auth-photo.rv .seal{opacity:0;transform:scale(.7) rotate(-20deg);transition:opacity .9s ease .5s,transform 1.2s cubic-bezier(.2,1.3,.4,1) .5s}
-.auth-photo.rv.in .seal{opacity:1;transform:none}
-@keyframes sealSpin{to{transform:rotate(360deg)}}
-@media (max-width:960px){
-  .auth-photo .seal{left:auto;right:14px;top:auto;bottom:62px;width:118px;height:118px}
-  .seal-c b{font-size:40px}
-  .seal-c small{font-size:9px}
-}
-@media (prefers-reduced-motion:reduce){
-  .seal-spin{animation:none}
-  .auth-photo.rv .seal{opacity:1;transform:none;transition:none}
-}
 
 /* ================= caminho menor · ilustração de fundo ================= */
 .revela .sx-foot .sx-capRow{border-top:1px solid var(--line);padding-top:18px;margin-top:0}
@@ -1709,17 +1688,8 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
       </div>
     </div>
     <figure class="auth-photo rv" id="authPhoto">
-      <div class="frame"><img src="img/dr-savio-cirurgia.jpg" alt="Dr. Sávio Reis no centro cirúrgico, segurando o endoscópio durante uma cirurgia endoscópica da coluna." width="1080" height="1440" loading="lazy" decoding="async"></div>
+      <div class="frame"><img src="img/dr-savio-cirurgia.jpg" alt="Dr. Sávio Reis no centro cirúrgico durante uma cirurgia endoscópica da coluna, com o colar &quot;Dr. Sávio Reis · Endoscopia de Coluna&quot;." width="1333" height="2000" loading="lazy" decoding="async"></div>
       <span class="ring" aria-hidden="true"></span>
-      <div class="seal" aria-hidden="true">
-        <svg viewBox="0 0 200 200" focusable="false">
-          <defs><path id="sealPath" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
-          <circle class="seal-bg" cx="100" cy="100" r="99"/>
-          <circle class="seal-in" cx="100" cy="100" r="58"/>
-          <g class="seal-spin"><text class="seal-t"><textPath href="#sealPath" textLength="472" lengthAdjust="spacing">PIONEIRO EM MINAS GERAIS · CIRURGIA ENDOSCÓPICA DA COLUNA ·</textPath></text></g>
-        </svg>
-        <span class="seal-c"><b>1º</b><small>em MG</small></span>
-      </div>
       <figcaption class="cap mono"><span>Dr. Sávio Reis</span><span>No centro cirúrgico</span></figcaption>
     </figure>
   </div>

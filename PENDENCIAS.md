@@ -55,7 +55,7 @@ A seção agora é uma tabela de prazos de retorno (caminhada, dirigir, trabalho
 - [ ] Publicar o site no domínio savioreisneuro.com.br (hoje mostra a página padrão da HostGator) e atualizar canonical, Open Graph, JSON-LD e sitemap
 
 ## Material visual
-- [ ] Foto do centro cirúrgico na seção "Experiência" (`img/dr-savio-cirurgia.jpg`, IMG_1208). Autorização do paciente confirmada; se quiser, validar com o jurídico o uso de imagem no centro cirúrgico (CFM 2.336/2023).
+- [ ] Foto do centro cirúrgico na seção "Experiência" (`img/dr-savio-cirurgia.jpg`, Dr. Sávio com o colar "Endoscopia de Coluna"; selo "1º em MG" removido da foto). Autorização do paciente confirmada; se quiser, validar com o jurídico o uso de imagem no centro cirúrgico (CFM 2.336/2023).
 - [ ] Topo no celular agora usa o retrato de terno (`img/dr-savio-retrato.jpg`), que é vertical e mais nítido. Se houver o arquivo original da foto de camisa marrom em alta resolução (pelo menos 2880 px de largura), trocar `img/dr-savio-hero.jpg` para o topo ficar nítido também em telas retina
 - [ ] Credenciais concretas para a seção "Experiência": formação, residência, especializações em endoscopia, sociedades médicas, anos de atuação. Só publicar com dados enviados pelo Dr. Sávio
 - [x] Vídeo da seção "A dor" recomprimido: `cena-1280.mp4` de 1,5 MB para 661 KB e `cena-854.mp4` de 827 KB para 368 KB, sem perda visível
