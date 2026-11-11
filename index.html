@@ -1243,7 +1243,6 @@ body.public [data-claim]{display:none!important}
 
 /* ================= perguntas · acolhimento ================= */
 .faq{background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 40%,#FBF5F3 100%)}
-.faq-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);gap:clamp(30px,5vw,80px);align-items:start}
 .faq .faq-list{border-top:0;display:flex;flex-direction:column;gap:12px}
 .faq .faq-list details{border:1px solid var(--line);border-radius:22px;background:#fff;transition:background .45s var(--ease),border-color .45s,box-shadow .45s var(--ease)}
 .faq .faq-list details:hover{border-color:rgba(138,34,64,.25)}
@@ -1253,7 +1252,6 @@ body.public [data-claim]{display:none!important}
 .faq .faq-list summary h3{font-size:clamp(21px,1.8vw,27px);line-height:1.15}
 .faq .faq-list .ans{grid-template-columns:44px minmax(0,1fr);padding:0 64px 28px 26px}
 .faq .faq-list .ans div{font-size:16px;line-height:1.75}
-.faq-aside{position:sticky;top:110px}
 .faq-help{position:relative;overflow:hidden;padding:clamp(30px,3vw,42px);border-radius:28px;color:#fff;background:radial-gradient(90% 120% at 0% 0%,#A93654 0%,#8A2240 40%,#4C1024 100%);box-shadow:0 30px 70px -36px rgba(138,34,64,.75)}
 .faq-help::after{content:"";position:absolute;right:-30%;bottom:-40%;width:90%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(168,52,79,.35),transparent);pointer-events:none}
 .faq-help-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.14);margin-bottom:26px}
@@ -1262,7 +1260,6 @@ body.public [data-claim]{display:none!important}
 .faq-help p{position:relative;z-index:1;margin:0 0 28px;color:rgba(255,255,255,.82);font-weight:300;font-size:15.5px;line-height:1.65}
 .faq-help-btn{position:relative;z-index:1;background:#fff;color:var(--wine)}
 .faq-help-btn:hover{background:#FFE9EF}
-@media (max-width:960px){.faq-grid{grid-template-columns:1fr}.faq-aside{position:relative;top:0}}
 @media (max-width:560px){
   .faq .faq-list summary{grid-template-columns:34px minmax(0,1fr) 36px;gap:12px;padding:20px 16px 20px 16px}
   .faq .faq-list summary .mono{width:30px;height:30px}
@@ -1561,6 +1558,41 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
   .care-bg img{object-position:78% 20%}
   .care-bg::after{background:linear-gradient(180deg,rgba(251,245,243,0) 40%,rgba(251,245,243,.75) 72%,#FBF5F3 96%)}
 }
+/* ================= perguntas · editorial (título fixo à esquerda, lista à direita) ================= */
+.faq{interpolate-size:allow-keywords}
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,120px);align-items:start}
+.faq-side{position:sticky;top:112px}
+.faq .faq-head .h2{font-size:clamp(46px,4.8vw,80px)}
+.faq-note{margin-top:24px;max-width:22em;font-size:16.5px;line-height:1.65;color:var(--mute)}
+.faq-side .faq-help{margin-top:clamp(40px,4.4vw,64px);max-width:440px}
+.faq .faq-list{display:block;border-top:1px solid var(--ink)}
+.faq .faq-list details,.faq .faq-list details:hover,.faq .faq-list details[open]{border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;box-shadow:none}
+.faq .faq-list summary{grid-template-columns:minmax(0,1fr) 44px;gap:24px;padding:30px 0}
+.faq .faq-list summary h3{font-size:clamp(23px,2vw,30px);line-height:1.15;transition:color .35s,transform .6s var(--ease)}
+.faq .faq-list summary i{width:44px;height:44px}
+.faq .faq-list summary:hover h3{color:var(--wine);transform:translateX(6px)}
+.faq .faq-list summary:hover i{border-color:var(--wine)}
+.faq .faq-list details[open] summary h3{color:var(--wine);transform:none}
+.faq .faq-list .ans{grid-template-columns:minmax(0,620px);padding:0 68px 36px 0}
+.faq .faq-list .ans div{font-size:16.5px;line-height:1.75;color:var(--ink-2)}
+.faq .faq-list details::details-content{block-size:0;overflow:clip;transition:block-size .55s var(--ease),content-visibility .55s allow-discrete}
+.faq .faq-list details[open]::details-content{block-size:auto}
+@media (max-width:960px){
+  .faq-wrap{display:flex;flex-direction:column;gap:0}
+  .faq-side{display:contents}
+  .faq-head{order:0;margin-bottom:clamp(36px,6vw,56px)}
+  .faq .faq-list{order:1}
+  .faq-side .faq-help{order:2;margin-top:48px;max-width:none}
+}
+@media (max-width:640px){
+  .faq .faq-list summary{grid-template-columns:minmax(0,1fr) 40px;gap:16px;padding:22px 0}
+  .faq .faq-list summary h3{font-size:21px}
+  .faq .faq-list summary i{width:40px;height:40px}
+  .faq .faq-list summary:hover h3{transform:none}
+  .faq .faq-list .ans{padding:0 0 26px}
+  .faq .faq-list .ans div{font-size:15.5px}
+  .faq-note{font-size:16px}
+}
 </style>
 </head>
 <body class="on-dark">
@@ -1843,23 +1875,21 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 
 <!-- ===== FAQ ===== -->
 <section class="sec faq" id="perguntas" aria-labelledby="faq-t">
-  <div class="sec-head">
-    <div>
-      <p class="sec-idx mono rv">Perguntas frequentes</p>
-      <h2 class="h2 rv d1" id="faq-t">Antes de decidir,<br><em>tire suas dúvidas.</em></h2>
-    </div>
-    <p class="sec-lede rv d2">É natural ter perguntas, e nenhuma delas é pequena demais. Aqui estão as respostas para as dúvidas mais comuns. Elas são gerais: na consulta, o seu caso é avaliado com calma e individualmente.</p>
-  </div>
-  <div class="faq-grid">
-    <div class="faq-list" id="faqList"></div>
-    <aside class="faq-aside rv">
-      <div class="faq-help">
+  <div class="faq-wrap">
+    <div class="faq-side">
+      <div class="faq-head">
+        <p class="sec-idx mono rv">Perguntas frequentes</p>
+        <h2 class="h2 rv d1" id="faq-t">Antes de decidir,<br><em>tire suas dúvidas.</em></h2>
+        <p class="faq-note rv d2">Respostas gerais para as dúvidas mais comuns. O seu caso é sempre avaliado com calma, na consulta.</p>
+      </div>
+      <div class="faq-help rv">
         <span class="faq-help-ic" aria-hidden="true"><i class="ic" data-ic="messages"></i></span>
         <h3>Ficou alguma dúvida?</h3>
         <p>Pergunte para a equipe. Ninguém precisa chegar à consulta com medo do que ainda não entende.</p>
         <a class="btn faq-help-btn" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Perguntar pelo WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
       </div>
-    </aside>
+    </div>
+    <div class="faq-list" id="faqList"></div>
   </div>
 </section>
 
