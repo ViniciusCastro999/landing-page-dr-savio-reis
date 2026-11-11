@@ -40,7 +40,7 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [ ] Revisar se os relatos atendem à CFM 2.336/2023: sóbrios, sem adjetivos de superioridade, sem promessa de resultado
 
 ## Conteúdo clínico a validar com o Dr. Sávio
-- [ ] Textos das etapas do método (acesso, câmera e instrumentos, descompressão)
+- [ ] Legendas da animação "Caminho menor" (corte de cerca de 8 mm, tubo entre os músculos, câmera e retirada da hérnia). A seção "Como funciona a endoscopia" foi removida por repetir esse conteúdo
 - [ ] "Três momentos": duração do procedimento, critérios de alta, recuperação
 - [ ] Comparação entre técnicas: medidas de referência das incisões (a ilustração é esquemática e fora de escala)
 - [ ] Lista de riscos (infecção, sangramento, lesão neural, fístula liquórica, recidiva, conversão)
