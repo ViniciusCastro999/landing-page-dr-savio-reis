@@ -61,7 +61,7 @@ O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` 
 
 ## Ordem das seções
 
-Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio → avaliações → comparação de prazos (aberta × endoscópica) → atendimento → perguntas → agendamento.
+Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio → comparação de prazos (aberta × endoscópica) → avaliações → atendimento → perguntas → agendamento.
 
 ## Próximos passos
 
