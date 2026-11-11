@@ -1494,7 +1494,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 /* ================= comparação · prazos de retorno ================= */
 .cmp{position:relative;overflow:hidden;background:#0C0B0E;color:#fff;padding:clamp(88px,9vw,140px) 0 clamp(80px,8vw,128px)}
 .cmp-photo{position:absolute;top:0;right:0;width:min(64%,1100px);height:min(100%,980px);pointer-events:none}
-.cmp-photo video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.cmp-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
 .cmp-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0C0B0E 0%,rgba(12,11,14,.7) 14%,rgba(12,11,14,.1) 42%,rgba(12,11,14,0) 100%),linear-gradient(180deg,rgba(12,11,14,.3) 0%,rgba(12,11,14,0) 18%,rgba(12,11,14,0) 52%,#0C0B0E 97%),radial-gradient(80% 70% at 60% 40%,rgba(138,34,64,.12),rgba(138,34,64,0) 70%)}
 .cmp-in{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:0 var(--pad)}
 .cmp-head{max-width:640px}
@@ -1537,7 +1537,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 @media (max-width:860px){
   .cmp{padding-top:0}
   .cmp-photo{position:relative;width:100%;height:auto;aspect-ratio:4/3.4;margin-bottom:-34%}
-  .cmp-photo video{object-position:50% 40%}
+  .cmp-photo img{object-position:50% 3%}
   .cmp-photo::after{background:linear-gradient(180deg,rgba(12,11,14,.2) 0%,rgba(12,11,14,0) 30%,rgba(12,11,14,.55) 62%,#0C0B0E 96%),radial-gradient(80% 70% at 60% 40%,rgba(138,34,64,.16),rgba(138,34,64,0) 70%)}
   .cmp-t{display:none}
   .cmp-m{display:block;margin-top:40px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04))}
@@ -1709,7 +1709,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
       </div>
     </div>
     <figure class="auth-photo rv" id="authPhoto">
-      <div class="frame"><img src="img/dr-savio-oracao.jpg" alt="Dr. Sávio Reis no centro cirúrgico, de olhos fechados e com a mão sobre o paciente, em um momento de oração antes da cirurgia endoscópica." width="1080" height="1404" loading="lazy" decoding="async"></div>
+      <div class="frame"><img src="img/dr-savio-cirurgia.jpg" alt="Dr. Sávio Reis no centro cirúrgico, segurando o endoscópio durante uma cirurgia endoscópica da coluna." width="1080" height="1440" loading="lazy" decoding="async"></div>
       <span class="ring" aria-hidden="true"></span>
       <div class="seal" aria-hidden="true">
         <svg viewBox="0 0 200 200" focusable="false">
@@ -1727,7 +1727,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 
 <!-- ===== VERSUS ===== -->
 <section class="cmp" id="comparativo" data-dark data-label="Comparação" aria-labelledby="vs-t">
-  <div class="cmp-photo" aria-hidden="true"><video id="cmpV" muted playsinline loop preload="none" poster="media/andando-poster.jpg" disablepictureinpicture disableremoteplayback tabindex="-1"></video></div>
+  <div class="cmp-photo" aria-hidden="true"><img src="img/dr-savio-endoscopia.jpg" alt="" width="1333" height="2000" loading="lazy" decoding="async"></div>
   <div class="cmp-in">
     <div class="cmp-head">
       <p class="cmp-eb mono rv"><span>Cirurgia aberta × endoscópica</span></p>
@@ -1982,15 +1982,6 @@ if(!reduce && 'IntersectionObserver' in window){
     if(e.isIntersecting){ if(!cenaV.src) cenaV.src = innerWidth < 900 ? 'media/cena-854.mp4' : 'media/cena-1280.mp4'; const pr = cenaV.play(); pr && pr.catch(()=>{}); }
     else cenaV.pause();
   }), {threshold:.25}).observe(cenaV);
-}
-
-/* ================= COMPARAÇÃO — paciente caminhando (fundo em loop) ================= */
-const cmpV = $('#cmpV');
-if(cmpV && !reduce && 'IntersectionObserver' in window){
-  new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting){ if(!cmpV.src) cmpV.src = innerWidth < 900 ? 'media/andando-640.mp4' : 'media/andando-1024.mp4'; const pr = cmpV.play(); pr && pr.catch(()=>{}); }
-    else cmpV.pause();
-  }), {threshold:.2}).observe(cmpV);
 }
 
 /* ================= AUTORIDADE — nome em parallax ================= */

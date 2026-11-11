@@ -24,17 +24,15 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   ├── dr-savio-hero.jpg         # topo no desktop
 │   ├── dr-savio-retrato.jpg      # topo no celular
 │   ├── dr-savio-atendimento.jpg  # fundo da seção Atendimento (IMG_1531)
-│   ├── dr-savio-oracao.jpg       # seção Dr. Sávio (oração antes da cirurgia, quadro do vídeo C019)
+│   ├── dr-savio-cirurgia.jpg     # seção Dr. Sávio (centro cirúrgico)
+│   ├── dr-savio-endoscopia.jpg   # fundo da comparação (prazos)
 │   ├── og-dr-savio.jpg           # imagem de compartilhamento (1200×630)
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
 │   └── icons/
 ├── media/       # cena em vídeo (dramatização) e imagens estáticas de apoio
 │   ├── cena-1280.mp4   # desktop, sem áudio, em loop (~650 KB)
 │   ├── cena-854.mp4    # celular (~360 KB)
-│   ├── cena-poster.jpg # momento da dor (fallback e movimento reduzido)
-│   ├── andando-1024.mp4  # fundo da comparação: paciente caminhando após a cirurgia (vídeos C057 + C058)
-│   ├── andando-640.mp4   # celular
-│   └── andando-poster.jpg # fallback e movimento reduzido
+│   └── cena-poster.jpg # momento da dor (fallback e movimento reduzido)
 ├── PENDENCIAS.md  # pendências editoriais, médicas e alegações em validação
 ├── .nojekyll    # faz o GitHub Pages servir os arquivos sem processar com Jekyll
 └── README.md

@@ -17,7 +17,7 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 A seção agora é uma tabela de prazos de retorno (caminhada, dirigir, trabalho, atividade física e recuperação plena), com foto do centro cirúrgico ao fundo.
 - [ ] Confirmar com o Dr. Sávio os prazos publicados: caminhada 7 dias × 3 horas; dirigir 30 dias × 1 dia; trabalho 30 dias × 3 a 5 dias; atividade física 60 dias × 7 dias; recuperação plena 90 dias × 7 a 10 dias
 - [ ] Validar com o jurídico o título "Por que a cirurgia endoscópica é a melhor opção?" e a comparação de prazos (CFM 2.336/2023 restringe superlativos e promessa de resultado). Abaixo da tabela há a nota "Prazos de referência... só a avaliação individual indica a técnica adequada"
-- [x] Fundo da seção agora é o vídeo do paciente caminhando após a cirurgia (`media/andando-*.mp4`, vídeos C057 e C058). Autorização do paciente confirmada.
+- [x] Foto de fundo da seção (`img/dr-savio-endoscopia.jpg`): Dr. Sávio operando, com o colar "Endoscopia de Coluna", em preto e branco. Autorização confirmada.
 
 ## Cena em vídeo
 - [ ] Confirmar o direito de uso do vídeo do avô e da criança (dramatização). O aviso "Cena ilustrativa · dramatização" foi retirado a pedido; avaliar com o jurídico se precisa voltar
@@ -55,7 +55,7 @@ A seção agora é uma tabela de prazos de retorno (caminhada, dirigir, trabalho
 - [ ] Publicar o site no domínio savioreisneuro.com.br (hoje mostra a página padrão da HostGator) e atualizar canonical, Open Graph, JSON-LD e sitemap
 
 ## Material visual
-- [ ] Foto da seção "Experiência" agora é o momento de oração antes da cirurgia (`img/dr-savio-oracao.jpg`, quadro do vídeo C019). Autorização do paciente confirmada; se quiser, validar com o jurídico o uso de imagem no centro cirúrgico (CFM 2.336/2023).
+- [ ] Foto do centro cirúrgico na seção "Experiência" (`img/dr-savio-cirurgia.jpg`, IMG_1208). Autorização do paciente confirmada; se quiser, validar com o jurídico o uso de imagem no centro cirúrgico (CFM 2.336/2023).
 - [ ] Topo no celular agora usa o retrato de terno (`img/dr-savio-retrato.jpg`), que é vertical e mais nítido. Se houver o arquivo original da foto de camisa marrom em alta resolução (pelo menos 2880 px de largura), trocar `img/dr-savio-hero.jpg` para o topo ficar nítido também em telas retina
 - [ ] Credenciais concretas para a seção "Experiência": formação, residência, especializações em endoscopia, sociedades médicas, anos de atuação. Só publicar com dados enviados pelo Dr. Sávio
 - [x] Vídeo da seção "A dor" recomprimido: `cena-1280.mp4` de 1,5 MB para 661 KB e `cena-854.mp4` de 827 KB para 368 KB, sem perda visível
