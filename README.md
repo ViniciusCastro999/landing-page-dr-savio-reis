@@ -22,14 +22,12 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   └── coluna3d.js  # modelo 3D da coluna (three.js)
 ├── img/         # fotografias do Dr. Sávio
 │   ├── dr-savio-hero.jpg         # topo no desktop
-│   ├── dr-savio-retrato.jpg      # topo no celular
+│   ├── dr-savio-retrato.jpg      # topo no celular e seção Dr. Sávio
 │   ├── dr-savio-atendimento.jpg  # fundo da seção Atendimento (IMG_1531)
-│   ├── dr-savio-retrato-terno.jpg # seção Dr. Sávio (retrato no consultório)
-│   ├── dr-savio-endoscopia.jpg   # fundo da comparação (prazos)
 │   ├── og-dr-savio.jpg           # imagem de compartilhamento (1200×630)
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
 │   └── icons/
-├── media/       # cena em vídeo (dramatização) e imagens estáticas de apoio
+├── media/       # vídeos: cena (dramatização) e fundo da comparação (cirurgia), com posters
 │   ├── cena-1280.mp4   # desktop, sem áudio, em loop (~650 KB)
 │   ├── cena-854.mp4    # celular (~360 KB)
 │   └── cena-poster.jpg # momento da dor (fallback e movimento reduzido)
