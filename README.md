@@ -24,7 +24,7 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   ├── dr-savio-hero.jpg         # topo no desktop
 │   ├── dr-savio-retrato.jpg      # topo no celular
 │   ├── dr-savio-atendimento.jpg  # fundo da seção Atendimento (IMG_1531)
-│   ├── dr-savio-cirurgia.jpg     # seção Dr. Sávio (centro cirúrgico)
+│   ├── dr-savio-retrato-consultorio.jpg # seção Dr. Sávio (retrato no consultório)
 │   ├── dr-savio-endoscopia.jpg   # fundo da comparação (prazos)
 │   ├── og-dr-savio.jpg           # imagem de compartilhamento (1200×630)
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
