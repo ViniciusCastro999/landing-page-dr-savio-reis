@@ -1518,6 +1518,19 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
   .cmp-mh .cmp-mv{align-items:center;padding:12px 6px;font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85)}
   .cmp-mh .cmp-mv.e{color:#fff}
 }
+/* comparativo · animação de entrada (só com JS e sem "reduzir movimento"; --d = atraso em ms) */
+.cmp-anim .cmp-hk,.cmp-anim .cmp-k,.cmp-anim .cmp-r,.cmp-anim .cmp-c0,.cmp-anim .cmp-v,.cmp-anim .cmp-mr{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--d,0) * 1ms)}
+.cmp-anim .cmp-hk{transform:none}
+.cmp-anim .cmp-r{transform:translateY(34px)}
+.cmp-anim .cmp-r .cmp-c0{transform:translateX(-24px)}
+.cmp-anim .cmp-k .ic{display:block;transform:scale(.3) rotate(-14deg);transition:transform .9s cubic-bezier(.34,1.56,.64,1);transition-delay:calc(var(--d,0) * 1ms + 140ms)}
+.cmp-anim .cmp-r.e::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(105deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 65%) no-repeat;background-size:260% 100%;background-position:130% 0;opacity:0}
+.cmp-anim .cmp-mv.e:not(.cmp-mh .cmp-mv){background-color:rgba(138,34,64,0);transition:background-color .7s var(--ease);transition-delay:calc(var(--d,0) * 1ms)}
+.cmp-anim .play .cmp-hk,.cmp-anim .play .cmp-k,.cmp-anim .play .cmp-r,.cmp-anim .play .cmp-c0,.cmp-anim .play .cmp-v,.cmp-anim .play .cmp-mr{opacity:1;transform:none}
+.cmp-anim .play .cmp-k .ic{transform:none}
+.cmp-anim .play .cmp-r.e::after{animation:cmpShine 1.5s calc(var(--sh,2600) * 1ms) ease-in-out forwards}
+.cmp-anim .play .cmp-mv.e:not(.cmp-mh .cmp-mv){background-color:rgba(138,34,64,.9)}
+@keyframes cmpShine{0%{opacity:1;background-position:130% 0}85%{opacity:1}100%{opacity:0;background-position:-30% 0}}
 
 /* ================= atendimento · foto de fundo ================= */
 /* computador: a foto fica fixa na tela enquanto o texto rola por cima (sticky dentro da seção) */
@@ -1923,6 +1936,37 @@ $('#reviewBtn').addEventListener('click', e => { const on = document.body.classL
 /* ================= REVEAL ================= */
 const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
 $$('.rv').forEach(el => io.observe(el));
+
+/* ================= COMPARATIVO — quadro entra em sequência e os números contam ================= */
+const cmpSec = $('#comparativo');
+if(cmpSec && !reduce && 'IntersectionObserver' in window){
+  cmpSec.classList.add('cmp-anim');
+  const D = (el, ms) => el.style.setProperty('--d', Math.round(ms));
+  const counts = [];
+  const prep = (b, delay, dur) => { const to = parseInt(b.textContent, 10); if(!to) return; b.textContent = '0'; counts.push({b, to, delay, dur}); };
+  const run = list => list.forEach(({b, to, delay, dur}) => setTimeout(() => { const t0 = performance.now(); const step = now => { const p = clamp((now - t0) / dur); b.textContent = Math.round(to * ease(p)); if(p < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }, delay));
+  const tbl = $('.cmp-t', cmpSec), mob = $('.cmp-m', cmpSec);
+  /* computador: cabeçalho → linha "aberta" contando devagar → linha "endoscópica" sobe → brilho */
+  const ta = [];
+  D($('.cmp-hk', tbl), 0);
+  $$('.cmp-k', tbl).forEach((k, i) => D(k, 120 + i * 90));
+  const [ra, re] = $$('.cmp-r', tbl);
+  D(ra, 520); D($('.cmp-c0', ra), 620);
+  $$('.cmp-v', ra).forEach((v, i) => { D(v, 700 + i * 110); $$('b', v).forEach(b => { prep(b, 760 + i * 110, 1300); }); });
+  D(re, 1500); D($('.cmp-c0', re), 1620);
+  $$('.cmp-v', re).forEach((v, i) => { D(v, 1700 + i * 110); $$('b', v).forEach(b => { prep(b, 1760 + i * 110, 700); }); });
+  re.style.setProperty('--sh', 2700);
+  ta.push(...counts.splice(0));
+  /* celular: linhas em cascata, coluna da endoscopia se acende */
+  $$('.cmp-mr', mob).forEach((r, i) => {
+    const t = i * 140; D(r, t);
+    const e = $('.cmp-mv.e', r); if(i) D(e, t + 380);
+    $$('b', r).forEach(b => prep(b, t + (b.closest('.e') ? 420 : 160), b.closest('.e') ? 600 : 1000));
+  });
+  const ma = counts.splice(0);
+  const io2 = new IntersectionObserver(es => es.forEach(x => { if(!x.isIntersecting) return; x.target.classList.add('play'); run(x.target === tbl ? ta : ma); io2.unobserve(x.target); }), {threshold:.35});
+  io2.observe(tbl); io2.observe(mob);
+}
 
 /* ================= CENA — vídeo em loop (sem scroll) ================= */
 const cenaV = $('#cenaV');
