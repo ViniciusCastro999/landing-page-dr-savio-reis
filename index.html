@@ -1700,7 +1700,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 <!-- ===== CENA · A DOR QUE INTERROMPE A VIDA ===== -->
 <section class="cena2" id="cena" data-dark data-label="A dor" aria-labelledby="cena-t">
   <div class="cena2-media" aria-hidden="true">
-    <video id="cenaV" muted playsinline loop preload="none" poster="media/cena-poster.jpg?v=3" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+    <video id="cenaV" muted playsinline loop preload="none" poster="media/cena-poster.jpg?v=4" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
   </div>
   <div class="cena2-copy">
     <p class="sec-idx mono rv">A dor no dia a dia</p>
@@ -2030,10 +2030,10 @@ if(cmpSec && !reduce && 'IntersectionObserver' in window){
 /* ================= CENA — vídeo em loop (sem scroll) ================= */
 const cenaV = $('#cenaV');
 const cenaCel = innerWidth < 900;   /* no celular, um arquivo já recortado na área que aparece (mais nítido) */
-if(cenaCel) cenaV.poster = 'media/cena-poster-celular.jpg';
+if(cenaCel) cenaV.poster = 'media/cena-poster-celular.jpg?v=2';
 if(!reduce && 'IntersectionObserver' in window){
   new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting){ if(!cenaV.src) cenaV.src = cenaCel ? 'media/cena-celular.mp4' : 'media/cena-1920.mp4'; const pr = cenaV.play(); pr && pr.catch(()=>{}); }
+    if(e.isIntersecting){ if(!cenaV.src) cenaV.src = cenaCel ? 'media/cena-celular.mp4?v=2' : 'media/cena-1920.mp4?v=2'; const pr = cenaV.play(); pr && pr.catch(()=>{}); }
     else cenaV.pause();
   }), {threshold:.25}).observe(cenaV);
 }
