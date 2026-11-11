@@ -58,7 +58,7 @@ A seção agora é uma tabela de prazos de retorno (caminhada, dirigir, trabalho
 - [ ] Foto do centro cirúrgico na seção "Experiência" (agora `img/dr-savio-retrato.jpg`, a mesma foto do topo no celular; selo "1º em MG" removido). Autorização do paciente confirmada; se quiser, validar com o jurídico o uso de imagem no centro cirúrgico (CFM 2.336/2023).
 - [ ] Topo no celular agora usa o retrato de terno (`img/dr-savio-retrato.jpg`), que é vertical e mais nítido. Se houver o arquivo original da foto de camisa marrom em alta resolução (pelo menos 2880 px de largura), trocar `img/dr-savio-hero.jpg` para o topo ficar nítido também em telas retina
 - [ ] Credenciais concretas para a seção "Experiência": formação, residência, especializações em endoscopia, sociedades médicas, anos de atuação. Só publicar com dados enviados pelo Dr. Sávio
-- [x] Vídeo da seção "A dor" trocado pelo vídeo gerado do avô com a neta (versão 1080p, take 7b54d85f), sem áudio e com escurecimento suave no fim do loop: `cena-1600.mp4` (1,4 MB) e `cena-960.mp4` (500 KB)
+- [x] Vídeo da seção "A dor" trocado pelo vídeo gerado do avô com a neta (versão 1080p, take 7b54d85f), sem áudio e com escurecimento suave no fim do loop: `cena-1920.mp4` (3,4 MB, resolução cheia e compressão leve) e `cena-celular.mp4` (2,3 MB, recortado na área que aparece no celular)
 - [ ] Fotos do consultório, dos equipamentos e do atendimento. A galeria demonstrativa foi removida; se as fotos chegarem, criar uma seção nova
 - [x] Card "Gestos de acolhimento" (pantufas, flores e cartão) removido da seção Atendimento
 - [x] Item "Acolhimento" (pantufas, flores e cartão na alta) removido da seção Experiência
