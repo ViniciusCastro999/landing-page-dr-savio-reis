@@ -213,7 +213,7 @@ function start() {
   host.classList.add('is3d');
 
   /* ---------- etapas ---------- */
-  const SPEED = 1.3; /* ritmo da animação (casa com as durações em anatomia.js) */
+  const SPEED = 1.3; /* ritmo da animação 3D: cada etapa termina antes e fica parada até o próximo texto */
   let step = 0, stepAt = performance.now();
   const readStep = () => { let n = 0; for (let j = 1; j <= 4; j++) if (host.classList.contains('p' + j)) n = j; return n; };
   new MutationObserver(() => { const n = readStep(); if (n !== step) { step = n; stepAt = performance.now(); } }).observe(host, { attributes: true, attributeFilter: ['class'] });

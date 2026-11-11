@@ -230,7 +230,7 @@ if (fCam) {
     ['Nervo livre, por um caminho menor', 'Em casos selecionados, menos tecido mexido no acesso.'],
   ];
   const cap = $('sxCaminhoCap');
-  player({watch: fCam, figs: [fCam], durs: [2150, 2900, 3250, 4750, 4000], segs: null, still: 4, /* ~30% mais rápido; casa com SPEED em coluna3d.js */
+  player({watch: fCam, figs: [fCam], durs: [2800, 3800, 4200, 6200, 5200], segs: null, still: 4, /* tempo de leitura de cada texto; a animação 3D anda mais rápido (SPEED em coluna3d.js) e espera */
     onStep: n => swap(cap, `<b>${T[n][0]}</b>${T[n][1]}`)});
 }
 /* ================= ABERTA × ENDOSCÓPICA (vista de cima) ================= */
