@@ -213,6 +213,7 @@ function start() {
   host.classList.add('is3d');
 
   /* ---------- etapas ---------- */
+  const SPEED = 1.3; /* ritmo da animação (casa com as durações em anatomia.js) */
   let step = 0, stepAt = performance.now();
   const readStep = () => { let n = 0; for (let j = 1; j <= 4; j++) if (host.classList.contains('p' + j)) n = j; return n; };
   new MutationObserver(() => { const n = readStep(); if (n !== step) { step = n; stepAt = performance.now(); } }).observe(host, { attributes: true, attributeFilter: ['class'] });
@@ -274,7 +275,7 @@ function start() {
   function frame(now) {
     raf = 0;
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
-    const tg = targets((now - stepAt) / 1000);
+    const tg = targets((now - stepAt) / 1000 * SPEED);
     const g = k => damp(k, tg[k], dt);
 
     M.open.opacity = g('open'); openEdges.material.opacity = g('edges');

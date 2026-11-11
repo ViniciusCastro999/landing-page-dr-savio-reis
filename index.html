@@ -1593,6 +1593,23 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
   .faq .faq-list .ans div{font-size:15.5px}
   .faq-note{font-size:16px}
 }
+/* ================= caminho menor · legenda sobre a ilustração (sem indicador) ================= */
+.revela .sx-card{position:relative}
+.revela .sx-over{position:absolute;left:0;bottom:0;z-index:3;max-width:min(440px,100%);padding:18px 22px 20px;border:1px solid rgba(26,22,24,.08);border-radius:18px;background:rgba(255,255,255,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 18px 40px -28px rgba(26,22,24,.35);pointer-events:none}
+.revela .sx-over .sx-text{min-height:0;font-size:15.5px;line-height:1.55}
+.revela .sx-over .sx-text b{font-size:clamp(22px,1.9vw,27px);margin-bottom:4px}
+.revela .sx-over .sx-text b:only-child{margin-bottom:0}
+@media (min-width:961px){
+  .revela-grid{grid-template-areas:"copy fig" "facts fig"}
+  .revela .sx-over{left:clamp(0px,2vw,24px);bottom:clamp(8px,2vw,28px)}
+}
+@media (max-width:960px){
+  .revela .sx-card{margin:0 0 44px}
+  .revela #sxCaminho.is3d{aspect-ratio:1/1.12}
+  .revela .sx-over{left:0;right:0;max-width:none;padding:14px 16px 16px;border-radius:16px}
+  .revela .sx-over .sx-text{font-size:14.5px}
+  .revela .sx-over .sx-text b{font-size:21px}
+}
 </style>
 </head>
 <body class="on-dark">
@@ -1704,11 +1721,8 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
     </ul>
     <figure class="sx-card rv">
       <div class="sx crop" data-kind="cmp" id="sxCaminho"></div>
+      <figcaption class="sx-over"><p class="sx-text" id="sxCaminhoCap" aria-live="polite"></p></figcaption>
     </figure>
-    <div class="sx-foot rv">
-      <div class="sx-capRow"><p class="sx-text" id="sxCaminhoCap" aria-live="polite"></p></div>
-      <div class="sx-segs" id="sxCaminhoSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
-    </div>
   </div>
 </section>
 
