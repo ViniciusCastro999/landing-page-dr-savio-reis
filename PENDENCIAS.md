@@ -30,7 +30,7 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [ ] Validar o texto biográfico
 
 ## Relatos
-- [ ] Substituir os 3 textos fictícios por relatos reais, com autorização formal (LGPD). Enquanto isso, a seção fictícia fica oculta (só em `#revisao`) e o site mostra a nota 5,0 e 5 trechos de avaliações públicas do Google, com nome e foto
+- [ ] Relatos longos de pacientes, se houver, só com autorização formal (LGPD). A seção demonstrativa com textos fictícios foi removida; o site mostra a nota 5,0 e 5 trechos de avaliações públicas do Google, com nome e foto
 - [ ] Validar com o jurídico o uso dos trechos de avaliações do Google (CFM 2.336/2023)
 - [ ] A seção de avaliações agora mostra nome e foto de perfil de 5 pacientes (Heloisa Machado, Camila Soares, Andressa Niltanielle, Luciano Fernandes Silva e Márcio Ronan), com trechos das avaliações públicas no Google. Nome e foto ligam a pessoa a um tratamento de coluna (dado de saúde, LGPD). Ideal: pedir autorização a cada um. O trecho do Márcio ("você volta a sua vida normal") soa como promessa de resultado; validar com o jurídico
 - [ ] A foto da seção "Atendimento" (`img/dr-savio-consultorio.jpg`, com o modelo da coluna) veio do Instagram do Dr. Sávio (post de 2022). Confirmar com ele que pode usar e se há crédito de fotógrafo. Se houver uma versão original em alta resolução, trocar
@@ -55,6 +55,10 @@ Ficam ocultas por padrão no site público. Só aparecem, com o selo, abrindo a 
 - [ ] Publicar o site no domínio savioreisneuro.com.br (hoje mostra a página padrão da HostGator) e atualizar canonical, Open Graph e sitemap
 
 ## Material visual
-- [ ] Fotos do consultório, do centro cirúrgico, dos equipamentos e do atendimento. A galeria fica oculta (só em `#revisao`) até elas chegarem
-- [ ] Fotos reais das pantufas, das flores e do cartão da alta (os espaços ficam ocultos até lá)
-- [ ] Vídeos: avaliar antes de publicar (a CFM veda a filmagem de procedimentos por terceiros)
+- [ ] Foto do centro cirúrgico na seção "Experiência" (`img/dr-savio-cirurgia.jpg`, IMG_1208 da pasta do iCloud "SAVIO FOTO E VIDEO"). Antes de ir para o ar, validar com o jurídico: a CFM 2.336/2023 restringe imagens de procedimentos feitas por terceiros. Confirmar também a autorização do hospital, da profissional da equipe que aparece de máscara à esquerda e do paciente (coberto, sem rosto). A marca Stryker aparece no endoscópio
+- [ ] Topo no celular agora usa o retrato de terno (`img/dr-savio-retrato.jpg`), que é vertical e mais nítido. Se houver o arquivo original da foto de camisa marrom em alta resolução (pelo menos 2880 px de largura), trocar `img/dr-savio-hero.jpg` para o topo ficar nítido também em telas retina
+- [ ] Credenciais concretas para a seção "Experiência": formação, residência, especializações em endoscopia, sociedades médicas, anos de atuação. Só publicar com dados enviados pelo Dr. Sávio
+- [ ] Vídeo da seção "A dor" (`media/cena-1280.mp4`, 1,5 MB): recomprimir para menos de 800 KB
+- [ ] Fotos do consultório, dos equipamentos e do atendimento. A galeria demonstrativa foi removida; se as fotos chegarem, criar uma seção nova
+- [ ] Fotos reais das pantufas, das flores e do cartão da alta (os espaços demonstrativos foram removidos)
+- [ ] Vídeos: avaliar antes de publicar (a CFM veda a filmagem de procedimentos por terceiros). A pasta "iPhone" do iCloud tem 51 vídeos .mov do centro cirúrgico

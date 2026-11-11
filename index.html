@@ -664,7 +664,7 @@ body.review-mode [data-pend] dd,body.review-mode [data-pend] b{color:var(--wine)
 }
 @media (max-width:380px){
   .brand .name{font-size:22px}
-  .hero-lede{font-size:14px;line-height:1.55}
+  .hero-lede{font-size:15.5px;line-height:1.6}
   .hero-cta .btn{padding:13px 18px 13px 20px;font-size:13.5px}
   
   
@@ -1440,6 +1440,81 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
   .g-foot{margin-top:8px}
 }
 @media (prefers-reduced-motion:reduce){.gq,.gq:hover{transform:none;transition:none}}
+
+/* ================= auditoria · ajustes ================= */
+/* tipografia mínima para leitura confortável */
+.mono{font-size:13px;letter-spacing:.12em}
+.sec-lede{font-weight:400;font-size:clamp(17px,1.3vw,20px)}
+.card-tag{font-size:13px}
+.card p:last-child,.step p:last-child{font-size:16px;font-weight:400}
+.principles div{grid-template-columns:1fr}
+.principles b{font-size:16.5px}
+.principles small{font-size:15px}
+.lead{font-weight:400}
+.hero-lede{font-size:18px;font-weight:400;color:rgba(255,255,255,.86)}
+.hero h1 em{color:var(--wine-glow);padding-left:0}
+.faq .ans div,.faq .faq-list .ans div{font-weight:400}
+/* contraste */
+:root{--mute:#67636B}
+.ct-note{color:rgba(255,255,255,.85)}
+.foot-legal{color:rgba(255,255,255,.66)}
+.foot-grid .mono{color:rgba(255,255,255,.62)}
+/* rodapé: áreas de toque */
+.foot-grid a{display:inline-block;padding:11px 0}
+.hero-proof{padding:10px 0;margin-top:10px}
+/* perguntas sem numeração */
+.faq summary,.faq .faq-list summary{grid-template-columns:minmax(0,1fr) 40px}
+.faq .ans,.faq .faq-list .ans{grid-template-columns:minmax(0,1fr);padding-right:64px}
+.faq .ans div{grid-column:1}
+/* método: grade sem buraco */
+@media (min-width:601px){.metodo3 .steps .step:last-child{grid-column:span 2}}
+/* comparação: vinho no lugar do verde, 4 linhas + expandir, alternância no celular */
+.vs2-legend i,.vs2-g::before{background:var(--wine)}
+.vs2-g{color:var(--wine)}
+#sxVs .node.e.cur .nodeC{stroke:#8A2240}
+.vs2-c{font-size:16px;font-weight:400}
+.vs2-head span,.vs2-c .mono,.vs2-legend{font-size:13px}
+.vs2-table:not(.all) .vs2-row.extra{display:none}
+.vs2-more{margin-top:18px;cursor:pointer;background:#fff;font:inherit;font-size:15px;font-weight:500}
+.vs2-more span{color:var(--mute);font-weight:400}
+.vs2-seg{display:none}
+@media (max-width:960px){
+  .vs2-seg{display:flex;gap:4px;padding:4px;margin-bottom:14px;border:1px solid var(--line);border-radius:999px;background:#fff;position:sticky;top:76px;z-index:5}
+  .vs2-seg button{flex:1;padding:12px 10px;border-radius:999px;font:inherit;font-size:15px;font-weight:500;color:var(--ink-2);background:transparent;border:0;cursor:pointer;transition:background .3s,color .3s}
+  .vs2-seg button[aria-pressed="true"]{background:var(--wine);color:#fff}
+  .vs2-table[data-show="e"] .vs2-c.a,.vs2-table[data-show="a"] .vs2-c.e{display:none}
+  .vs2-c .mono{display:none}
+  .vs2-more{width:100%;justify-content:center}
+}
+/* chamadas para agendar no meio da página */
+.cta-inline{margin-top:clamp(40px,5vw,64px);display:flex;align-items:center;justify-content:space-between;gap:24px 40px;padding:clamp(24px,3vw,36px) clamp(24px,3.4vw,44px);border-radius:26px;background:#FBF5F3;border:1px solid rgba(138,34,64,.12)}
+.cta-inline p{display:flex;flex-direction:column;gap:6px;max-width:640px}
+.cta-inline b{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,32px);line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+.cta-inline span{font-size:16px;line-height:1.6;color:var(--ink-2)}
+.cta-inline .btn{flex:none}
+@media (max-width:760px){.cta-inline{flex-direction:column;align-items:stretch}.cta-inline .btn{justify-content:center}}
+/* espaçamento entre seções mais enxuto */
+.sec{padding-top:clamp(72px,8.5vw,128px);padding-bottom:clamp(72px,8.5vw,128px)}
+.auth{padding-top:clamp(80px,9vw,136px);padding-bottom:clamp(72px,8vw,120px)}
+.contact{padding-top:clamp(12px,2vw,24px)}
+.reviews + .metodo2,.metodo2 + .vs2{padding-top:clamp(40px,4.5vw,72px)}
+/* rodapé e cabeçalho: áreas de toque */
+.foot-grid a{display:block;width:max-content;padding:9px 0}
+.foot-grid a:first-of-type{margin-top:-9px}
+.brand{padding:8px 0}
+@media (max-width:1180px){.hdr-cta,.menu-btn{min-height:44px}}
+/* menores textos restantes */
+.ct-row small{font-size:12.5px;color:rgba(255,255,255,.78)}
+.care-frame figcaption .mono{font-size:12.5px}
+/* topo no celular: retrato vertical, rosto acima do texto */
+.hero-photo picture{display:contents}
+@media (max-width:960px){
+  .eb-name{display:none}
+  .hero-photo img{height:68%;object-position:58% 12%}
+  .hero-photo::after{background:linear-gradient(0deg,rgba(12,11,14,1) 34%,rgba(12,11,14,.86) 46%,rgba(12,11,14,.2) 66%,rgba(12,11,14,0) 80%),linear-gradient(90deg,rgba(12,11,14,.35),transparent 60%)}
+  .hero-photo{background:#0c0b0e}
+  .hero-lede{font-size:16.5px}
+}
 </style>
 </head>
 <body class="on-dark">
@@ -1471,17 +1546,17 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 <header class="hdr" id="hdr">
   <a class="brand" href="#inicio" aria-label="Dr. Sávio Reis, início">
     <span class="name">Sávio Reis</span>
-    <span class="role mono">Neurocirurgia · Coluna</span>
+    <span class="role mono">Endoscopia de coluna</span>
   </a>
   <nav aria-label="Principal">
     <a href="#revelacao">Tratamento</a>
     <a href="#trajetoria">Dr. Sávio</a>
-    <a href="#comparativo">Comparação</a>
-    <a href="#metodo">Método</a>
     <a href="#relatos">Avaliações</a>
+    <a href="#metodo">Como funciona</a>
     <a href="#cuidado">Atendimento</a>
+    <a href="#perguntas">Dúvidas</a>
   </nav>
-  <a class="hdr-cta" href="#contato">Agendar<span class="lg">&nbsp;avaliação</span></a>
+  <a class="hdr-cta" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Agendar<span class="lg">&nbsp;avaliação</span></a>
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu"><span>Menu</span><i aria-hidden="true"></i></button>
 </header>
 
@@ -1491,16 +1566,14 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
     <li><a href="#cena"><span>01</span>A dor</a></li>
     <li><a href="#revelacao"><span>02</span>Tratamento</a></li>
     <li><a href="#trajetoria"><span>03</span>Dr. Sávio</a></li>
-    <li><a href="#comparativo"><span>04</span>Comparação</a></li>
-    <li><a href="#metodo"><span>05</span>Método</a></li>
-    <li><a href="#relatos"><span>06</span>Avaliações</a></li>
+    <li><a href="#relatos"><span>04</span>Avaliações</a></li>
+    <li><a href="#metodo"><span>05</span>Como funciona</a></li>
+    <li><a href="#comparativo"><span>06</span>Comparação</a></li>
     <li><a href="#cuidado"><span>07</span>Atendimento</a></li>
-    <li><a href="#contato"><span>08</span>Agendar avaliação</a></li>
+    <li><a href="#perguntas"><span>08</span>Dúvidas</a></li>
+    <li><a href="#contato"><span>09</span>Agendar avaliação</a></li>
   </ol>
 </div>
-
-<!-- trilho vertebral -->
-<nav class="rail" id="rail" aria-label="Seções"></nav>
 
 <button class="review-btn" id="reviewBtn" aria-pressed="false" title="Destacar campos que dependem de informação oficial">Revisão · <b id="pendCount">0</b> pendências</button>
 
@@ -1508,21 +1581,21 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 
 <!-- ===== HERO ===== -->
 <section class="hero dark" id="inicio" data-dark data-label="Início" aria-label="Apresentação">
-  <div class="hero-photo"><img src="img/dr-savio-hero.jpg" srcset="img/dr-savio-hero-sm.jpg 916w, img/dr-savio-hero.jpg 1832w" sizes="100vw" alt="Dr. Sávio Reis, sorridente, sentado em uma poltrona em seu consultório, com estante iluminada ao fundo." fetchpriority="high"></div>
+  <div class="hero-photo"><picture><source media="(max-width: 960px)" srcset="img/dr-savio-retrato.jpg"><img src="img/dr-savio-hero.jpg" alt="Dr. Sávio Reis, sorridente, sentado em uma poltrona em seu consultório, com estante iluminada ao fundo." fetchpriority="high"></picture></div>
   <div class="grain" aria-hidden="true"></div>
 
   <div class="hero-in">
     <div class="hero-copy">
-      <p class="eyebrow mono">Dr. Sávio Reis · Neurocirurgião especialista em endoscopia de coluna</p>
+      <p class="eyebrow mono"><span><span class="eb-name">Dr. Sávio Reis · </span>Neurocirurgião especialista em endoscopia de coluna</span></p>
       <h1><span class="ln"><span>A hérnia de disco está</span></span><span class="ln"><span><em>atrapalhando a sua vida?</em></span></span></h1>
-      <p class="hero-lede">Com a cirurgia endoscópica da coluna, ofereço uma abordagem minimamente invasiva para tratar a hérnia de disco, buscando aliviar sua dor e proporcionar uma recuperação mais rápida.</p>
+      <p class="hero-lede">A cirurgia endoscópica da coluna é uma abordagem minimamente invasiva para tratar a hérnia de disco, buscando aliviar a sua dor e proporcionar uma recuperação mais rápida.</p>
       <a class="hero-proof" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><svg class="stars" viewBox="0 0 90 16" aria-hidden="true"><path transform="translate(0 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(18 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(36 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(54 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/><path transform="translate(72 0)" d="M8 .8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L.8 6.1l5-.7z"/></svg><span><b>5,0</b> · 203 avaliações no Google</span></a>
       <div class="hero-cta">
-        <a class="btn btn-wine" href="#contato">Agendar uma avaliação <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+        <a class="btn btn-wine" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Agendar uma avaliação <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
       </div>
     </div>
     <div class="hero-foot">
-      <span class="crm mono">Dr. Sávio Reis · Neurocirurgião · CRM-MG 60801 · RQE 50166</span>
+      <span class="crm mono">CRM-MG 60801 · RQE 50166</span>
     </div>
   </div>
 </section>
@@ -1576,14 +1649,14 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
       </div>
       <p class="claim-note rv" data-claim><span class="stamp">Relato da equipe · em validação</span>Experiência com pacientes de diferentes idades e graus de complexidade.</p>
       <div class="principles rv">
-        <div><span class="mono">01</span><span><b>Tecnologia e precisão</b><small>Equipamentos e instrumentos específicos para a endoscopia da coluna.</small></span></div>
-        <div><span class="mono">02</span><span><b>Comunicação clara</b><small>Imagens, opções e riscos explicados sem pressa.</small></span></div>
-        <div><span class="mono">03</span><span><b>Acompanhamento</b><small>Orientação e contato próximo antes e depois da cirurgia.</small></span></div>
-        <div><span class="mono">04</span><span><b>Acolhimento</b><small>Pantufas personalizadas, flores e cartão na alta.</small></span></div>
+        <div><span><b>Tecnologia e precisão</b><small>Equipamentos e instrumentos específicos para a endoscopia da coluna.</small></span></div>
+        <div><span><b>Comunicação clara</b><small>Imagens, opções e riscos explicados sem pressa.</small></span></div>
+        <div><span><b>Acompanhamento</b><small>Orientação e contato próximo antes e depois da cirurgia.</small></span></div>
+        <div><span><b>Acolhimento</b><small>Pantufas personalizadas, flores e cartão na alta.</small></span></div>
       </div>
     </div>
     <figure class="auth-photo rv" id="authPhoto">
-      <div class="frame"><img src="img/dr-savio-retrato.jpg" alt="Retrato do Dr. Sávio Reis de terno azul-marinho, sorrindo, em ambiente com luz quente." loading="lazy"></div>
+      <div class="frame"><img src="img/dr-savio-cirurgia.jpg" alt="Dr. Sávio Reis no centro cirúrgico, segurando o endoscópio durante uma cirurgia endoscópica da coluna." width="1080" height="1440" loading="lazy" decoding="async"></div>
       <span class="ring" aria-hidden="true"></span>
       <div class="seal" aria-hidden="true">
         <svg viewBox="0 0 200 200" focusable="false">
@@ -1594,60 +1667,8 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
         </svg>
         <span class="seal-c"><b>1º</b><small>em MG</small></span>
       </div>
-      <figcaption class="cap mono"><span>Dr. Sávio Reis</span><span>Neurocirurgião · Pouso Alegre, MG</span></figcaption>
+      <figcaption class="cap mono"><span>Dr. Sávio Reis</span><span>No centro cirúrgico</span></figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- ===== VERSUS ===== -->
-<section class="sec vs2" id="comparativo" data-label="Comparação" aria-labelledby="vs-t">
-  <div class="sec-head">
-    <div>
-      <p class="sec-idx mono rv">Comparação entre técnicas</p>
-      <h2 class="h2 rv d1" id="vs-t">Aberta <span class="vs2-x">×</span><br><em>endoscópica.</em></h2>
-    </div>
-    <div>
-      <p class="sec-lede rv d2">Duas formas de chegar ao mesmo nervo. Compare característica por característica, sabendo que cada técnica tem as suas indicações.</p>
-      <p class="vs2-legend mono rv d2"><i aria-hidden="true"></i>Possível benefício em casos selecionados</p>
-    </div>
-  </div>
-  <figure class="sx-card vs-vis rv">
-    <div class="vs-heads" aria-hidden="true"><span>Cirurgia aberta</span><i>×</i><span>Cirurgia endoscópica</span></div>
-    <div class="sx" id="sxVs"></div>
-    <p class="sx-now mono" id="sxVsNow" aria-live="polite">01 · Incisão</p>
-    <div class="sx-segs" id="sxVsSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
-  </figure>
-  <div class="vs2-table rv" role="table" aria-label="Comparação entre cirurgia aberta e cirurgia endoscópica">
-    <div class="vs2-head" role="row"><span role="columnheader">Característica</span><span role="columnheader">Cirurgia aberta</span><span role="columnheader">Cirurgia endoscópica</span></div>
-    <div id="vsRows" role="rowgroup"></div>
-  </div>
-  <p class="vs-foot">Comparação entre técnicas, não entre resultados. Internação, recuperação, retorno às atividades e eventuais restrições de movimento são definidos caso a caso. Infecção, sangramento, lesão neural, fístula liquórica e recidiva são riscos possíveis nas duas abordagens. <span class="pending">Conteúdo a validar com o Dr. Sávio</span></p>
-</section>
-
-<!-- ===== MÉTODO ===== -->
-<section class="sec metodo2" id="metodo" data-label="Método" aria-labelledby="metodo-t">
-  <div class="sec-head">
-    <div>
-      <p class="sec-idx mono rv">O método</p>
-      <h2 class="h2 rv d1" id="metodo-t">Como funciona<br>a <em>endoscopia.</em></h2>
-    </div>
-    <p class="sec-lede rv d2">Etapa por etapa, do disco intervertebral à recuperação.</p>
-  </div>
-  <div class="metodo3">
-    <figure class="sx-card rv">
-      <div class="sx full withlabels" data-kind="endo" id="sxMetodo"></div>
-      <div class="sx-capRow"><span class="sx-num mono" id="sxMetodoNum">01 / 04</span><p class="sx-text" id="sxMetodoCap" aria-live="polite"></p></div>
-      <div class="sx-segs" id="sxMetodoSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
-    </figure>
-    <ol class="steps">
-      <li class="step rv"><i class="ic card-ic" data-ic="disc" aria-hidden="true"></i><p class="card-tag mono">01 / 07 · Anatomia</p><h3>O disco intervertebral</h3><p>Um amortecedor entre as vértebras: núcleo gelatinoso envolvido pelo ânulo fibroso.</p></li>
-      <li class="step rv"><i class="ic card-ic" data-ic="alert-circle" aria-hidden="true"></i><p class="card-tag mono">02 / 07 · Hérnia</p><h3>Quando o núcleo se desloca</h3><p>Parte do núcleo atravessa o ânulo e pode comprimir uma raiz nervosa.</p></li>
-      <li class="step rv"><i class="ic card-ic" data-ic="stethoscope" aria-hidden="true"></i><p class="card-tag mono">03 / 07 · Indicação</p><h3>Antes de tudo, a avaliação</h3><p>Muitas hérnias melhoram sem cirurgia. A indicação é sempre individual.</p></li>
-      <li class="step rv"><i class="ic card-ic" data-ic="crosshair" aria-hidden="true"></i><p class="card-tag mono">04 / 07 · Acesso</p><h3>Uma via estreita</h3><p>Por uma pequena incisão, a cânula guiada por imagem chega ao local da compressão.</p></li>
-      <li class="step rv"><i class="ic card-ic" data-ic="video" aria-hidden="true"></i><p class="card-tag mono">05 / 07 · Visualização</p><h3>Câmera e luz</h3><p>O endoscópio amplia a imagem num monitor, com irrigação contínua de soro.</p></li>
-      <li class="step rv"><i class="ic card-ic" data-ic="arrows-maximize" aria-hidden="true"></i><p class="card-tag mono">06 / 07 · Descompressão</p><h3>Liberar a raiz nervosa</h3><p>Instrumentos delicados removem o fragmento que comprime o nervo.</p></li>
-      <li class="step rv"><i class="ic card-ic" data-ic="heart" aria-hidden="true"></i><p class="card-tag mono">07 / 07 · Depois</p><h3>O cuidado continua</h3><p>Alta e recuperação são individuais, com acompanhamento em cada etapa.</p></li>
-    </ol>
   </div>
 </section>
 
@@ -1693,36 +1714,69 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
     <a class="g-all" href="https://maps.google.com/?cid=9671020110644028301" target="_blank" rel="noopener"><svg class="gq-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.8 6.6-9.5 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Ler as 203 avaliações no Google <span aria-hidden="true">↗</span></a>
     <p class="g-src mono">Trechos de avaliações públicas no Google · Resultados variam de pessoa para pessoa</p>
   </div>
-</section>
-
-<!-- ===== RELATOS (fictícios · só em #revisao) ===== -->
-<section class="sec stories" id="relatos-demo" aria-labelledby="relatos-t" data-wip>
-  <p class="sec-idx mono rv">Relatos de pacientes</p>
-  <h2 class="stories-title rv d1" id="relatos-t">Rela<em>tos.</em></h2>
-  <div class="stories-sub">
-    <p class="sec-lede rv">Experiências contadas por quem passou pelo cuidado do Dr. Sávio, nas palavras de cada paciente, sem cortes.</p>
-    <p class="demo-note mono rv"><i aria-hidden="true"></i>Prévia de composição · textos fictícios, a substituir por relatos reais autorizados</p>
-  </div>
-  <div class="tst" id="tst">
-    <div class="tst-person" id="tstPerson"></div>
-    <article class="tst-main" id="tstMain" aria-live="polite"></article>
-    <ol class="tst-list" id="tstList" aria-label="Outros relatos"></ol>
+  <div class="cta-inline rv">
+    <p><b>Quer entender o que está causando a sua dor?</b><span>A equipe recebe você com atenção e orienta sobre agenda, documentos e exames para a consulta.</span></p>
+    <a class="btn btn-wine" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Agendar pelo WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
   </div>
 </section>
 
-<!-- modo leitura -->
-<div class="rmode" id="rmode" role="dialog" aria-modal="true" aria-label="Modo leitura">
-  <div class="rmode-bar">
-    <span class="mono" id="rmTitle">Modo leitura</span>
-    <div class="ctl">
-      <button id="rmMinus" aria-label="Diminuir texto">A−</button>
-      <button id="rmPlus" aria-label="Aumentar texto">A+</button>
-      <button id="rmClose" aria-label="Fechar modo leitura">Fechar ✕</button>
+<!-- ===== MÉTODO ===== -->
+<section class="sec metodo2" id="metodo" data-label="Método" aria-labelledby="metodo-t">
+  <div class="sec-head">
+    <div>
+      <p class="sec-idx mono rv">O método</p>
+      <h2 class="h2 rv d1" id="metodo-t">Como funciona<br>a <em>endoscopia.</em></h2>
     </div>
-    <i class="rmode-prog" id="rmProg"></i>
+    <p class="sec-lede rv d2">Etapa por etapa, do disco intervertebral à recuperação.</p>
   </div>
-  <div class="rmode-col" id="rmCol"></div>
-</div>
+  <div class="metodo3">
+    <figure class="sx-card rv">
+      <div class="sx full withlabels" data-kind="endo" id="sxMetodo"></div>
+      <div class="sx-capRow"><span class="sx-num mono" id="sxMetodoNum">01 / 04</span><p class="sx-text" id="sxMetodoCap" aria-live="polite"></p></div>
+      <div class="sx-segs" id="sxMetodoSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    </figure>
+    <ol class="steps">
+      <li class="step rv"><i class="ic card-ic" data-ic="disc" aria-hidden="true"></i><p class="card-tag mono">Anatomia</p><h3>O disco intervertebral</h3><p>Um amortecedor entre as vértebras: núcleo gelatinoso envolvido pelo ânulo fibroso.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="alert-circle" aria-hidden="true"></i><p class="card-tag mono">Hérnia</p><h3>Quando o núcleo se desloca</h3><p>Parte do núcleo atravessa o ânulo e pode comprimir uma raiz nervosa.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="stethoscope" aria-hidden="true"></i><p class="card-tag mono">Indicação</p><h3>Antes de tudo, a avaliação</h3><p>Muitas hérnias melhoram sem cirurgia. A indicação é sempre individual.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="crosshair" aria-hidden="true"></i><p class="card-tag mono">Acesso</p><h3>Uma via estreita</h3><p>Por uma pequena incisão, a cânula guiada por imagem chega ao local da compressão.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="video" aria-hidden="true"></i><p class="card-tag mono">Visualização</p><h3>Câmera e luz</h3><p>O endoscópio amplia a imagem num monitor, com irrigação contínua de soro.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="arrows-maximize" aria-hidden="true"></i><p class="card-tag mono">Descompressão</p><h3>Liberar a raiz nervosa</h3><p>Instrumentos delicados removem o fragmento que comprime o nervo.</p></li>
+      <li class="step rv"><i class="ic card-ic" data-ic="heart" aria-hidden="true"></i><p class="card-tag mono">Depois</p><h3>O cuidado continua</h3><p>Alta e recuperação são individuais, com acompanhamento em cada etapa.</p></li>
+    </ol>
+  </div>
+  <div class="cta-inline rv">
+    <p><b>A endoscopia é indicada para o seu caso?</b><span>Só uma avaliação individual pode responder. Converse com a equipe e agende a sua.</span></p>
+    <a class="btn btn-wine" href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">Agendar uma avaliação <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+  </div>
+</section>
+
+<!-- ===== VERSUS ===== -->
+<section class="sec vs2" id="comparativo" data-label="Comparação" aria-labelledby="vs-t">
+  <div class="sec-head">
+    <div>
+      <p class="sec-idx mono rv">Comparação entre técnicas</p>
+      <h2 class="h2 rv d1" id="vs-t">Aberta <span class="vs2-x">×</span><br><em>endoscópica.</em></h2>
+    </div>
+    <div>
+      <p class="sec-lede rv d2">Duas formas de chegar ao mesmo nervo. Compare característica por característica, sabendo que cada técnica tem as suas indicações.</p>
+      <p class="vs2-legend mono rv d2"><i aria-hidden="true"></i>Possível benefício em casos selecionados</p>
+    </div>
+  </div>
+  <figure class="sx-card vs-vis rv">
+    <div class="vs-heads" aria-hidden="true"><span>Cirurgia aberta</span><i>×</i><span>Cirurgia endoscópica</span></div>
+    <div class="sx" id="sxVs"></div>
+    <p class="sx-now mono" id="sxVsNow" aria-live="polite">01 · Incisão</p>
+    <div class="sx-segs" id="sxVsSegs"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+  </figure>
+  <div class="vs2-seg rv" role="group" aria-label="Escolha a técnica"><button type="button" data-s="a" aria-pressed="false">Cirurgia aberta</button><button type="button" data-s="e" aria-pressed="true">Endoscópica</button></div>
+  <div class="vs2-table rv" id="vsTable" data-show="e" role="table" aria-label="Comparação entre cirurgia aberta e cirurgia endoscópica">
+    <div class="vs2-head" role="row"><span role="columnheader">Característica</span><span role="columnheader">Cirurgia aberta</span><span role="columnheader">Cirurgia endoscópica</span></div>
+    <div id="vsRows" role="rowgroup"></div>
+  </div>
+  <button type="button" class="btn btn-line vs2-more" id="vsMore" aria-expanded="false" aria-controls="vsRows">Ver a comparação completa <span>· 8 itens</span></button>
+  <p class="vs-foot">Comparação entre técnicas, não entre resultados. Internação, recuperação, retorno às atividades e eventuais restrições de movimento são definidos caso a caso. Infecção, sangramento, lesão neural, fístula liquórica e recidiva são riscos possíveis nas duas abordagens. <span class="pending">Conteúdo a validar com o Dr. Sávio</span></p>
+</section>
 
 <!-- ===== CUIDADO ===== -->
 <section class="sec care" id="cuidado" data-label="Atendimento" aria-labelledby="cuidado-t">
@@ -1796,27 +1850,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
       <blockquote>Pantufas com o nome, flores e um cartão na alta. <em>Ninguém atravessa esse processo sozinho.</em></blockquote>
       <p>Detalhes simples, que fazem parte da experiência cirúrgica e traduzem uma filosofia: tratar a coluna sem esquecer a pessoa.</p>
     </div>
-    <div class="gesture-objects" data-wip>
-      <figure data-ph="slippers" data-label="Foto · pantufas personalizadas" data-tone="wine"></figure>
-      <figure data-ph="flowers" data-label="Foto · flores da alta" data-tone="wine"></figure>
-      <figure data-ph="card" data-label="Foto · cartão da alta" data-tone="wine"></figure>
-    </div>
   </div>
-</section>
-
-<!-- ===== GALERIA ===== -->
-<section class="sec gallery" id="galeria" aria-labelledby="gal-t" data-wip>
-  <div class="sec-head">
-    <div>
-      <p class="sec-idx mono rv">Os lugares do cuidado</p>
-      <h2 class="h2 rv d1" id="gal-t">Onde o cuidado<br><em>acontece.</em></h2>
-    </div>
-    <p class="sec-lede rv d2">Consultório, centro cirúrgico, equipamentos e momentos de atendimento. Arraste para navegar.</p>
-  </div>
-  <div class="g-filters" id="gFilters" role="group" aria-label="Filtrar galeria"></div>
-  <div class="g-strip" id="gStrip" tabindex="0" aria-label="Galeria de fotos e vídeos"></div>
-  <div class="g-nav"><button id="gPrev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 8H2M7 3L2 8l5 5"/></svg></button><button id="gNext" aria-label="Próximo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div>
-  <p class="g-note">Espaços reservados para fotos. Serão substituídas pelo material fotográfico e audiovisual do consultório e do centro cirúrgico. Pela Resolução CFM nº 2.336/2023, a filmagem de procedimentos por terceiros é vedada. Vídeos de cirurgia exigem avaliação antes da publicação.</p>
 </section>
 
 <!-- ===== FAQ ===== -->
@@ -1876,12 +1910,11 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
   <div class="foot-grid">
     <div><span class="mono">Responsável técnico</span>Dr. Sávio Reis · Neurocirurgião<br>CRM-MG 60801 · RQE 50166</div>
     <div><span class="mono">Consultório</span>Medical Center · R. Cel. Brito Filho, 469<br>Fátima · Pouso Alegre, MG</div>
-    <div><span class="mono">Redes</span><a href="https://www.instagram.com/drsavioreis.neuro/" rel="noopener">Instagram ↗</a><br><a href="https://linktr.ee/savioreisneuro" rel="noopener">Linktree ↗</a></div>
-    <div><span class="mono">Navegar</span><a href="#metodo">Método</a> · <a href="#relatos">Avaliações</a><br><a href="#perguntas">Perguntas</a> · <a href="#contato">Contato</a></div>
+    <div><span class="mono">Redes</span><a href="https://www.instagram.com/drsavioreis.neuro/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://wa.me/message/6ZH7KUJVVJMRM1" target="_blank" rel="noopener">WhatsApp ↗</a></div>
+    <div><span class="mono">Navegar</span><a href="#metodo">Como funciona</a><a href="#relatos">Avaliações</a><a href="#perguntas">Dúvidas</a><a href="#contato">Contato</a></div>
   </div>
   <div class="foot-legal">
     <span>Conteúdo informativo. Não substitui consulta médica. Cada caso exige avaliação individual.</span>
-    <span data-wip>Prévia de desenvolvimento · conteúdo demonstrativo</span>
   </div>
 </footer>
 
@@ -1896,133 +1929,6 @@ const ease = t => 1-Math.pow(1-t,3);
 const seg = (v,a,b) => clamp((v-a)/(b-a));
 const NS = 'http://www.w3.org/2000/svg';
 
-/* ================= RELATOS ================= */
-const STORIES = [
-  { n:'01', tema:'Diagnóstico e decisão', tempo:'4 min',
-    titulo:'Eu cheguei com medo de uma palavra: cirurgia.',
-    paras:[
-      'Durante meses, a dor descia pela perna e organizava os meus dias. Eu escolhia os caminhos mais curtos, recusava convites, dormia mal. Quando os exames mostraram uma hérnia de disco, a palavra que mais me assustava ainda nem tinha sido dita, mas eu já tinha decidido ter medo dela.',
-      'A primeira consulta foi diferente do que eu imaginava. Antes de falar em qualquer procedimento, o doutor quis entender a minha rotina, o meu trabalho, o que eu já tinha tentado. Depois abriu as imagens da ressonância e me mostrou, com calma, onde estava o problema e por que ele causava aquele tipo de dor.',
-      'Lembro de perguntar se eu precisaria operar. A resposta não foi um sim imediato. Ele explicou que muitas hérnias melhoram com tratamento conservador e que a cirurgia só faz sentido quando existe indicação. Conversamos sobre as opções, sobre os riscos de cada caminho e sobre o que eu poderia esperar, sem promessas.',
-      '@Pela primeira vez, eu entendi o que estava acontecendo dentro de mim.',
-      'Saí daquela consulta com mais informação do que medo. Recebi orientações por escrito, um contato para dúvidas e a sensação, rara, de ter sido escutado até o fim. Nos dias seguintes, mandei perguntas que pareciam pequenas demais. Todas foram respondidas.',
-      'Hoje, quando alguém da família me pergunta sobre aquele período, eu não começo pela cirurgia. Começo pela conversa. Foi ali que as coisas mudaram de lugar.'
-    ]},
-  { n:'02', tema:'O dia da cirurgia', tempo:'5 min',
-    titulo:'Havia um par de pantufas com o meu nome.',
-    paras:[
-      'Na véspera, repassei mentalmente cada orientação que tinha recebido: horário do jejum, documentos, o que levar. A equipe tinha ligado para confirmar tudo e perguntar se eu ainda tinha alguma dúvida. Eu tinha várias. Responderam todas, sem pressa.',
-      'Chegar ao hospital de madrugada tem algo de solitário. Os corredores são longos, as luzes parecem brancas demais, e a gente se sente pequeno. Foi nesse estado que entrei no quarto e encontrei, ao lado da cama, um par de pantufas com o meu nome.',
-      'Parece um detalhe. Talvez seja. Mas naquele momento foi a coisa mais importante do mundo, porque dizia, sem precisar de palavras, que alguém tinha pensado em mim antes de eu chegar.',
-      '@Dizia, sem precisar de palavras, que alguém tinha pensado em mim antes de eu chegar.',
-      'Antes de seguir para o centro cirúrgico, o doutor passou para conversar. Explicou de novo as etapas, falou sobre a anestesia junto com a equipe e perguntou como eu estava. Respondi a verdade: com medo. Ele não tentou me convencer do contrário. Disse que era natural, e que eu seria acompanhado o tempo todo.',
-      'Do procedimento, naturalmente, não lembro de quase nada. Lembro de acordar e ver as pantufas no mesmo lugar, esperando.',
-      'Cada pessoa vive essa experiência de um jeito, e a recuperação também é diferente para cada um. A minha foi acompanhada de perto: orientações claras, retornos marcados e alguém do outro lado da linha sempre que precisei.'
-    ]},
-  { n:'03', tema:'Alta e retorno', tempo:'4 min',
-    titulo:'Guardei o cartão da alta na primeira página da agenda.',
-    paras:[
-      'No dia da alta, minha esposa chegou cedo. Eu esperava papéis, receitas, recomendações, e recebi tudo isso. O que eu não esperava eram as flores, e um cartão escrito para mim.',
-      'Li o cartão em silêncio, ainda no quarto. Não era longo. Falava do caminho que eu tinha percorrido até ali e do caminho que ainda viria, com paciência. Eu, que tinha passado meses com pressa de voltar a ser quem era, entendi ali que a recuperação também é um processo.',
-      '@Entendi ali que a recuperação também é um processo.',
-      'As semanas seguintes tiveram altos e baixos, como me disseram que poderia acontecer. Havia dias bons e dias de cansaço. Em cada dúvida (se aquilo era esperado, se eu podia retomar uma atividade, se era melhor aguardar), havia alguém para responder.',
-      'Nos retornos, o doutor olhava para o exame, mas olhava também para mim. Perguntava do trabalho, do sono, das caminhadas. Ajustava as orientações a partir do que eu contava.',
-      'O cartão continua na primeira página da minha agenda. Não como lembrança da cirurgia, mas de como fui tratado durante ela.'
-    ]}
-];
-['Antes da cirurgia','Dia da cirurgia','Alta e recuperação'].forEach((e,k)=>{ STORIES[k].etapa = e; });
-const tstPerson = $('#tstPerson'), tstList = $('#tstList'), tstMain = $('#tstMain'), tstWrap = $('#tst');
-let cur = 0;
-tstList.innerHTML = STORIES.map((st,i)=>`<li><button data-i="${i}" aria-current="${i===0}"><span class="n">${st.n}</span><span class="t">${st.titulo}</span><span class="m">${st.etapa} · ${st.tempo} de leitura</span></button></li>`).join('');
-tstList.addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if(b) showStory(+b.dataset.i, true); });
-function showStory(i, scroll){
-  cur = i;
-  $$('button[data-i]', tstList).forEach(b => b.setAttribute('aria-current', String(+b.dataset.i===i)));
-  const st = STORIES[i];
-  const quote = (st.paras.find(x=>x.startsWith('@')) || '@'+st.titulo).slice(1);
-  const body = st.paras.filter(x=>!x.startsWith('@'));
-  tstMain.classList.add('swap');
-  setTimeout(() => {
-    tstPerson.innerHTML = `<div class="tst-av" aria-hidden="true">${st.foto ? `<img src="${st.foto}" alt="">` : '<span>“</span>'}</div>
-      <div class="tst-who"><b>Paciente <span class="pending">nome e foto autorizados</span></b><small>Relato ${st.n} de ${String(STORIES.length).padStart(2,'0')}</small></div>
-      <dl class="tst-ctx"><dt>Contexto</dt><dd>${st.tema}</dd><dt>Etapa</dt><dd>${st.etapa}</dd></dl>`;
-    tstMain.innerHTML = `<blockquote class="tst-quote">${quote}</blockquote>
-      <h3 class="tst-title"><small>Relato completo · ${st.tempo} de leitura</small>${st.titulo}</h3>
-      <div class="tst-body" id="tstBody">${body.map(x=>`<p>${x}</p>`).join('')}</div>
-      <div class="tst-actions"><button class="btn btn-line" id="tstMore" aria-expanded="false" aria-controls="tstBody">Ler relato completo</button><button class="btn-text" id="tstRead">Abrir em modo leitura</button>
-      <span class="tst-arrows"><button id="tstPrev" aria-label="Relato anterior">←</button><button id="tstNext" aria-label="Próximo relato">→</button></span></div>`;
-    const bd = $('#tstBody'), more = $('#tstMore');
-    more.addEventListener('click', () => {
-      const open = !bd.classList.contains('open');
-      if(open){ bd.style.maxHeight = bd.scrollHeight + 'px'; bd.classList.add('open'); setTimeout(()=>{ if(bd.classList.contains('open')) bd.style.maxHeight='none'; }, reduce?0:820); }
-      else { bd.style.maxHeight = bd.scrollHeight + 'px'; requestAnimationFrame(()=>{ bd.classList.remove('open'); bd.style.maxHeight=''; }); const y = tstMain.getBoundingClientRect().top + scrollY - 100; if(y < scrollY) scrollTo({top:y, behavior: reduce?'auto':'smooth'}); }
-      more.setAttribute('aria-expanded', String(open)); more.textContent = open ? 'Recolher relato' : 'Ler relato completo';
-    });
-    $('#tstRead').addEventListener('click', ()=>openReader(cur));
-    $('#tstPrev').addEventListener('click', ()=>showStory((cur-1+STORIES.length)%STORIES.length, true));
-    $('#tstNext').addEventListener('click', ()=>showStory((cur+1)%STORIES.length, true));
-    tstMain.classList.remove('swap');
-    updatePending();
-    if(scroll){ const y = tstWrap.getBoundingClientRect().top + scrollY - 96; if(Math.abs(y-scrollY) > 160) scrollTo({top:y, behavior: reduce?'auto':'smooth'}); }
-  }, scroll ? 240 : 0);
-}
-showStory(0,false);
-
-/* modo leitura */
-const rm = $('#rmode'), rmCol = $('#rmCol');
-let fs = 20, lastFocus = null;
-function openReader(i){
-  lastFocus = document.activeElement;
-  const st = STORIES[i];
-  const next = (i+1)%STORIES.length;
-  rmCol.innerHTML = `<div class="s-kicker mono"><span class="tag" style="color:var(--wine)">Relato ${st.n}</span><span>${st.tema}</span><span>${st.etapa}</span></div>
-    <h2>${st.titulo}</h2>
-    ${st.paras.map(p=>p.startsWith('@')?`<blockquote>${p.slice(1)}</blockquote>`:`<p>${p}</p>`).join('')}
-    <div class="end"><span class="mono" style="color:var(--mute)">Fim do relato ${st.n}</span><button class="btn btn-wine" id="rmNext">Ler o próximo</button></div>`;
-  $('#rmTitle').textContent = `Relato ${st.n} · ${st.tempo}`;
-  $('#rmNext').addEventListener('click', ()=>{ openReader(next); rm.scrollTop = 0; });
-  rm.classList.add('open'); document.body.style.overflow='hidden';
-  rm.scrollTop = 0; $('#rmClose').focus();
-}
-function closeReader(){ rm.classList.remove('open'); document.body.style.overflow=''; lastFocus && lastFocus.focus(); }
-$('#rmClose').addEventListener('click', closeReader);
-$('#rmPlus').addEventListener('click', ()=>{ fs=Math.min(28,fs+2); rmCol.style.setProperty('--fs',fs+'px'); });
-$('#rmMinus').addEventListener('click', ()=>{ fs=Math.max(16,fs-2); rmCol.style.setProperty('--fs',fs+'px'); });
-rm.addEventListener('scroll', ()=>{ const p = rm.scrollTop/(rm.scrollHeight-rm.clientHeight||1); $('#rmProg').style.setProperty('--p', p); });
-addEventListener('keydown', e => { if(e.key==='Escape'){ if(rm.classList.contains('open')) closeReader(); if(menu.classList.contains('open')) toggleMenu(false); } });
-
-/* ================= PLACEHOLDERS ILUSTRADOS ================= */
-const PH_ICON = { or:'building-hospital', equip:'device-desktop', care:'bed', office:'armchair', slippers:'shoe', flowers:'flower', card:'mail' };
-function ph(kind, label, tone){
-  return `<div class="ph${tone==='wine'?' on-wine':''}"><span class="ph-ic"><i class="ic" data-ic="${PH_ICON[kind]||'camera'}" aria-hidden="true"></i></span><span class="tag">${label}</span></div>`;
-}
-$$('.gesture-objects figure').forEach(f => { f.innerHTML = ph(f.dataset.ph, f.dataset.label, f.dataset.tone); });
-
-/* ================= GALERIA ================= */
-const GALLERY = [
-  {cat:'consultorio', w:'w4', kind:'img', src:'img/dr-savio-hero-sm.jpg', t:'Consultório', d:'Dr. Sávio Reis em consulta'},
-  {cat:'centro', w:'w5', kind:'or', t:'Centro cirúrgico', d:'Sala cirúrgica · foto a inserir'},
-  {cat:'equipamentos', w:'w3', kind:'equip', t:'Equipamentos', d:'Torre de vídeo endoscópica · foto a inserir'},
-  {cat:'atendimento', w:'w4', kind:'care', t:'Atendimento', d:'Quarto e acolhimento · foto a inserir'},
-  {cat:'videos', w:'w5', kind:'office', t:'Vídeo', d:'Dr. Sávio explica a técnica · vídeo a inserir', video:true},
-  {cat:'consultorio', w:'w3', kind:'office', t:'Consultório', d:'Recepção · foto a inserir'},
-  {cat:'centro', w:'w4', kind:'or', t:'Centro cirúrgico', d:'Preparação da equipe · foto a inserir'},
-  {cat:'atendimento', w:'w1', kind:'card', t:'Atendimento', d:'Cartão da alta · foto a inserir', tone:'wine'},
-];
-const CATS = [['todos','Todos'],['consultorio','Consultório'],['centro','Centro cirúrgico'],['equipamentos','Equipamentos'],['atendimento','Atendimento'],['videos','Vídeos']];
-const gStrip = $('#gStrip'), gF = $('#gFilters');
-gStrip.innerHTML = GALLERY.map(g => `<figure class="g-item ${g.w}" data-cat="${g.cat}">
-  ${g.kind==='img' ? `<div class="img"><img src="${g.src}" alt="${g.d}" loading="lazy" style="object-position:80% 30%"></div>` : `<div style="flex:1;border-radius:6px;overflow:hidden;position:relative">${ph(g.kind, g.video?'Vídeo · a inserir':'Imagem provisória', g.tone)}${g.video?'<span class="g-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3l13 8-13 8z" fill="currentColor"/></svg></span>':''}</div>`}
-  <figcaption class="g-cap"><span>${g.d}</span><span class="mono">${g.t}</span></figcaption></figure>`).join('');
-gF.innerHTML = CATS.map(([k,l],i)=>`<button data-k="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
-gF.addEventListener('click', e => { const b = e.target.closest('button'); if(!b) return; $$('button',gF).forEach(x=>x.setAttribute('aria-pressed', String(x===b))); $$('.g-item',gStrip).forEach(it => it.classList.toggle('hide', b.dataset.k!=='todos' && it.dataset.cat!==b.dataset.k)); gStrip.scrollTo({left:0}); });
-let dragX=null, dragS=0, moved=false;
-gStrip.addEventListener('pointerdown', e => { if(e.pointerType!=='mouse') return; dragX=e.clientX; dragS=gStrip.scrollLeft; moved=false; });
-addEventListener('pointermove', e => { if(dragX===null) return; const dx=e.clientX-dragX; if(Math.abs(dx)>4){ moved=true; gStrip.classList.add('drag'); } gStrip.scrollLeft = dragS-dx; });
-addEventListener('pointerup', () => { dragX=null; gStrip.classList.remove('drag'); });
-$('#gPrev').addEventListener('click', ()=>gStrip.scrollBy({left:-gStrip.clientWidth*.6, behavior:'smooth'}));
-$('#gNext').addEventListener('click', ()=>gStrip.scrollBy({left:gStrip.clientWidth*.6, behavior:'smooth'}));
-
 /* ================= FAQ ================= */
 const FAQ = [
   ['Toda hérnia de disco precisa de cirurgia?', ['Não. Grande parte das hérnias de disco melhora com tratamento conservador, como medicação, fisioterapia e orientação de atividades. A cirurgia é considerada quando há indicação clínica, por exemplo dor persistente apesar do tratamento adequado ou déficit neurológico, e sempre após avaliação individual.']],
@@ -2034,20 +1940,16 @@ const FAQ = [
   ['Que tipo de anestesia é utilizado?', ['Depende da técnica e do caso. A anestesia é definida em conjunto com a equipe de anestesiologia, considerando a segurança e o conforto do paciente.']],
   ['Como agendar uma avaliação?', ['Pelo WhatsApp (35) 99867-2564 ou pelo telefone (35) 3647-3550, de segunda a sexta, das 7h às 19h. A agenda pode ter tempo de espera; a equipe orienta sobre datas disponíveis e documentos e exames que devem ser levados à consulta.']],
 ];
-$('#faqList').innerHTML = FAQ.map(([q,a],i)=>`<details class="rv"><summary><span class="mono">${String(i+1).padStart(2,'0')}</span><h3>${q}</h3><i aria-hidden="true"></i></summary><div class="ans"><div>${a.map(p=>`<p>${p}</p>`).join('')}</div></div></details>`).join('');
+$('#faqList').innerHTML = FAQ.map(([q,a],i)=>`<details class="rv"><summary><h3>${q}</h3><i aria-hidden="true"></i></summary><div class="ans"><div>${a.map(p=>`<p>${p}</p>`).join('')}</div></div></details>`).join('');
 
 /* ================= RAIL / MENU / REVISÃO ================= */
-const SECTIONS = $$('section[data-label]').filter(s => s.offsetParent !== null);
-const rail = $('#rail');
-rail.innerHTML = SECTIONS.map((s,i)=>`<button data-t="${s.id}" aria-label="${s.dataset.label}"><span>${String(i).padStart(2,'0')} · ${s.dataset.label}</span></button>`).join('');
-rail.addEventListener('click', e => { const b = e.target.closest('button'); if(b) document.getElementById(b.dataset.t).scrollIntoView({behavior: reduce?'auto':'smooth'}); });
-const rb = $$('button', rail);
 
 const menu = $('#menu'), menuBtn = $('#menuBtn');
 function toggleMenu(open){ menu.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', String(open)); document.body.style.overflow = open?'hidden':''; if(open) $('#menuClose').focus(); else menuBtn.focus(); }
 menuBtn.addEventListener('click', ()=>toggleMenu(true));
 $('#menuClose').addEventListener('click', ()=>toggleMenu(false));
 $$('a', menu).forEach(a => a.addEventListener('click', ()=>toggleMenu(false)));
+addEventListener('keydown', e => { if(e.key==='Escape' && menu.classList.contains('open')) toggleMenu(false); });
 
 function updatePending(){ $('#pendCount').textContent = $$('.pending, [data-pend]').length; }
 updatePending();
@@ -2079,9 +1981,13 @@ const VS_ROWS = [
   { k:'Retorno às atividades', ic:'briefcase', a:'Definido individualmente, conforme a evolução.', e:'Também definido individualmente; pode ser mais precoce em casos selecionados.', g:true },
   { k:'Cuidados e limitações', ic:'alert-circle', a:'Segue indicada em diversas situações em que a endoscopia não é a melhor escolha.', e:'Nem todo caso é candidato, e pode haver conversão para a técnica aberta.', g:false },
 ];
-$('#vsRows').innerHTML = VS_ROWS.map((r,i)=>`<div class="vs2-row" role="row"><p class="vs2-k" role="rowheader"><i class="ic" data-ic="${r.ic}" aria-hidden="true"></i><span><b>${String(i+1).padStart(2,'0')}</b>${r.k}</span></p>
+const VS_MAIN = [0,2,5,7];
+$('#vsRows').innerHTML = VS_ROWS.map((r,i)=>`<div class="vs2-row${VS_MAIN.includes(i)?'':' extra'}" role="row"><p class="vs2-k" role="rowheader"><i class="ic" data-ic="${r.ic}" aria-hidden="true"></i><span>${r.k}</span></p>
   <p class="vs2-c a" role="cell"><span class="mono">Aberta</span>${r.a}</p>
   <p class="vs2-c e" role="cell"><span class="mono">Endoscópica</span>${r.e}${r.g?'<br><span class="vs2-g">Possível benefício</span>':''}</p></div>`).join('');
+const vsTable = $('#vsTable'), vsMore = $('#vsMore');
+vsMore.addEventListener('click', () => { const open = !vsTable.classList.contains('all'); vsTable.classList.toggle('all', open); vsMore.setAttribute('aria-expanded', String(open)); vsMore.innerHTML = open ? 'Mostrar menos' : 'Ver a comparação completa <span>· 8 itens</span>'; if(!open){ const y = vsTable.getBoundingClientRect().top + scrollY - 110; if(y < scrollY) scrollTo({top:y, behavior: reduce?'auto':'smooth'}); } });
+$$('.vs2-seg button').forEach(b => b.addEventListener('click', () => { vsTable.dataset.show = b.dataset.s; $$('.vs2-seg button').forEach(x => x.setAttribute('aria-pressed', String(x===b))); }));
 
 /* ================= AUTORIDADE — nome em parallax ================= */
 function _unusedAuth(vh){ const r = authSec.getBoundingClientRect(); if(r.bottom < 0 || r.top > vh) return; const p = clamp((vh - r.top)/(vh + r.height)); authGhost.style.setProperty('--gx', (-p*12).toFixed(2)+'vw'); }
@@ -2106,8 +2012,6 @@ function onScroll(){
   document.body.classList.toggle('on-dark', DARKS.some(under) || (foot && foot.getBoundingClientRect().top < 60));
   document.body.classList.toggle('at-hero', hero.getBoundingClientRect().bottom > vh*.5);
   hdr.classList.toggle('scrolled', scrollY > 40);
-  let act = 0; SECTIONS.forEach((sec,i)=>{ if(sec.getBoundingClientRect().top < vh*.45) act = i; });
-  rb.forEach((b,i)=>b.classList.toggle('on', i===act));
 }
 const req = () => { if(!ticking){ ticking = true; requestAnimationFrame(onScroll); } };
 addEventListener('scroll', req, {passive:true}); addEventListener('resize', req); onScroll();
