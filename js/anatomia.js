@@ -259,14 +259,17 @@ function buildVersus(){
     s += `<path class="herA" d="M22 -50 C34 -60 54 -54 56 -40 C58 -28 44 -22 32 -26 C20 -30 14 -42 22 -50Z"/>`;
     return s;
   };
-  /* ícones Tabler (bed, walk, heartbeat, briefcase) */
-  const IC = ['<g transform="translate(-20.4 -20.4) scale(1.7)" style="stroke-width:1.05"><path d="M7 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M22 17v-3h-20"/><path d="M2 8v9"/><path d="M12 14h10v-2a3 3 0 0 0 -3 -3h-7v5z"/></g>',
-              '<g transform="translate(-20.4 -20.4) scale(1.7)" style="stroke-width:1.05"><path d="M13 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M7 21l3 -4"/><path d="M16 21l-2 -4l-3 -3l1 -6"/><path d="M6 12l2 -3l4 -1l3 3l3 1"/></g>',
-              '<g transform="translate(-20.4 -20.4) scale(1.7)" style="stroke-width:1.05"><path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572"/><path d="M3 13h2l2 3l2 -6l1 3h3"/></g>',
-              '<g transform="translate(-20.4 -20.4) scale(1.7)" style="stroke-width:1.05"><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"/><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"/><path d="M12 12l0 .01"/><path d="M3 13a20 20 0 0 0 18 0"/></g>'];
+  /* mesmos ícones do site (window.SITE_ICONS, em index.html): cama, caminhada, batimento e maleta */
+  const ICN = ['bed', 'walk', 'heartbeat', 'briefcase'];
+  const ic = k => {
+    const src = (window.SITE_ICONS || {})[ICN[k]] || '';
+    const paths = (src.match(/<path[^>]*\/>/g) || []).join('');
+    return `<g transform="translate(-18 -18) scale(1.5)" style="stroke-width:1.5">${paths}</g>`;
+  };
   const LBn = ['Internação', 'Mobilidade', 'Recuperação', 'Retorno'], ys = [130, 230, 330, 430];
-  const track = (cx, side) => `<line x1="${cx}" y1="${ys[0]}" x2="${cx}" y2="${ys[3]}" class="trk ${side}"/>` + ys.map((y, k) =>
-    `<g class="node n${k} ${side}"><circle class="nodeC" cx="${cx}" cy="${y}" r="31"/><g transform="translate(${cx} ${y}) scale(.95)" class="nodeI">${IC[k]}</g>${T(side === 'e' ? cx+48 : cx-48, y+4, LBn[k], side === 'e' ? 'w' : '', side === 'e' ? 'start' : 'end')}</g>`).join('');
+  /* a linha liga os círculos sem atravessá-los */
+  const track = (cx, side) => ys.slice(1).map((y, k) => `<line x1="${cx}" y1="${ys[k]+31}" x2="${cx}" y2="${y-31}" class="trk ${side}"/>`).join('') + ys.map((y, k) =>
+    `<g class="node n${k} ${side}"><circle class="nodeC" cx="${cx}" cy="${y}" r="31"/><g transform="translate(${cx} ${y})" class="nodeI">${ic(k)}</g>${T(side === 'e' ? cx+48 : cx-48, y+4, LBn[k], side === 'e' ? 'w' : '', side === 'e' ? 'start' : 'end')}</g>`).join('');
   let s = `<line x1="500" y1="50" x2="500" y2="540" stroke="#141317" stroke-opacity=".1" stroke-dasharray="2 6"/>`;
   /* A · incisão */
   s += `<g class="vsc" id="vA">${back(250, 'vsBkA')}${back(750, 'vsBkE')}
