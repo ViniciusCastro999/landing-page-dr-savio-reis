@@ -854,11 +854,12 @@ body.public [data-claim]{display:none!important}
 .cena2-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,14,.96) 0%,rgba(12,11,14,.88) 26%,rgba(12,11,14,.5) 44%,rgba(12,11,14,0) 62%),linear-gradient(0deg,#0C0B0E 0%,rgba(12,11,14,.7) 14%,rgba(12,11,14,0) 38%),linear-gradient(180deg,rgba(12,11,14,.45) 0%,rgba(12,11,14,0) 22%)}
 .cena2-copy{position:relative;max-width:min(540px,42%)}
 .cena2 .h2{font-size:clamp(38px,4vw,64px)}
-.cena2 .h2 em,.revela .h2 em{color:var(--wine-glow)}
-.cena2 .sec-lede,.revela .sec-lede{color:rgba(255,255,255,.72);margin-top:28px}
+.cena2 .h2 em{color:var(--wine-glow)}
+.cena2 .sec-lede{color:rgba(255,255,255,.72);margin-top:28px}
+.revela .sec-lede{margin-top:28px}
 .cena2 .sec-lede em{color:#fff}
-.cena2 .sec-idx,.revela .sec-idx{color:rgba(255,255,255,.55)}
-.cena2 .sec-idx b,.revela .sec-idx b{color:var(--wine-soft)}
+.cena2 .sec-idx{color:rgba(255,255,255,.55)}
+.cena2 .sec-idx b{color:var(--wine-soft)}
 .cena2-cap{margin-top:30px;color:rgba(255,255,255,.4);font-size:12px}
 
 /* sinais */
@@ -866,16 +867,16 @@ body.public [data-claim]{display:none!important}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 
 /* revelação */
-.revela{background:var(--night);color:#fff;padding:clamp(96px,12vw,170px) var(--pad)}
+.revela{background:var(--white);color:var(--ink);border-bottom:1px solid var(--line);padding:clamp(96px,12vw,170px) var(--pad)}
 .revela-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,90px);align-items:center}
 .revela .h2{font-size:clamp(42px,5.4vw,92px)}
 .facts{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:44px}
-.facts li{border-top:1px solid rgba(255,255,255,.14);padding-top:18px;display:flex;flex-direction:column;gap:4px}
-.facts i{font-size:28px;color:var(--wine-glow);margin-bottom:10px}
+.facts li{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:4px}
+.facts i{font-size:28px;color:var(--wine);margin-bottom:10px}
 .facts b{font-weight:500;font-size:15px}
-.facts span{font-size:13px;color:rgba(255,255,255,.55)}
+.facts span{font-size:13px;color:var(--mute)}
 
-.revela .ilus figcaption{color:rgba(255,255,255,.45)}
+.revela .ilus figcaption{color:var(--mute)}
 
 /* comparativo */
 .vs2-x{font-style:italic;color:var(--mute);padding:0 .1em}
@@ -947,14 +948,11 @@ body.public [data-claim]{display:none!important}
 .metodo3{display:grid;gap:14px}
 .metodo3 .steps{grid-template-columns:repeat(4,minmax(0,1fr))}
 .metodo3 .sx{max-width:860px;margin:0 auto}
-.revela .sx-card{border:0;border-radius:0;padding:0;background:none;color:#fff}
+.revela .sx-card{border:0;border-radius:0;padding:0;background:none;color:var(--ink)}
 .revela .sx-grain{display:none}
-.revela .sx-capRow{border-top-color:rgba(255,255,255,.12)}
-.revela .sx-text{color:rgba(255,255,255,.66)}
-.revela .sx-text b{color:#fff}
-.revela .sx-segs span{background:rgba(255,255,255,.14)}
-.revela .sx .olab{stroke:#0C0B0E}
-.revela .sx .olab.g{fill:#E8B54F}
+.revela .sx-capRow{border-top-color:var(--line)}
+.revela .sx .olab{stroke:#fff}
+.revela .sx .olab.g{fill:#9A6510}
 .vs-vis{margin-bottom:22px}
 .vs-vis .sx,.vs-vis .vs-heads{max-width:920px;margin-left:auto;margin-right:auto}
 .vs-heads{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:6px 0 0}
@@ -1220,8 +1218,7 @@ body.public [data-claim]{display:none!important}
 }
 
 /* ================= caminho menor · ilustração de fundo ================= */
-.revela .facts li{border-top-color:rgba(255,255,255,.14)}
-.revela .sx-foot .sx-capRow{border-top:1px solid rgba(255,255,255,.14);padding-top:18px;margin-top:0}
+.revela .sx-foot .sx-capRow{border-top:1px solid var(--line);padding-top:18px;margin-top:0}
 @media (min-width:961px){
   .revela-grid{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);grid-template-areas:"copy fig" "facts foot";column-gap:clamp(32px,5vw,90px);row-gap:0;align-items:start}
   .revela .rv-copy{grid-area:copy}
@@ -1229,13 +1226,13 @@ body.public [data-claim]{display:none!important}
   .revela .sx-card{grid-area:fig;align-self:stretch;position:relative;contain:size;margin:0}
   .revela #sxCaminho{position:absolute;inset:0}
   .revela #sxCaminho svg{width:100%;height:100%}
-  .revela #sxCaminho::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#0C0B0E 0%,rgba(12,11,14,.55) 7%,rgba(12,11,14,0) 18%),linear-gradient(180deg,#0C0B0E 0%,rgba(12,11,14,0) 12%),linear-gradient(0deg,#0C0B0E 0%,rgba(12,11,14,0) 14%)}
+  .revela #sxCaminho::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 7%,rgba(255,255,255,0) 18%),linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 12%),linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 14%)}
   .revela .sx-foot{grid-area:foot;align-self:stretch;display:flex;flex-direction:column;margin-top:44px}
   .revela .sx-text{min-height:0}
   .revela .sx-segs{margin-top:auto;padding-top:16px}
 }
-.revela .sx .olab{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:.01em;stroke:none;filter:drop-shadow(0 1px 6px rgba(0,0,0,.9))}
-.revela .sx .olab.r{fill:#FF7D95}
+.revela .sx .olab{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:.01em;stroke:none;filter:drop-shadow(0 0 5px #fff)}
+.revela .sx .olab.r{fill:#B3243F}
 @media (max-width:960px){.revela .sx.crop .olab{font-size:30px}}
 @media (max-width:960px){
   .revela{padding-top:84px}
@@ -1250,12 +1247,12 @@ body.public [data-claim]{display:none!important}
 #sxCaminho.is3d > svg{display:none}
 #sxCaminho .s3-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 #sxCaminho .s3-labels{position:absolute;inset:0;z-index:2;pointer-events:none}
-.s3-lab{position:absolute;left:0;top:0;opacity:0;font:500 14px/1.2 var(--sans);letter-spacing:.01em;white-space:nowrap;text-shadow:0 1px 10px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.8);will-change:transform,opacity}
-.s3-lab.g{color:#F0C063}.s3-lab.r{color:#FF8FA3}
+.s3-lab{position:absolute;left:0;top:0;opacity:0;font:500 14px/1.2 var(--sans);letter-spacing:.01em;white-space:nowrap;text-shadow:0 0 8px #fff,0 0 3px #fff,0 0 1px #fff;will-change:transform,opacity}
+.s3-lab.g{color:#9A6510}.s3-lab.r{color:#B3243F}
 .revela #sxCaminho::after{z-index:1}
 @media (max-width:960px){
   .revela #sxCaminho.is3d{position:relative;aspect-ratio:1/1;width:100%}
-  .revela #sxCaminho.is3d::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,#0C0B0E 0%,rgba(12,11,14,0) 20%),linear-gradient(180deg,#0C0B0E 0%,rgba(12,11,14,0) 10%)}
+  .revela #sxCaminho.is3d::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 20%),linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 10%)}
   .s3-lab{font-size:12.5px}
 }
 /* ================= auditoria · ajustes ================= */
@@ -1675,7 +1672,7 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 </section>
 
 <!-- ===== REVELAÇÃO ===== -->
-<section class="revela" id="revelacao" data-dark data-label="Tratamento" aria-labelledby="rev-t">
+<section class="revela" id="revelacao" data-label="Tratamento" aria-labelledby="rev-t">
   <div class="revela-grid">
     <div class="rv-copy">
       <p class="sec-idx mono rv">Cirurgia endoscópica da coluna</p>

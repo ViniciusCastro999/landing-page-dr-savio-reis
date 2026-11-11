@@ -36,7 +36,9 @@ function start() {
   const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 200);
 
   /* ---------- luz ---------- */
-  scene.add(new THREE.HemisphereLight(0xfff4ea, 0x2a0d16, 0.55));
+  // fundo claro (seção sem data-dark): cores e mesclas próprias para não sumir no branco
+  const LIGHT = !host.closest('[data-dark]');
+  scene.add(new THREE.HemisphereLight(0xfff4ea, LIGHT ? 0x8a6a6a : 0x2a0d16, LIGHT ? 0.8 : 0.55));
   const key = new THREE.DirectionalLight(0xfff1e0, 2.2);
   key.position.set(12, 14, -4);
   key.castShadow = true;
@@ -44,7 +46,7 @@ function start() {
   Object.assign(key.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12, near: 1, far: 60 });
   key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02;
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0xff8fa6, 2.4);
+  const rim = new THREE.DirectionalLight(0xff8fa6, LIGHT ? 1.2 : 2.4);
   rim.position.set(-10, 6, -12);
   scene.add(rim);
   const fill = new THREE.DirectionalLight(0xffe2c4, 0.5);
@@ -61,8 +63,8 @@ function start() {
     hern: new THREE.MeshPhysicalMaterial({ color: 0xd93a55, roughness: 0.3, clearcoat: 0.8, emissive: 0xb0213f, emissiveIntensity: 0.55 }),
     muscle: new THREE.MeshStandardMaterial({ color: 0x5a1a2c, roughness: 0.8, transparent: true, opacity: 0.38, depthWrite: false }),
     skin: new THREE.MeshStandardMaterial({ color: 0xc98b76, roughness: 0.6, transparent: true, opacity: 0.55, depthWrite: false }),
-    open: new THREE.MeshBasicMaterial({ color: 0xff4d6d, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }),
-    path: new THREE.MeshBasicMaterial({ color: 0xffc35a, transparent: true, opacity: 0.95 }),
+    open: new THREE.MeshBasicMaterial({ color: LIGHT ? 0xb3243f : 0xff4d6d, transparent: true, opacity: 0, depthWrite: false, blending: LIGHT ? THREE.NormalBlending : THREE.AdditiveBlending }),
+    path: new THREE.MeshBasicMaterial({ color: LIGHT ? 0xd18f12 : 0xffc35a, transparent: true, opacity: 0.95 }),
     steel: new THREE.MeshStandardMaterial({ color: 0xd9d6de, metalness: 1, roughness: 0.22 }),
     grip: new THREE.MeshStandardMaterial({ color: 0x24212a, metalness: 0.4, roughness: 0.45 }),
   };
@@ -171,7 +173,7 @@ function start() {
   const yTop = levelGroups.L4.position.y + 1.6, yBot = levelGroups.L5.position.y - 1.6;
   const gOpen = new RoundedBoxGeometry(4.6, yTop - yBot, 4.9, 4, 0.6);
   const open = mesh(gOpen, M.open, false); open.position.set(0, (yTop + yBot) / 2, -4.85); open.renderOrder = 4; spine.add(open);
-  const openEdges = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(4.6, yTop - yBot, 4.9)), new THREE.LineDashedMaterial({ color: 0xff6b85, dashSize: 0.35, gapSize: 0.25, transparent: true, opacity: 0 }));
+  const openEdges = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(4.6, yTop - yBot, 4.9)), new THREE.LineDashedMaterial({ color: LIGHT ? 0xb3243f : 0xff6b85, dashSize: 0.35, gapSize: 0.25, transparent: true, opacity: 0 }));
   openEdges.computeLineDistances(); openEdges.position.copy(open.position); openEdges.renderOrder = 5; spine.add(openEdges);
 
   // trajeto da endoscopia
@@ -180,7 +182,7 @@ function start() {
   const gPath = new THREE.TubeGeometry(new THREE.LineCurve3(E, T), 64, 0.07, 10, false);
   const pathM = mesh(gPath, M.path, false); pathM.renderOrder = 6; spine.add(pathM);
   const pathCount = gPath.index.count; gPath.setDrawRange(0, 0);
-  const cut = mesh(new THREE.CapsuleGeometry(0.09, 0.55, 6, 12), new THREE.MeshBasicMaterial({ color: 0xffc35a, transparent: true, opacity: 0 }), false);
+  const cut = mesh(new THREE.CapsuleGeometry(0.09, 0.55, 6, 12), new THREE.MeshBasicMaterial({ color: LIGHT ? 0xd18f12 : 0xffc35a, transparent: true, opacity: 0 }), false);
   cut.position.copy(E); cut.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), new THREE.Vector3(0.75, 0.66, 0).normalize()); spine.add(cut);
 
   // endoscópio
@@ -226,7 +228,7 @@ function start() {
     const s = step, big = reduce ? 99 : t;
     const tt = s === 0 ? 0 : big;
     return {
-      open: s === 1 ? 0.13 * seg(tt, 0.1, 1.1) : s >= 2 ? 0.03 : 0,
+      open: (LIGHT ? 1.8 : 1) * (s === 1 ? 0.13 * seg(tt, 0.1, 1.1) : s >= 2 ? 0.03 : 0),
       edges: s === 1 ? 0.85 * seg(tt, 0.1, 1.1) : s >= 2 ? 0.2 : 0,
       path: s === 2 ? seg(tt, 0.2, 1.8) : s >= 3 ? 1 : 0,
       pathO: s === 2 ? 0.95 : s === 3 ? 0.35 : s === 4 ? 0.6 : 0,
