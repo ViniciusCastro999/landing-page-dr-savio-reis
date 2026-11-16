@@ -2,7 +2,7 @@
 
 Site institucional (landing page) do **Dr. Sávio Reis** — neurocirurgia e cirurgia endoscópica da coluna, em Pouso Alegre, MG.
 
-🔗 **Site publicado:** https://viniciuscastro999.github.io/landing-page-dr-savio-reis/
+🔗 **Site publicado:** https://savioreisneuro.com.br/
 
 ## Sobre
 
@@ -49,7 +49,9 @@ Depois acesse http://localhost:8000.
 
 ## Publicação (GitHub Pages)
 
-O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` (pasta raiz). Qualquer `git push` para `main` atualiza o site em cerca de um minuto.
+O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` (pasta raiz), no domínio próprio **savioreisneuro.com.br** (arquivo `CNAME`). Qualquer `git push` para `main` atualiza o site em cerca de um minuto. O endereço antigo `viniciuscastro999.github.io/landing-page-dr-savio-reis/` redireciona para o domínio.
+
+**DNS (Zone Editor do cPanel da HostGator):** `savioreisneuro.com.br` com registros A para 185.199.108.153, 185.199.109.153, 185.199.110.153 e 185.199.111.153; `www` como CNAME para `viniciuscastro999.github.io`. O e-mail (`mail` e MX) continua na HostGator (162.241.203.80) — não cancelar o plano da HostGator nem deixar o domínio vencer (Registro.br, 13/04/2027).
 
 ## Status do conteúdo
 
@@ -66,11 +68,11 @@ Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio 
 
 - Revisar e validar as pendências médicas/editoriais.
 - Migração prevista para React + Vite + TypeScript.
-- Publicar no domínio savioreisneuro.com.br (ver abaixo).
+- Enviar o sitemap no Google Search Console e trocar o link do site no Instagram e no perfil do Google.
 
-## Publicar na HostGator (savioreisneuro.com.br)
+## Plano B: hospedar na HostGator
 
-O domínio e a hospedagem estão na HostGator (domínio registrado no Registro.br no nome do Dr. Sávio, vence em 13/04/2027). Nesta branch (`dominio-hostgator`) os endereços do site (canonical, Open Graph, JSON-LD, sitemap e robots) já apontam para `https://savioreisneuro.com.br/`, e o `.htaccess` força https sem "www", define o cache e bloqueia arquivos ocultos.
+Se um dia o site sair do GitHub Pages, ele pode ir para a hospedagem da HostGator (voltando o registro A do domínio para 162.241.203.80). Os endereços do site (canonical, Open Graph, JSON-LD, sitemap e robots) já apontam para `https://savioreisneuro.com.br/`, e o `.htaccess` força https sem "www", define o cache e bloqueia arquivos ocultos.
 
 1. Gerar o pacote: `zip -q -r -X publicar/savioreisneuro.com.br.zip .htaccess index.html robots.txt sitemap.xml img js media -x '*.DS_Store'` (a pasta `publicar/` não vai para o git)
 2. cPanel → Gerenciador de Arquivos → `public_html`: apagar a página padrão da HostGator (ou renomear o que já existir)
