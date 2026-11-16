@@ -23,7 +23,7 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 ├── img/         # fotografias do Dr. Sávio
 │   ├── dr-savio-hero.jpg         # topo no desktop
 │   ├── dr-savio-retrato.jpg      # topo no celular e seção Dr. Sávio
-│   ├── dr-savio-atendimento.jpg  # fundo da seção Atendimento (IMG_1531)
+│   ├── dr-savio-atendimento.jpg  # fundo da seção Atendimento (IMG_1531, 2880 px)
 │   ├── og-dr-savio.jpg           # imagem de compartilhamento (1200×630)
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
 │   └── icons/
