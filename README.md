@@ -55,7 +55,7 @@ O site é publicado automaticamente pelo GitHub Pages a partir da branch `main` 
 
 - **Conteúdo demonstrativo:** os relatos de pacientes são fictícios e estão marcados como tal.
 - **Pendências editoriais/médicas** ficam fora da interface pública. Abra a página com `#revisao` no fim do endereço para vê-las destacadas.
-- **Alegações em validação** (+1.000 procedimentos, pioneirismo em MG) aparecem com o selo "Em validação". Abra com `#publico` para ver a página sem elas.
+- **Alegações em validação** aparecem com o selo "Em validação" só ao abrir a página com `#revisao`; no site público ficam ocultas. O "1º no Sul de Minas Gerais" e os "+1.000 pacientes operados" foram confirmados pelo Dr. Sávio e aparecem sempre.
 - Lista completa em [`PENDENCIAS.md`](PENDENCIAS.md).
 
 ## Ordem das seções
