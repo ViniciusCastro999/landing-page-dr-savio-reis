@@ -1614,10 +1614,10 @@ a.ct-row:hover i{color:#fff;transform:translate(2px,-2px)}
 .btn-wine,.hdr-cta{background:radial-gradient(90% 160% at 0% 0%,#A93654 0%,#8A2240 45%,#5A1529 100%);transition:filter .35s var(--ease),transform .35s var(--ease),box-shadow .35s}
 .btn-wine:hover,.hdr-cta:hover{background:radial-gradient(90% 160% at 0% 0%,#A93654 0%,#8A2240 45%,#5A1529 100%);filter:brightness(1.12)}
 /* ================= experiência · destaques empilhados (1º e +1.000) ================= */
-.auth .ledger{grid-auto-flow:row;grid-template-columns:max-content minmax(0,1fr);column-gap:clamp(18px,2.4vw,34px)}
-.auth .ledger > .ledger-pio{grid-column:1/-1;display:grid;grid-template-columns:subgrid;align-items:center;padding:30px 0 26px;border:0}
-.auth .ledger > .ledger-pio + .ledger-pio{border-top:1px solid var(--line);padding-top:26px}
-.auth .ledger > .ledger-pio b{text-align:left}
+.auth .ledger{grid-auto-flow:row;grid-template-columns:minmax(0,1fr)}
+.auth .ledger > .ledger-pio{display:flex;align-items:center;gap:clamp(18px,2vw,28px);padding:28px 0 24px;border:0}
+.auth .ledger > .ledger-pio + .ledger-pio{border-top:1px solid var(--line);padding-top:24px}
+.auth .ledger > .ledger-pio p{max-width:13em}
 @media (max-width:600px){
   .auth .ledger{grid-template-columns:minmax(0,1fr)}
   .auth .ledger > .ledger-pio{display:block;padding:26px 0 22px}
