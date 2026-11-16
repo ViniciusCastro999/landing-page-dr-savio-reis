@@ -1,0 +1,60 @@
+# savioreisneuro.com.br · regras do servidor (Apache / HostGator)
+
+Options -Indexes
+DirectoryIndex index.html
+
+# Sempre https e sem "www" → https://savioreisneuro.com.br/
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://savioreisneuro.com.br%{REQUEST_URI} [L,R=301]
+
+  # /index.html → /
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [L,R=301]
+
+  # Arquivos que não fazem parte do site
+  RewriteRule (^|/)\.(?!well-known/) - [F]
+  RewriteRule \.(md|log|zip)$ - [F,NC]
+</IfModule>
+
+# Tipos de arquivo
+<IfModule mod_mime.c>
+  AddType video/mp4 .mp4
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/manifest+json .webmanifest
+  AddCharset utf-8 .html .css .js .xml .txt
+</IfModule>
+
+# Compressão do texto (html, css, js, xml)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript text/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache: a página sempre atualizada; imagens e vídeos guardados no navegador
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 day"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/plain "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType image/jpeg "access plus 7 days"
+  ExpiresByType image/png "access plus 7 days"
+  ExpiresByType image/webp "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 7 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+</IfModule>

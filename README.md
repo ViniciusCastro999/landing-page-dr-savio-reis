@@ -66,7 +66,17 @@ Topo → cena em vídeo → revelação da cirurgia endoscópica → Dr. Sávio 
 
 - Revisar e validar as pendências médicas/editoriais.
 - Migração prevista para React + Vite + TypeScript.
-- Configurar domínio próprio (opcional).
+- Publicar no domínio savioreisneuro.com.br (ver abaixo).
+
+## Publicar na HostGator (savioreisneuro.com.br)
+
+O domínio e a hospedagem estão na HostGator (domínio registrado no Registro.br no nome do Dr. Sávio, vence em 13/04/2027). Nesta branch (`dominio-hostgator`) os endereços do site (canonical, Open Graph, JSON-LD, sitemap e robots) já apontam para `https://savioreisneuro.com.br/`, e o `.htaccess` força https sem "www", define o cache e bloqueia arquivos ocultos.
+
+1. Gerar o pacote: `zip -q -r -X publicar/savioreisneuro.com.br.zip .htaccess index.html robots.txt sitemap.xml img js media -x '*.DS_Store'` (a pasta `publicar/` não vai para o git)
+2. cPanel → Gerenciador de Arquivos → `public_html`: apagar a página padrão da HostGator (ou renomear o que já existir)
+3. Enviar o .zip para `public_html` e clicar em "Extrair"; ligar "mostrar arquivos ocultos" e conferir o `.htaccess`
+4. Testar https://savioreisneuro.com.br no computador e no celular (cadeado, vídeos, WhatsApp)
+5. Depois de no ar: enviar o sitemap no Google Search Console e trocar o link do Instagram e do perfil do Google
 
 ## Links
 

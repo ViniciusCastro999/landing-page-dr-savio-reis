@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://viniciuscastro999.github.io/landing-page-dr-savio-reis/sitemap.xml
+Sitemap: https://savioreisneuro.com.br/sitemap.xml
