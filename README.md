@@ -28,8 +28,8 @@ Página única, leve e responsiva, construída com HTML, CSS e JavaScript puros 
 │   ├── avaliacoes/               # fotos de perfil das avaliações do Google
 │   └── icons/
 ├── media/       # vídeos: cena (dramatização) e fundo da comparação (cirurgia), com posters
-│   ├── cena-1920.mp4   # computador, sem áudio, em loop (~4,6 MB, resolução cheia)
-│   ├── cena-celular.mp4 # celular, recortado na área que aparece (~3 MB)
+│   ├── cena-2560.mp4   # computador, sem áudio, em loop (~5 MB, ampliado com IA — Real-ESRGAN)
+│   ├── cena-celular.mp4 # celular, recortado na área que aparece (~3,9 MB, ampliado com IA)
 │   ├── cena-poster.jpg # primeiro quadro (computador; fallback e movimento reduzido)
 │   └── cena-poster-celular.jpg # primeiro quadro recortado (celular)
 ├── PENDENCIAS.md  # pendências editoriais, médicas e alegações em validação
